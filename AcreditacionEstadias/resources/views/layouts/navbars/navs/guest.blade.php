@@ -13,11 +13,7 @@
     <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav">
 
-        <li class="nav-item{{ $activePage == 'register' ? ' active' : '' }}">
-          <a href="{{ route('register') }}" class="nav-link">
-            <i class="material-icons">person_add</i> {{ __('Nuevo Usuario') }}
-          </a>
-        </li>
+        
         <li class="nav-item{{ $activePage == 'login' ? ' active' : '' }}">
           <a href="{{ route('login') }}" class="nav-link">
             <i class="fas fa-sign-in-alt"></i> {{ __('Iniciar Sesión') }}
