@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 
 use App\Models\primernivel;
+use App\Models\Unidad;
+use App\Models\Municipio;
+use App\Models\Jurisdiccion;
 use Illuminate\Http\Request;
 
 class AcreditacionController extends Controller
 {
     public function altaprimernivel(){
-
-      return view('acreditacionprimernivel.acreditaprimernivel');
+			$unidades = Unidad::all();
+			$municipios = Municipio::all();
+			$jurisdicciones = Jurisdiccion::all();
+			//return $unidades;
+      return view('acreditacionprimernivel.acreditaprimernivel', compact('unidades', 'municipios', 'jurisdicciones'));
 
     }
 

@@ -25,16 +25,28 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-4">
-                                <input type="text" name="nom_unidad" id="nom_unidad" placeholder="Nombre de la Unidad" class="form-control">
+                              <select name="unidad" id="unidad_id" class="form-control" onchange="selectUnidad()">
+                                @foreach ( $unidades as $unidad )
+                                  <option value="{{ $unidad->claveclues }}"> {{ $unidad->nombreunidad   }}</option>
+                                @endforeach
+                              </select>
                             </div>
                             <div class="col-4">
-                                <select name="municipio_primer" id="municipio_primer" class="form-control">
-                                    <option selected>..Selecciona un municipio...</option>
-                                    <option value="toluca">Toluca</option>
+                                <select name="municipio_primer" id="municipio_primer" class="form-control"  disabled>
+                                    <option selected value="-1">Selecciona primero una unidad...</option>
+                                    @foreach ( $municipios as $municipio )
+                                      <option value="{{ $municipio->clave_municipio }}"> {{ $municipio->nombremunicipio   }}</option>
+                                    @endforeach
                                 </select>
-                            </div>
-                            <div class="col-4">
-                                <input name="jurisdiccion_primer" id="jurisdiccion_primer" type="text" placeholder="Jurisdiccion" class="form-control">
+                              </div>
+                              <div class="col-4">
+                                <select name="juridiccion_primer" id="juridiccion_primer" class="form-control" disabled >
+                                    <option selected value="-1">Selecciona primero una unidad...</option>
+                                    @foreach ( $jurisdicciones as $juri )
+                                      <option value="{{ $juri->clavejuridiccion }}"> {{ $juri->nombrejurisdiccion   }}</option>
+                                    @endforeach
+                                </select>
+
                             </div>
                         </div>
 
@@ -775,7 +787,153 @@
                                             </thead>
                                             <tbody>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">BASCULA CON ESTADIMETRO</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">BASCULA PESA BEBE</th>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">BIOMBO</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CINTA METRICUA MENTAL</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESFIGMOMANOMETRO</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESFIGMOMANOMETRO</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESTERILIZADOR</th>
+                                                <td><input  disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input  disabled="disabled"class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESTETOSCOPIO DE CAPSULA DOBLE</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESTUCHE DE DIAGNOSTICO BASICO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">FONODETECTOR/PINARD</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">GLUCOMETRO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+
+                                              <tr>
+                                                <th scope="row">LAMPARA DE HAZ DIRIGIBLE</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -789,7 +947,7 @@
 
                                               </tr>
                                               <tr>
-                                                <th scope="row">BASCULA PESA BEBE</th>
+                                                <th scope="row">NEGATOSCOPIO</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -800,9 +958,25 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+
+                                              <tr>
+                                                <th scope="row">REFRIGERADOR PARA BIOLOGICO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">BIOMBO</th>
+                                                <th scope="row">TERMOMETRP DIGITALES</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -813,9 +987,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">CINTA METRICUA MENTAL</th>
+                                                <th scope="row">MANTENIMIENTO A LA UNIDAD DENTAL</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -826,9 +1001,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">ESFIGMOMANOMETRO</th>
+                                                <th scope="row">ANAQUEL/GUARDA PARA MEDICAMENTOS</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -839,9 +1015,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">ASIENTO PARA PERSONAL DE SALUD</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -852,9 +1029,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">ASIENTO PARA PACIENTO Y ACOMPAÑANTE</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -865,9 +1043,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">BANCA TANDEM</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -878,9 +1057,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">BANQUETA DE ALTURA</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -891,9 +1071,10 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">BANCO GIRATORIO</th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -904,9 +1085,767 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
+
                                               </tr>
                                               <tr>
-                                                <th scope="row">Bascula con estadimetro</th>
+                                                <th scope="row">BOTES DE PEDAL</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">BOTES DE CAMPANA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CUBETA/CESTO PARA BASURA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESCRITORIO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">INFANTOMETRO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MANDIL PLOMADO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA DE EXPLORACION UNIVERSAL</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA MAYO PASTEUR</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA CON TARJA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA DE TRABAJO PARA ÁREA DE ESTERILIZACION</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">VITRINA CLINICA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESPEJOS VAGINALES CHICOS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESPEJOS VAGINALES GRANDES</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESPEJOS VAGINALES MEDIANOS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">HISTEROMETRO</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MANGO PARA BISTURI</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MARTILLO PERCUTOR</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA CRILLE</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE DISECCION SIN DIENTES</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE DISECCION CON DIENTES</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA CURVA</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE ANILLOS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE KHOCHER</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE TRASLADO</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA PARA SUJETAR CUELLO DE MATRIZ</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA TIPO MOZQUITO</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PORTA AGUJAS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">RIÑON 250ML</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">SET DE CURACIONES</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">TORUNDERO CON TAPA</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">TIJERAS RECTAS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">TIJERAS CURVAS</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ALVEOLOTOMO</th>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input disabled="disabled" class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CONTRANGULO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">AMALGADOR O MORTERO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ARCO DE YOUNG PARA DIQUE DE HULE</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">DOSIFICADOR AMALGAMADOR</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CUCHARILLA PARA CIRUGIA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CURETA MC DERECHA E IZQ</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ELEVADOR CON MANGOS METALICOS</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ELEVADOR DE BANDERA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESPATULA DOBLE EXTREMO</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESPATULA ESTIQUES</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">ESTUCHE DE DIAGNOSTICO DENTAL</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">GRAPAS PARA DIQUES DE HULE</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">JERINGA CARPULLE</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE MANO DE BAJA VELOCIDAD</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA DE MANO DE ALTA VELOCIDAD</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA PERFORADORA AINSWORTH</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PINZA PORTAGRAPAS</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">PORTAVASOS PARA ESCUPIDERA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">RECORTADOR DE AMALGAMA</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">TIJERAS PARA ENCIAS CURVAS</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">TIRAPUENTES MILLER</th>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row"></th>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
