@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="content">
@@ -8,7 +7,7 @@
 
         <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+
 
                 <div class="card">
 
@@ -777,156 +776,147 @@
                                             <tbody>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
 
                                               </tr>
                                               <tr>
                                                 <th scope="row">BASCULA PESA BEBE</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">BIOMBO</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">CINTA METRICUA MENTAL</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">ESFIGMOMANOMETRO</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">Bascula con estadimetro</th>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
-                                                <td><input type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="form-control" type="text"></td>
 
                                               </tr>
                                             </tbody>
@@ -952,7 +942,7 @@
 
                 </div>
 
-            </div>
+
         </div>
     </form>
     </div>
