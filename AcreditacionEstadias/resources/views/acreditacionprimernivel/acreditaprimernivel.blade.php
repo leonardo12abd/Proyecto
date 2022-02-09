@@ -10,11 +10,10 @@
 
 
                 <div class="card">
-
-                        <div class="card-header card-header-danger">
-                            <h4 class="card-tittle">Acreditacion de Primer Nivel  <i class="fas fa-hospital-alt"></i>
-                                </h4>
-                            <input  class="form-control" name="id_primernivel" id="id_primernivel" placeholder="id_primernivel">
+                        <div class="card text-white bg-danger" style="max-heigth: 18rem;">
+                          <center>  <h4 class="card-tittle">Acreditacion de Primer Nivel  <i class="fas fa-hospital-alt"></i>
+                                </h4></center>
+                            <input  hidden class="form-control" name="id_primernivel" id="id_primernivel" placeholder="id_primernivel">
                             @if ($errors->first('id_primernivel'))
                             <p class="text-warning">{{ $errors->first('id_primernivel') }}</p>
                             @endif
@@ -53,7 +52,7 @@
                         {{-- Tipología --}}
 
                         <br>
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
                             <h4 class="card-tittle">Tipología  <i class="fas fa-procedures"></i></h4>
                         </div>
                         <br>
@@ -75,8 +74,8 @@
                         {{-- Estructura CLUES --}}
 
                         <br>
-                        <div class="card-header card-header-danger">
-                            <h4 class="card-tittle">Estructura CLUES  <i class="fas fa-heart"></i></h4>
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                            <h4 class="card-tittle">Estructura CLUES  </i></h4>
                         </div>
                         <br>
                         <div class="row">
@@ -197,7 +196,7 @@
                         </div>
 {{-- Estructura Real --}}
                         <br>
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
                             <h4 class="card-tittle">Estructura Real <i class="fas fa-stethoscope"></i></h4>
                         </div>
                         <br>
@@ -321,7 +320,7 @@
                         {{-- Estrato --}}
                         <br>
 
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
                             <h4 class="card-tittle">Estrato  <i class="fas fa-ambulance"></i></h4>
                         </div>
                         <br>
@@ -372,7 +371,7 @@
                         </div>
 
                         <br>
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;"">
                             <h4 class="card-tittle">Aviso de Funcionamiento <i class="fas fa-laptop-medical"></i></h4>
                         </div>
                         <br>
@@ -497,7 +496,7 @@
                         {{-- Responsable Sanitario Actualizado --}}
 
                         <br>
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
                             <h4 class="card-tittle">Responsable Sanitario Actualizado  <i class="fas fa-user-md"></i></h4>
                         </div>
                         <br>
@@ -621,7 +620,7 @@
 
                         <br>
                         {{-- Servicio subrogados(Incluidos en el contrato) --}}
-                        <div class="card-header card-header-danger">
+                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
                             <h4 class="card-tittle">Servicio subrogados(Incluidos en el contrato) <i class="fas fa-concierge-bell"></i></h4>
                         </div>
                         <br>
@@ -728,9 +727,9 @@
 
                                 <div class="card">
 
-                                        <div class="card-header card-header-success">
-                                            <h4 class="card-tittle">NECESIDADES DE RECURSOS HUMANOS <i class="fas fa-people-carry"></i>
-                                                </h4>
+                                        <div class="card text-white bg-info" style="max-heigth: 18rem;">
+                                           <center> <h4 class="card-tittle">NECESIDADES DE RECURSOS HUMANOS <i class="fas fa-people-carry"></i>
+                                                </h4></center>
                                         </div>
                                 </div>
 
@@ -743,9 +742,9 @@
 
                                 <div class="card">
 
-                                        <div class="card-header card-header-warning">
-                                            <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACION AL INMUEBLE  <i class="fas fa-screwdriver"></i>
-                                                </h4>
+                                        <div class="card text-white bg-warning" style="max-heigth: 18rem;">
+                                          <center>  <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACION AL INMUEBLE  <i class="fas fa-screwdriver"></i>
+                                                </h4></center>
 
                                         </div>
 
@@ -763,9 +762,9 @@
 
                                 <div class="card">
 
-                                        <div class="card-header card-header-info">
-                                            <h4 class="card-tittle">NECESIDADES DE EQUIPO, INMUBILIARIO E INSTRUMENTAL  <i class="fas fa-tools"></i>
-                                                </h4>
+                                        <div class="card text-white bg-secondary" style="max-heigth: 18rem;">
+                                         <center>   <h4 class="card-tittle">NECESIDADES DE EQUIPO, INMUBILIARIO E INSTRUMENTAL  <i class="fas fa-tools"></i>
+                                                </h4></center>
                                         </div>
 
                                         <table class="table table-responsive">
@@ -1845,17 +1844,12 @@
 
                                               </tr>
                                               <tr>
-                                                <th scope="row"></th>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
+                                                <th scope="row">Comentarios</th>
+                                                <td>
+                                                  <textarea></textarea>
+
+                                                </td>
+
 
                                               </tr>
                                             </tbody>
@@ -1875,12 +1869,12 @@
                     </div>
                 </div>
 
-                <center><button type="submit" class="btn btn-primary btn-round">
-                    <i class="far fa-save"></i> Guardar
-                  </button></center>
 
                 </div>
 
+                <center><button type="submit" class="btn btn-primary btn-round">
+                    <i class="far fa-save"></i> Guardar
+                  </button></center>
 
         </div>
     </form>
