@@ -55,7 +55,12 @@
                   <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 4)') }} </span>
                 </a>
               </li>
-
+              <li class="nav-item{{ $activePage == 'acreditaprimer5' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('altaprimernivelsec5') }} ">
+                    <i class="fas fa-procedures"></i>
+                  <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 5)') }} </span>
+                </a>
+              </li>
 
               
 

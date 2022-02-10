@@ -105,3 +105,4 @@ Route::get('altaprimernivelsec3',[App\Http\Controllers\AcreditacionController::c
 Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
 
 
+Route::get('altaprimernivelsec5',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
