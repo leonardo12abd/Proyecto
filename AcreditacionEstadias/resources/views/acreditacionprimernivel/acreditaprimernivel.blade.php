@@ -11,7 +11,7 @@
 
                 <div class="card">
                         <div class="card text-white bg-danger" style="max-heigth: 18rem;">
-                          <center>  <h4 class="card-tittle">Acreditacion de Primer Nivel
+                          <center>  <h4 class="card-tittle">Acreditación de Primer Nivel
                                 </h4></center>
 
                             <input  hidden class="form-control" name="id_primernivel" id="id_primernivel" placeholder="id_primernivel">
@@ -660,7 +660,7 @@
 
                          {{-- Servicio subrogados(Incluidos en el contrato) --}}
                          <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                          <h4 class="card-tittle">Mantenimineto y conservacion al inmueble </h4>
+                          <h4 class="card-tittle">Mantenimiento y conservación al inmueble </h4>
                       </div>
 
                       <br>
@@ -777,13 +777,13 @@
                                 <div class="card">
 
                                         <div class="card text-white bg-warning" style="max-heigth: 18rem;">
-                                          <center>  <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACION AL INMUEBLE  <i class="fas fa-screwdriver"></i>
+                                          <center>  <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACIÓN AL INMUEBLE  <i class="fas fa-screwdriver"></i>
                                                 </h4></center>
                                         </div>
                                         <table class="table-responsive">
                                           <thead>
                                             <tr>
-                                              <th scope="col">REQUERTIMIENTO</th>
+                                              <th scope="col">REQUERIMIENTO</th>
                                               <th scope="col">FACHADA</th>
                                               <th scope="col">SALA DE ESPERA</th>
                                               <th scope="col">SANITARIOS</th>
@@ -798,7 +798,7 @@
                                           </thead>
                                           <tbody>
                                             <tr>
-                                              <th scope="row">ROTULO DE IDENTIFICACION DE LA UNIDAD</th>
+                                              <th scope="row">RÓTULO DE IDENTIFICACIÓN DE LA UNIDAD</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input  disabled class="form-control" type="text"></td>
                                               <td><input disabled class="form-control" type="text"></td>
@@ -810,7 +810,7 @@
 
                                             </tr>
                                             <tr>
-                                              <th scope="row">2</th>
+                                              <th scope="row">COLOCACIÓN DE BARRAS DE SEGURIDAD EN RAMPA DE ACCESO Y/O REHABILITACION</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -821,7 +821,7 @@
                                               <td><input  disabled class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">3</th>
+                                              <th scope="row">COLOCACIÓN O REHABILITACION DE PISO CERÁMICO</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
@@ -833,7 +833,7 @@
 
                                             </tr>
                                             <tr>
-                                              <th scope="row">4</th>
+                                              <th scope="row">PINTURA VINILICA   EXTERIORES</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -846,7 +846,7 @@
 
                                             </tr>
                                             <tr>
-                                              <th scope="row">5</th>
+                                              <th scope="row">PINTURA VINILICA  INTERIORES</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
@@ -857,7 +857,7 @@
                                               <td><input class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">6</th>
+                                              <th scope="row">RESANE DE GRIETAS Y CUARTEADURAS EN PAREDES</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
@@ -868,7 +868,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">7</th>
+                                              <th scope="row">FILTRACIONES Y HUMEDAD EN PAREDES</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
@@ -879,7 +879,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">8</th>
+                                              <th scope="row">COLOCACIÓN DE ZOCLOS</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
@@ -890,7 +890,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">9</th>
+                                              <th scope="row">REHABILITACIÓN DE PLAFONES </th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
@@ -901,18 +901,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">10</th>
-                                              <td><input disabled class="form-control" type="text"></td>
-                                              <td><input  disabled  class="form-control" type="text"></td>
-                                              <td><input   class="form-control" type="text"></td>
-                                              <td><input  disabled class="form-control" type="text"></td>
-                                              <td><input  disabled class="form-control" type="text"></td>
-                                              <td><input  disabled class="form-control" type="text"></td>
-                                              <td><input  disabled class="form-control" type="text"></td>
-                                              <td><input   class="form-control" type="text"></td>
-                                            </tr>
-                                            <tr>
-                                              <th scope="row">11</th>
+                                              <th scope="row">REHABILITACIÓN DE SANITARIOS</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -923,7 +912,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">12</th>
+                                              <th scope="row">REHABILITACIÓN DE RED HIDROSANITARIA</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -934,7 +923,18 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">13</th>
+                                              <th scope="row">ADECUACION  DE SANITARIOS PARA DISCAPACITADOS (REHABILITACIÓN)</th>
+                                              <td><input disabled class="form-control" type="text"></td>
+                                              <td><input  disabled  class="form-control" type="text"></td>
+                                              <td><input   class="form-control" type="text"></td>
+                                              <td><input  disabled class="form-control" type="text"></td>
+                                              <td><input  disabled class="form-control" type="text"></td>
+                                              <td><input  disabled class="form-control" type="text"></td>
+                                              <td><input  disabled class="form-control" type="text"></td>
+                                              <td><input   class="form-control" type="text"></td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">REHABILITACIÓN DE RED ELECTRICA (INCLUYE CONTACTOS)</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -945,7 +945,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">14</th>
+                                              <th scope="row">REHABILITACIÓN DE LUMINARIAS</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -956,7 +956,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">15 </th>
+                                              <th scope="row">REHABILITACIÓN DE PUERTAS (CHAPAS)</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -967,7 +967,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">16 </th>
+                                              <th scope="row">REHABILITACIÓN DE VENTANAS </th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -978,7 +978,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">17</th>
+                                              <th scope="row">COLOCACIÓN DE LAVABOS</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
@@ -989,7 +989,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">18</th>
+                                              <th scope="row">REHABILITACIÓN DE TARJAS</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
                                               <td><input  disabled class="form-control" type="text"></td>
@@ -1000,7 +1000,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">19</th>
+                                              <th scope="row">IMPERMEABILIZACIÓN</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
@@ -1011,7 +1011,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">20</th>
+                                              <th scope="row">REHABILITACIÓN BARDA PERIMETRAL</th>
                                               <td><input  class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1022,7 +1022,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">21</th>
+                                              <th scope="row">REHABILITACIÓN DEL EQUIPO HIDRONEUMÁTICO Y BOMBAS </th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1033,7 +1033,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">22</th>
+                                              <th scope="row">REHABILITACIÓN DE CISTERNA</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1044,7 +1044,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">23</th>
+                                              <th scope="row">ALMACEN TEMPORAL RPBI</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1055,7 +1055,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">24</th>
+                                              <th scope="row">NICHO PARA COMPRESOR DENTAL</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1066,7 +1066,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">25</th>
+                                              <th scope="row">MANTENIMIENTO UNIDADES MANEJADORAS DE AIRE</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1077,7 +1077,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">26</th>
+                                              <th scope="row">SEÑALIZACIÓN DE PROTECCIÓN CIVIL</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -1088,7 +1088,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">27</th>
+                                              <th scope="row">SEÑALIZACIÓN DE RPBI</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input    class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1099,7 +1099,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">28</th>
+                                              <th scope="row">SEÑALIZACION DE ÁREAS</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -1110,7 +1110,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">29</th>
+                                              <th scope="row">REQUIEREN EXTINTORES</th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1121,7 +1121,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">30</th>
+                                              <th scope="row">RECARGA EXTINTORES </th>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input  class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
@@ -1132,7 +1132,7 @@
                                               <td><input  class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">31</th>
+                                              <th scope="row">ALMACEN TEMPORAL DE RPBI</th>
                                               <td><input  disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
@@ -1143,7 +1143,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">32</th>
+                                              <th scope="row">RAMPA DE ACCESO PARA PERSONAS CON  DISCAPACIDAD</th>
                                               <td><input class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input disabled  class="form-control" type="text"></td>
@@ -1154,7 +1154,7 @@
                                               <td><input   class="form-control" type="text"></td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">33</th>
+                                              <th scope="row">SANITARIOS INDEPENDIENTES (HOMBRES / MUJERES)</th>
                                               <td><input disabled class="form-control" type="text"></td>
                                               <td><input  disabled  class="form-control" type="text"></td>
                                               <td><input   class="form-control" type="text"></td>
@@ -1192,14 +1192,15 @@
                                 <div class="card">
 
                                         <div class="card text-white bg-secondary" style="max-heigth: 18rem;">
-                                         <center>   <h4 class="card-tittle">NECESIDADES DE EQUIPO, INMUBILIARIO E INSTRUMENTAL  <i class="fas fa-tools"></i>
-                                                </h4></center>
+                                         <center>
+                                             <h4 class="card-tittle">NECESIDADES DE EQUIPO, INMOBILIARIO E INSTRUMENTAL  <i class="fas fa-tools"></i>
+                                                </h4>
+                                        </center>
                                         </div>
-
                                         <table class="table-responsive">
                                             <thead>
                                               <tr>
-                                                <th scope="col">REQUERTIMIENTO</th>
+                                                <th scope="col">REQUERIMIENTO</th>
                                                 <th scope="col">SALA DE ESPERA</th>
                                                 <th scope="col">CONSULTORIOS</th>
                                                 <th scope="col">MEDICINA PREVENTIVA</th>
@@ -1229,7 +1230,7 @@
 
                                               </tr>
                                               <tr>
-                                                <th scope="row">BASCULA PESA BEBE</th>
+                                                <th scope="row">BASCULA PESA BEBÉ</th>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
@@ -1280,19 +1281,7 @@
                                                 <td><input class="form-control" type="text"></td>
                                                 <td><input class="form-control" type="text"></td>
                                               </tr>
-                                              <tr>
-                                                <th scope="row">ESFIGMOMANOMETRO</th>
-                                                <td><input  disabled  class="form-control" type="text"></td>
-                                                <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                              </tr>
+
                                               <tr>
                                                 <th scope="row">ESTERILIZADOR</th>
                                                 <td><input  disabled  class="form-control" type="text"></td>
@@ -1307,7 +1296,7 @@
                                                 <td><input class="form-control" type="text"></td>
                                               </tr>
                                               <tr>
-                                                <th scope="row">ESTETOSCOPIO DE CAPSULA DOBLE</th>
+                                                <th scope="row">ESTETOSCOPIO DE CÁPSULA DOBLE</th>
                                                 <td><input disabled class="form-control" type="text"></td>
                                                 <td><input  class="form-control" type="text"></td>
                                                 <td><input  class="form-control" type="text"></td>
@@ -1658,6 +1647,34 @@
                                               </tr>
                                               <tr>
                                                 <th scope="row">VITRINA CLINICA</th>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">CARROCURACIONES</th>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA PEDIATRICA</th>
                                                 <td><input disabled class="form-control" type="text"></td>
                                                 <td><input disabled class="form-control" type="text"></td>
                                                 <td><input disabled class="form-control" type="text"></td>
