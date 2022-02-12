@@ -23,19 +23,17 @@
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col">VERIFICAR QUE CUENTE CON:</th>
-                                <th scope="col">SI</th>
-                                <th scope="col">NO</th>
-                                <th scope="col">OBSERVACIONES</th>
+                                <th scope="col" scope="col" style="background-color: rgb(133, 193, 233);">VERIFICAR QUE CUENTE CON:</th>
+                                <th scope="col" style="background-color: rgb(133, 193, 233);">SI</th>
+                                <th scope="col" style="background-color: rgb(133, 193, 233);">NO</th>
+                                <th scope="col" style="background-color: rgb(133, 193, 233);">OBSERVACIONES</th>
                               </tr>
                             </thead>
                             <tbody>
                                 <thead class="thead-dark">
                                     <tr>
-                                      <th scope="col">Manuales</th>
-                                      <th></th>
-                                      <th></th>
-                                      <th></th>
+                                      <th scope="col" style="background-color: rgb(214, 234, 248);">Manuales</th>
+                                      <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                     </tr>
                                   </thead>
                               <tr>
@@ -67,10 +65,8 @@
                               {{-- otra --}}
                               <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Expediente clinico</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Expediente clinico</th>
+                                  <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
 
@@ -202,10 +198,8 @@
                             {{-- 3 --}}
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Referencia y Contrareferencia</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Referencia y Contrareferencia</th>
+                                  <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
 
@@ -306,10 +300,8 @@
                             {{-- 4 --}}
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Mobiliario y Equipo</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Mobiliario y Equipo</th>
+                                  <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
                           <tr>
@@ -353,10 +345,8 @@
                             {{-- 5 --}}
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Esta en tus manos</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Esta en tus manos</th>
+                                  <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
                           <tr>
@@ -452,10 +442,8 @@
 
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Esterilizacion, Limpieza y Desinfeccion</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Esterilizacion, Limpieza y Desinfeccion</th>
+                                  <td colspan="3"style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
                           <tr>
@@ -526,11 +514,8 @@
 
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Manejo de Residuos Peligrosos Biologicos <br>
-                                    Infecciosos RPBI</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Manejo de Residuos Peligrosos Biologicos Infecciosos RPBI</th>
+                                  <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
                           <tr>
@@ -637,10 +622,8 @@
                           {{-- 8 --}}
                           <thead class="thead-dark">
                             <tr>
-                              <th scope="col">Medicina Preventiva</th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
+                              <th scope="col" style="background-color: rgb(214, 234, 248);">Medicina Preventiva</th>
+                              <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                             </tr>
                           </thead>
                       <tr>
@@ -761,10 +744,8 @@
 
                           <thead class="thead-dark">
                             <tr>
-                              <th scope="col">Curaciones</th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
+                              <th scope="col" style="background-color: rgb(214, 234, 248);">Curaciones</th>
+                              <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                             </tr>
                           </thead>
                       <tr>
@@ -810,10 +791,8 @@
 
                           <thead class="thead-dark">
                             <tr>
-                              <th scope="col">Hidratacion Oral</th>
-                              <th></th>
-                              <th></th>
-                              <th></th>
+                              <th scope="col" style="background-color: rgb(214, 234, 248);">Hidratacion Oral</th>
+                              <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                             </tr>
                           </thead>
                       <tr>
@@ -869,10 +848,8 @@
                       {{-- 10 --}}
                       <thead class="thead-dark">
                         <tr>
-                          <th scope="col">Estomatologia</th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
+                          <th scope="col" style="background-color: rgb(214, 234, 248);">Estomatologia</th>
+                          <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                         </tr>
                       </thead>
                   <tr>

@@ -11,7 +11,7 @@
 
 
                 <div class="card">
-                        <div class="card text-white bg-info" style="max-heigth: 18rem;">
+                        <div class="card text-white bg-success mb-3" style="max-heigth: 18rem;">
                             <center>
                               <h4 class="card-tittle">LINEA CPCASEP/MEJORA CONTINUA</h4>
                             </center>
@@ -20,14 +20,14 @@
 
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
-                        <center><h4>Linea COCASEP</h4></center>
+                        <center><h4 style="background-color: rgb(125, 206, 160);">Linea COCASEP</h4></center>
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col">Acta de Instalación del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
-                                <th scope="col">SI</th>
-                                <th scope="col">NO</th>
-                                <th scope="col">OBSERVACIONES</th>
+                                <th scope="col" style="background-color: rgb(169, 223, 191);">Acta de Instalación del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
+                                <th scope="col" style="background-color: rgb(169, 223, 191);">SI</th>
+                                <th scope="col" style="background-color: rgb(169, 223, 191);">NO</th>
+                                <th scope="col" style="background-color: rgb(169, 223, 191);">OBSERVACIONES</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -86,7 +86,7 @@
                               </tr>
 
                               <tbody>
-                                <th scope="row">Calendario de Sesiones Ordinarias del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
+                                <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Calendario de Sesiones Ordinarias del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
 
                               </tbody>
 
@@ -135,11 +135,7 @@
                             <tbody>
                                 <thead class="thead-dark">
                                     <tr>
-                                      <th scope="col">Minutas de Sesiones del Comité de Calidad y Seguridad del Paciente (COCASEP)				
-                                    </th>
-                                      <th scope="col"></th>
-                                      <th scope="col"></th>
-                                      <th scope="col"></th>
+                                      <th scope="col" colspan="4" style="background-color: rgb(169, 223, 191);">Minutas de Sesiones del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
                                     </tr>
                                   </thead>
 
@@ -334,7 +330,7 @@
                                   </tr>
 
                                   <tbody>
-                                    <th scope="row">Formato de Seguimiento-Difusión de Acuerdos</th>
+                                    <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Formato de Seguimiento-Difusión de Acuerdos</th>
     
                                   </tbody>
                                   <tr>
@@ -395,8 +391,7 @@
                                   </tr>
 
                                   <tbody>
-                                    <th scope="row">Memoria Anual de COCASEP				
-                                    </th>
+                                    <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Memoria Anual de COCASEP</th>
     
                                   </tbody>
                                   <tr>
@@ -445,8 +440,7 @@
                                   </tr>
 
                                   <tbody>
-                                    <th scope="row">Programa de Mejora Continua de la Calidad				
-                                    </th>
+                                    <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Programa de Mejora Continua de la Calidad</th>
     
                                   </tbody>
 
@@ -608,9 +602,7 @@
 
                                   
                                   <tbody>
-                                    <th scope="row">Subcomité de Expediente Clínico				
-				
-                                    </th>
+                                    <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Subcomité de Expediente Clínico</th>
     
                                   </tbody>
                                   <tr>

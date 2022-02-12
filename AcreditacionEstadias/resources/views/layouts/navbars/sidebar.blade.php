@@ -32,33 +32,33 @@
             <li class="nav-item{{ $activePage == 'acreditaprimer' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('altaprimernivel') }}">
                 <i class="fas fa-medkit"></i>
-                <span class="sidebar-normal">{{ __('Primer Nivel(Seccion 1)') }} </span>
+                <span class="sidebar-normal">{{ __('Acreditación') }} </span>
               </a>
             </li>
 
             <li class="nav-item{{ $activePage == 'acreditaprimer2' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec2') }} ">
                     <i class="fas fa-file-medical"></i>
-                  <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 2)') }} </span>
+                  <span class="sidebar-normal">{{ __('Calidad precibida') }} </span>
                 </a>
               </li>
 
               <li class="nav-item{{ $activePage == 'acreditaprimer3' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec3') }} ">
                     <i class="fas fa-heartbeat"></i>
-                  <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 3)') }} </span>
+                  <span class="sidebar-normal">{{ __('Calidad Técnica y seguridad al paciente') }} </span>
                 </a>
             </li>
             <li class="nav-item{{ $activePage == 'acreditaprimer4' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec4') }} ">
                     <i class="fas fa-procedures"></i>
-                  <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 4)') }} </span>
+                  <span class="sidebar-normal">{{ __('COCASEP') }} </span>
                 </a>
               </li>
               <li class="nav-item{{ $activePage == 'acreditaprimer5' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec5') }} ">
                     <i class="fas fa-procedures"></i>
-                  <span class="sidebar-normal">{{ __('Primer Nivel (Seccion 5)') }} </span>
+                  <span class="sidebar-normal">{{ __('INDICAS') }} </span>
                 </a>
               </li>
 

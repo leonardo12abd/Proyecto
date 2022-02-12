@@ -11,7 +11,7 @@
 
 
                 <div class="card">
-                        <div class="card text-white bg-info" style="max-heigth: 18rem;">
+                        <div class="card text-white bg-primary" style="max-heigth: 18rem;">
                             <center>
                               <h4 class="card-tittle">INDICAS Y GESTORES DE CALIDAD</h4>
                             </center>
@@ -23,19 +23,16 @@
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col">VERIFICAR QUE CUENTE CON:</th>
-                                <th scope="col">SI</th>
-                                <th scope="col">NO</th>
-                                <th scope="col">OBSERVACIONES</th>
+                                <th scope="col" style="background-color: rgb(127, 179, 213);">VERIFICAR QUE CUENTE CON:</th>
+                                <th scope="col" style="background-color: rgb(127, 179, 213);">SI</th>
+                                <th scope="col" style="background-color: rgb(127, 179, 213);">NO</th>
+                                <th scope="col" style="background-color: rgb(127, 179, 213);">OBSERVACIONES</th>
                               </tr>
                             </thead>
                             <tbody>
                                 <thead class="thead-dark">
                                     <tr>
-                                      <th scope="col">Gestor de Calidad</th>
-                                      <th></th>
-                                      <th></th>
-                                      <th></th>
+                                      <th scope="col" colspan="4" style="background-color: rgb(212, 230, 241);">Gestor de Calidad</th>
                                     </tr>
                                   </thead>
                               <tr>
@@ -67,10 +64,7 @@
                               {{-- otra --}}
                               <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Sistema Nacional de Indicadores de Calidad en Salud (INDICAS II )</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" colspan="4" style="background-color: rgb(212, 230, 241);">Sistema Nacional de Indicadores de Calidad en Salud (INDICAS II )</th>
                                 </tr>
                               </thead>
                           <tr>
@@ -268,10 +262,7 @@
                             {{-- 3 --}}
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col">Sistema de la Encuesta de Satisfacción, Trato Adecuado y Digno (SESTAD).</th>
-                                  <th></th>
-                                  <th></th>
-                                  <th></th>
+                                  <th scope="col" colspan="4" style="background-color: rgb(212, 230, 241);">Sistema de la Encuesta de Satisfacción, Trato Adecuado y Digno (SESTAD).</th>
                                 </tr>
                               </thead>
                           <tr>

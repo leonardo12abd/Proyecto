@@ -20,14 +20,14 @@
 
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
-                        <center><h4>Aval Ciudadano</h4></center>
+                        <center><h4 style="background-color: rgb(247, 220, 111);">Aval Ciudadano</h4></center>
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col">Seguimineto a la instalacion del Programa</th>
-                                <th scope="col">SI</th>
-                                <th scope="col">NO</th>
-                                <th scope="col">OBSERVACIONES</th>
+                                <th scope="col" style="background-color: rgb(249, 231, 159);">Seguimiento a la instalacion del Programa</th>
+                                <th scope="col" style="background-color: rgb(249, 231, 159);">SI</th>
+                                <th scope="col" style="background-color: rgb(249, 231, 159);">NO</th>
+                                <th scope="col" style="background-color: rgb(249, 231, 159);">OBSERVACIONES</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -107,11 +107,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">mensaje***</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
+                                <th scope="row" style="background-color: rgb(249, 231, 159);">Evidencias del Trabajo del Aval Ciudadano</th>
+                                <td colspan="3" style="background-color: rgb(249, 231, 159);"></td>
                               </tr>
                               <tr>
                                 <th scope="row">La unidad cuenta con la muestra de las ESTAD indicada: 140 encuestas por cuatrimestre para unidades urbanas y 36 encuestas para unidades rurales. </th>
@@ -152,10 +149,8 @@
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">Second Message****</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <th scope="row" style="background-color: rgb(249, 231, 159);">Evidencias del Trabajdo de la Unidad</th>
+                                <td colspan="3" style="background-color: rgb(249, 231, 159);"></td>
                               </tr>
                               <tr>
                                 <th scope="row">Cuenta con las evidencias que dan seguimiento al acuerdo establecido en la Carta Compromiso de los cuatrimestres anteriores y corresponden a lo descrito por el AC en la sección V del formato de monitoreo. </th>
@@ -254,22 +249,20 @@
                                 </td>
                               </tr>
                                <tr>
-                                <th scope="row">a nother message****</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                   <th scope="row" colspan="4" style="text-align: justify">En caso de no haber cumplido los compromisos establecidos en la carta, cuáles son los compromisos adquiridos por la unidad para su cumplimiento: desempeño, gestión, capacitación, supervisión, otros. </th>
                               </tr>
                               <tr>
-                                <th scope="row">Pen Message*****</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <th scope="row" colspan="4" style="text-align: justify">Fortalezas(Compromiso del directivo, personal y aval ciudadano. Desempeño en el programa. Trato digno. Organización. Disposición. Iniciativa. Otros) y oportunidades (Actitud, estandarización de procesos, iniciativa, propuestas de mejora, seguimiento a compromisos, otros) detectadas durante la supervisión.</th>
                               </tr>
                               <tr>
-                                <th scope="row">Finish Message****</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <th scope="row">Fortalezas</th>
+                                <td>
+                                    <textarea class="form-control" rows="1" cols="10" ></textarea>
+                                </td>
+                                <th scope="row">Oportunidades</th>
+                                <td>
+                                    <textarea class="form-control" rows="1" cols="10" ></textarea>
+                                </td>
 
                               </tr>
 
@@ -278,10 +271,10 @@
                             <tbody>
                                 <thead class="thead-dark">
                                     <tr>
-                                      <th scope="col">Implementacion del Sistema</th>
-                                      <th scope="col">SI</th>
-                                      <th scope="col">NO</th>
-                                      <th scope="col">OBSERVACIONES</th>
+                                      <th scope="col" style="background-color: rgb(247, 220, 111);">Implementacion del Sistema</th>
+                                      <th scope="col" style="background-color: rgb(247, 220, 111);">SI</th>
+                                      <th scope="col" style="background-color: rgb(247, 220, 111);">NO</th>
+                                      <th scope="col" style="background-color: rgb(247, 220, 111);">OBSERVACIONES</th>
                                     </tr>
                                   </thead>
 
