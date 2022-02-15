@@ -196,6 +196,37 @@
                           </tr>
 
                             {{-- 3 --}}
+                                 
+                            <thead class="thead-dark">
+                                <tr>
+                                <th scope="col" style="background-color: rgb(214, 234, 248);">Estomatologia</th>
+                                <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
+                                </tr>
+                            </thead>
+                        <tr>
+                            <th scope="row">Expediente Clínico,  verificar procedimientos documentados para la seguridad del paciente 1A, 1B, 2B, 4A Y 4B. Orden, Historia Clínica, evidencia de aplicación de AESP 1, 2, 3, 4, 5,  Nota médica con evidencia de aplicación de AESP, que no contenga tachaduras ni enmendaduras, que no utilice abreviaturas, coherencia entre diagnóstico y tratamiento  AESP 3.</th>
+                            <td>
+                                <input type="radio">
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+                            <td>
+                                <textarea class="form-control" rows="1" cols="10" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Marcaje del sitio anatómico, Tiempo fuera para procedimientos fuera de quirófano.</th>
+                            <td>
+                                <input type="radio">
+                            </td>
+                            <td>
+                                <input type="radio">
+                            </td>
+                            <td>
+                                <textarea class="form-control" rows="1" cols="10" ></textarea>
+                            </td>
+                        </tr>
                             <thead class="thead-dark">
                                 <tr>
                                   <th scope="col" style="background-color: rgb(214, 234, 248);">Referencia y Contrareferencia</th>
@@ -318,18 +349,6 @@
                           </tr>
 
                           <tr>
-                            <th scope="row">Bitácora de Funcionalidad y Limpieza de Equipo (Registro de actividades realizadas, Nombre cargo y firma de quien realiza y quien supervisa)</th>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <textarea class="form-control" rows="1" cols="10" ></textarea>
-                            </td>
-                          </tr>
-                          <tr>
                             <th scope="row">Bitacóra de aseo de la unidad</th>
                             <td>
                                 <input type="radio">
@@ -345,7 +364,7 @@
                             {{-- 5 --}}
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Esta en tus manos</th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Está en tus manos</th>
                                   <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
@@ -442,35 +461,11 @@
 
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Esterilizacion, Limpieza y Desinfeccion</th>
+                                  <th scope="col" style="background-color: rgb(214, 234, 248);">Esterilización, Limpieza y Desinfeccion</th>
                                   <td colspan="3"style="background-color: rgb(214, 234, 248);"></td>
                                 </tr>
                               </thead>
                           <tr>
-                            <th scope="row">Bitácoras de limpieza, desinfección y esterilización con nombre, cargo y firma de quien realiza la actividad y quien la supervisa.</th>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <textarea class="form-control" rows="1" cols="10" ></textarea>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <th scope="row">Verificación de frascos de soluciones con rotulación de fecha (jabón, isodine, alcohol, cambio diario), lidocaína con fecha de apertura no mayor a 7 días y caducidad.</th>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <input type="radio">
-                            </td>
-                            <td>
-                                <textarea class="form-control" rows="1" cols="10" ></textarea>
-                            </td>
-                          </tr>
                           <tr>
                             <th scope="row">Registro de esterilización de instrumental y material de curación, verificar empaque y rotulación (7 días de vigencia).</th>
                             <td>
@@ -622,7 +617,7 @@
                           {{-- 8 --}}
                           <thead class="thead-dark">
                             <tr>
-                              <th scope="col" style="background-color: rgb(214, 234, 248);">Medicina Preventiva</th>
+                              <th scope="col" style="background-color: rgb(214, 234, 248);">Vacunas</th>
                               <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                             </tr>
                           </thead>
@@ -774,7 +769,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">Sistema de abasto, hoja de atención diaria y nota en expediente clínico. </th>
+                        <th scope="row">Verifica Sistema de abasto. </th>
                         <td>
                             <input type="radio">
                         </td>
@@ -791,7 +786,7 @@
 
                           <thead class="thead-dark">
                             <tr>
-                              <th scope="col" style="background-color: rgb(214, 234, 248);">Hidratacion Oral</th>
+                              <th scope="col" style="background-color: rgb(214, 234, 248);">Hidratación Oral</th>
                               <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
                             </tr>
                           </thead>
@@ -845,64 +840,7 @@
                             <textarea class="form-control" rows="1" cols="10" ></textarea>
                         </td>
                       </tr>
-                      {{-- 10 --}}
-                      <thead class="thead-dark">
-                        <tr>
-                          <th scope="col" style="background-color: rgb(214, 234, 248);">Estomatologia</th>
-                          <td colspan="3" style="background-color: rgb(214, 234, 248);"></td>
-                        </tr>
-                      </thead>
-                  <tr>
-                    <th scope="row">Expediente Clínico,  verificar procedimientos documentados para la seguridad del paciente 1A, 1B, 2B, 4A Y 4B. Orden, Historia Clínica, evidencia de aplicación de AESP 1, 2, 3, 4, 5,  Nota médica con evidencia de aplicación de AESP, que no contenga tachaduras ni enmendaduras, que no utilice abreviaturas, coherencia entre diagnóstico y tratamiento  AESP 3.</th>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <textarea class="form-control" rows="1" cols="10" ></textarea>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row">Recomendaciones  de las GPC.</th>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <textarea class="form-control" rows="1" cols="10" ></textarea>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row">Verificar existencia y requisición de los formatos de consentimiento informado.</th>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <textarea class="form-control" rows="1" cols="10" ></textarea>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row">Marcaje del sitio anatómico, Tiempo fuera para procedimientos fuera de quirófano.</th>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <input type="radio">
-                    </td>
-                    <td>
-                        <textarea class="form-control" rows="1" cols="10" ></textarea>
-                    </td>
-                  </tr>
+                      
                             </tbody>
                         </table>
                     </div>
