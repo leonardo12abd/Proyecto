@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalidadPercibidaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DropdownController;
 use App\Http\Controllers\FirstlevelController;
@@ -97,10 +98,12 @@ Route::get('altaprimernivel',[App\Http\Controllers\AcreditacionController::class
 Route::POST('guardarprimernivel',[App\Http\Controllers\AcreditacionController::class,'guardarprimernivel'])->name('guardarprimernivel');
 Route::get('eloquent',[App\Http\Controllers\AcreditacionController::class,'eloquent'])->name('eloquent');
 
+/** CRUD CALIDAD PERCIBIDA -> INICIO*/
+Route::get('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2'])->name('altaprimernivelsec2');
+Route::POST('guardaravalpercibido',[CalidadPercibidaController::class,'guardaravalpercibido'])->name('guardaravalpercibido');
 
-Route::get('altaprimernivelsec2',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec2'])->name('altaprimernivelsec2');
 
-
+/** FIN -> CRUD CALIDAD PERCIBIDA */
 Route::get('altaprimernivelsec3',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec3'])->name('altaprimernivelsec3');
 
 Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
