@@ -9,17 +9,21 @@ class Unidad extends Model
 {
     use HasFactory;
     protected $primaryKey = 'claveclues';
-    protected $table = 'datos';
+    protected $table = 'clues2';
     protected $fillable = [
-        'claveclues',
+        'id_clues',
         'clues',
         'nombreunidad',
-        'clavemunicipio',
+        'clave_municipio',
         'clavejurisdiccion',
+        'id_tipologia',
+        'claveestrato',
+
     ];
 
-    public function municipio(){
-        return $this->hasOne(Municipio::class,'clave_municipio', 'clavemunicipio');
+
+    public function municipios(){
+        return $this->hasOne(Municipio::class,'clave_municipio', 'clave_municipio');
     }
 
     public function jurisdiccion(){

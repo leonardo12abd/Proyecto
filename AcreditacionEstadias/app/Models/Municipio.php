@@ -9,7 +9,7 @@ class Municipio extends Model
 {
     use HasFactory;
     protected $primaryKey = 'claveclues';
-    protected $table = 'municipio';
+    protected $table = 'municipios';
     protected $fillable = [
         'clavemunicipio',
         'nombremunicipio',

@@ -255,14 +255,9 @@
                                 <th scope="row" colspan="4" style="text-align: justify">Fortalezas(Compromiso del directivo, personal y aval ciudadano. Desempeño en el programa. Trato digno. Organización. Disposición. Iniciativa. Otros) y oportunidades (Actitud, estandarización de procesos, iniciativa, propuestas de mejora, seguimiento a compromisos, otros) detectadas durante la supervisión.</th>
                               </tr>
                               <tr>
-                                <th scope="row">Fortalezas</th>
-                                <td>
-                                    <textarea class="form-control" rows="1" cols="10" ></textarea>
-                                </td>
-                                <th scope="row">Oportunidades</th>
-                                <td>
-                                    <textarea class="form-control" rows="1" cols="10" ></textarea>
-                                </td>
+                                <th scope="row">Fortalezas<textarea class="form-control" rows="1" cols="2" ></textarea></th>
+                                <th scope="row">Oportunidades<textarea class="form-control" rows="1" cols="2" ></textarea>
+                                </th>
 
                               </tr>
 

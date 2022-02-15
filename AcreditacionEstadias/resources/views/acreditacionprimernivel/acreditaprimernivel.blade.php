@@ -25,10 +25,18 @@
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
                         <div class="row">
+                          <div class="col-4">
+                            <select name="clues" id="clues_id" class="form-control" onchange="selectClues()">
+                              @foreach ( $unidades as $unidad )
+                                <option value="{{ $unidad->id_clues }}"> {{ $unidad->clues  }}</option>
+                              @endforeach
+                            </select>
+                          </div>
                             <div class="col-4">
-                              <select name="unidad" id="unidad_id" class="form-control" onchange="selectUnidad()">
+                              <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
+                                <option selected value="-1">Selecciona primero una unidad...</option>
                                 @foreach ( $unidades as $unidad )
-                                  <option value="{{ $unidad->claveclues }}"> {{ $unidad->nombreunidad   }}</option>
+                                  <option value="{{ $unidad->id_clues }}"> {{ $unidad->nombreunidad   }}</option>
                                 @endforeach
                               </select>
                             </div>

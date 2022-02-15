@@ -5,6 +5,7 @@ const selectUnidad = async () => {
     return res.json()
   })
 
+  document.getElementById("unidad").value = data.id_clues
   document.getElementById("municipio_primer").value = data.clavemunicipio
   document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
 
