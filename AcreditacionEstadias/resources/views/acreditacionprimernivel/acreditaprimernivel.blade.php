@@ -1618,6 +1618,34 @@
 
                                               </tr>
                                               <tr>
+                                                <th scope="row">CARROCURACIONES</th>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
+                                                <th scope="row">MESA PEDÍATRICA</th>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input disabled class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+                                                <td><input  class="form-control" type="text"></td>
+
+                                              </tr>
+                                              <tr>
                                                 <th scope="row">MESA CON TARJA</th>
                                                 <td><input disabled class="form-control" type="text"></td>
                                                 <td><input disabled class="form-control" type="text"></td>
