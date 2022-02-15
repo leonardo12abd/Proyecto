@@ -67,6 +67,13 @@ public function altaprimernivelsec5(){
 //---------------------------------------- Fin Quinta Seccion----------------------------------
 
 
+//---------------------------------------- INICIO Sexta Seccion----------------------------------
+
+public function altaprimernivelsec6(){
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion6');
+}
+//---------------------------------------- Fin Sexto Seccion----------------------------------
+
 
 
 

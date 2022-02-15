@@ -6,10 +6,12 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Calidad Acreditación') }}
+      {{ __('ÁREA ESTATAL DE CALIDAD') }}
 
     </a>
-    <center><i class="fas fa-user-md"></i></center>
+    <center><span class="material-icons">
+        medication
+        </span></center>
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
@@ -22,7 +24,9 @@
       {{-- Select --}}
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-            <i class="fas fa-book-medical"></i>
+            <i class="material-icons">
+                medical_information
+            </i>
           <p>{{ __('Contenido') }}
             <b class="caret"></b>
           </p>
@@ -31,38 +35,55 @@
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'acreditaprimer' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('altaprimernivel') }}">
-                <i class="fas fa-medkit"></i>
-                <span class="sidebar-normal">{{ __('Acreditación') }} </span>
+                <i class="material-icons">
+                    task
+                </i>                <span class="sidebar-normal">{{ __('ACREDITACIÓN') }} </span>
               </a>
             </li>
 
             <li class="nav-item{{ $activePage == 'acreditaprimer2' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec2') }} ">
-                    <i class="fas fa-file-medical"></i>
-                  <span class="sidebar-normal">{{ __('Calidad precibida') }} </span>
+                    <i class="material-icons">
+                        pending_actions
+                    </i>
+                  <span class="sidebar-normal">{{ __('CALIDAD PERCIBIDA') }} </span>
                 </a>
               </li>
 
               <li class="nav-item{{ $activePage == 'acreditaprimer3' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec3') }} ">
-                    <i class="fas fa-heartbeat"></i>
-                  <span class="sidebar-normal">{{ __('Calidad Técnica y seguridad al paciente') }} </span>
+
+                    <span class="sidebar-auto">   <i class="material-icons">
+                        healing
+                    </i>{{ __('CALIDAD TÉCNICA Y SEGURIDAD AL PACIENTE') }}  </span>
                 </a>
             </li>
             <li class="nav-item{{ $activePage == 'acreditaprimer4' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec4') }} ">
-                    <i class="fas fa-procedures"></i>
+                    <i class="material-icons">
+                        leaderboard
+                    </i>
                   <span class="sidebar-normal">{{ __('COCASEP') }} </span>
                 </a>
               </li>
               <li class="nav-item{{ $activePage == 'acreditaprimer5' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('altaprimernivelsec5') }} ">
-                    <i class="fas fa-procedures"></i>
+                    <i class="material-icons">
+                        emergency_recording
+                    </i>
                   <span class="sidebar-normal">{{ __('INDICAS') }} </span>
                 </a>
               </li>
 
-              
+              <li class="nav-item{{ $activePage == 'acreditaprimer6' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('altaprimernivelsec6') }} ">
+                    <i class="material-icons">
+                        attach_money
+                    </i>
+                    <span class="sidebar-normal">{{ __('APOYOS E INCENTIVOS') }} </span>
+                </a>
+              </li>
+
 
           </ul>
         </div>

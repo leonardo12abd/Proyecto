@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DropdownController;
 use App\Http\Controllers\FirstlevelController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -106,3 +107,6 @@ Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::c
 
 
 Route::get('altaprimernivelsec5',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
+
+Route::get('altaprimernivelsec6',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
+
