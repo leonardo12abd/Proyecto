@@ -1226,15 +1226,15 @@
                                               <tr>
                                                 <th scope="row">BASCULA CON ESTADIMETRO</th>
                                                 <td><input  disabled  class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="monto" type="text" id="txt_campo_1" onkeyup="sumar();"></td>
+                                                <td><input class="monto" type="text" id="txt_campo_3" onkeyup="sumar();"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
                                                 <td><input  disabled class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
-                                                <td><input class="form-control" type="text"></td>
+                                                <td><input class="monto" type="text" id="txt_campo_3" onkeyup="sumar();"></td>
+                                                <td><span class="form-control" type="text"  id="spTotal"></td>
 
                                               </tr>
                                               <tr>
