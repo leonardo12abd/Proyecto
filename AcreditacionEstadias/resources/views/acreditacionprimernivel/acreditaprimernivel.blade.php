@@ -69,7 +69,7 @@
                                     @endforeach
                                 </select>
 
-                            </div>
+                              </div>
                         </div>
 
                         {{-- Tipología --}}
@@ -79,20 +79,18 @@
                             <h4 class="card-tittle">Tipología</h4>
                         </div>
                         <br>
-                           <div class="row">
-                            <div class="col-4">
-                                <input type="text" name="r_nucleosbasicos" placeholder="Rural Nucleos" class="form-control">
+                        <div class="row">
+                            <div class="col-6">
+                              <select name="tipologia_primer" id="tipologia_primer" class="form-control"  disabled>
+                                  <option selected value="-1">Selecciona primero una unidad...</option>
+                                  @foreach ( $tipologias as $tipologia )
+                                    <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
+                                  @endforeach
+                              </select>
                             </div>
-                            <div class="col-4">
-                                <input type="text" name="u_nucleosbasicos" placeholder="Urbana Nucleos" class="form-control">
+                            <div class="col-6">
+                              <label> Otra:</label><center> <textarea name="otra_tipologia" id="" cols="30" rows="3" class="form-control" placeholder="Introduzca alguna que halla faltado ingresar"></textarea></center>
                             </div>
-                            <div class="col-4">
-                                <input type="text" name="complet_nucleosbasicos" placeholder="Nucleos básicos completos existentes" class="form-control">
-                            </div>
-
-                            <center><div class="col-12">
-                               <label>Otra:</label><textarea name="otra_tipologia" id="" cols="30" rows="3" class="form-control" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
-                            </div></center>
                         </div>
 
                         {{-- Estructura CLUES --}}
@@ -318,35 +316,15 @@
                         </div>
                         <br>
                         <div class="row">
-                            <div class="col-4">
-                                <label>Urbano:</label> <div class="form-check form-check-inline">
-                                    <label name="estrato_urbano" class="form-check-label">
-                                      <input class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="estrato_urbano" class="form-check-input" type="radio" id="inlineradio2" value="NO"> No
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-4">
-                               <label>Rural: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="estrato_rural" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="estrato_rural" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-4">
+                          <div class="col-8">
+                            <select name="estrato_primer" id="estrato_primer" class="form-control" disabled >
+                                <option selected value="-1">Selecciona primero una unidad...</option>
+                                @foreach ( $estratos as $estrato )
+                                  <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
+                                @endforeach
+                            </select>
+                          </div>
+                         <div class="col-4">
                                 <label>Abasto de medicamento: </label>
                                 <input type="text" name="estrato_abastom" id="" placeholder="Porcentaje %" class="form-control">
 

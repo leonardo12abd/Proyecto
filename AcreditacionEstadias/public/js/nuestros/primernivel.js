@@ -14,11 +14,18 @@ const selectUnidad = async () => {
     document.getElementById("unidad_id").value = data.id_clues
     document.getElementById("municipio_primer").value = data.clave_municipio
     document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+    document.getElementById("tipologia_primer").value = data.id_tipologia
+    document.getElementById("estrato_primer").value = data.claveestrato
+
+
   } catch (error) {
     console.warn({error})
     document.getElementById("unidad_id").value = ''
     document.getElementById("municipio_primer").value = ''
     document.getElementById("juridiccion_primer").value = ''
+    document.getElementById("tipologia_primer").value = ''
+    document.getElementById("estrato_primer").value = ''
+
   }
 }
 

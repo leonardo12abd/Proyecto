@@ -15,6 +15,6 @@ class Tipologia extends Model
         'clave_tipologia',
         'nombre_tipologia',
         'clasificacion',
-
+        'otra',
     ];
 }
