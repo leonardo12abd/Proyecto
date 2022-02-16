@@ -25,14 +25,15 @@
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
                         <div class="row">
-                          <div class="col-4">
-                            <select name="clues" id="clues_id" class="form-control" onchange="selectClues()">
+                          <div class="col-3">
+                            <select name="clues" id="clues_id" class="form-control" onchange="selectUnidad()" label="hola">
+                              <option selected value="-1">Seleccionar...</option>
                               @foreach ( $unidades as $unidad )
                                 <option value="{{ $unidad->id_clues }}"> {{ $unidad->clues  }}</option>
                               @endforeach
                             </select>
                           </div>
-                            <div class="col-4">
+                            <div class="col-3">
                               <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
                                 <option selected value="-1">Selecciona primero una unidad...</option>
                                 @foreach ( $unidades as $unidad )
@@ -40,7 +41,7 @@
                                 @endforeach
                               </select>
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
                                 <select name="municipio_primer" id="municipio_primer" class="form-control"  disabled>
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $municipios as $municipio )
@@ -48,7 +49,7 @@
                                     @endforeach
                                 </select>
                               </div>
-                              <div class="col-4">
+                              <div class="col-3">
                                 <select name="juridiccion_primer" id="juridiccion_primer" class="form-control" disabled >
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $jurisdicciones as $juri )
@@ -761,20 +762,28 @@
                         {{-- Inicia la segunda seccion --}}
                         <div class="row">
                             <div class="col-md-12">
-
                                 <div class="card">
-
                                         <div class="card text-white bg-info" style="max-heigth: 18rem;">
-                                           <center> <h4 class="card-tittle">NECESIDADES DE RECURSOS HUMANOS <i class="fas fa-people-carry"></i>
-                                                </h4></center>
+                                           <center> 
+                                             <h4 class="card-tittle">
+                                                NECESIDADES DE RECURSOS HUMANOS <i class="fas fa-people-carry" > </i>
+                                              </h4>
+                                            </center>
                                         </div>
-
-
                                 </div>
-
                             </div>
-
                         </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div id="map_rh"></div>
+                            
+                          </div>
+                          <div class="col-md-12">
+                            <button onclick="addRH()"> Agregar fila</button>
+
+                          </div>
+                        </div>
+
                         <br><br>
 
                         {{-- Termina la segunda seccion --}}

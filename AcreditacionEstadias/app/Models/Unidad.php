@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Unidad extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'claveclues';
+    protected $primaryKey = 'id_clues';
     protected $table = 'clues2';
     protected $fillable = [
         'id_clues',
@@ -22,7 +22,7 @@ class Unidad extends Model
     ];
 
 
-    public function municipios(){
+    public function municipio(){
         return $this->hasOne(Municipio::class,'clave_municipio', 'clave_municipio');
     }
 

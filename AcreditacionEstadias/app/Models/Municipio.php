@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Municipio extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'claveclues';
+    protected $primaryKey = 'clave_municipio';
     protected $table = 'municipios';
     protected $fillable = [
-        'clavemunicipio',
+        'clave_municipio',
         'nombremunicipio',
     ];
 }
