@@ -27,7 +27,9 @@ class UnidadesController extends Controller
 
     public function show($id)
     {
-        $unidad = Unidad::with('municipio', 'jurisdiccion')->find($id);
+        $unidad = Unidad::with('municipio', 'jurisdiccion')->where([
+            ['clues', $id]
+        ])->first();
         return response()->json([
             'message' => 'Success One',
             'data' => $unidad

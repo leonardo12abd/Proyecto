@@ -34,10 +34,10 @@
                               <tr>
                                 <th scope="row">El establecimiento cuenta con Acta de COCASEP (original si es COCASEP local, copia si es COCASEP Jurisdiccional o de Coordinación) en formato federal.</th>
                                 <td>
-                                    <input type="radio">
+                                    <input type="radio" name="nombre1" value="Si">
                                 </td>
                                 <td>
-                                    <input type="radio">
+                                    <input type="radio" name="nombre1" value="No">
                                 </td>
                                 <td>
                                     <textarea class="form-control" rows="1" cols="10" ></textarea>
@@ -47,10 +47,10 @@
                               <tr>
                                 <th scope="row">Los nombres de presidente y secretario técnico del Comité están actualizados.</th>
                                 <td>
-                                    <input type="radio">
+                                    <input type="radio" name="nombre2">
                                 </td>
                                 <td>
-                                    <input type="radio">
+                                    <input type="radio" name="nombre2">
                                 </td>
                                 <td>
                                     <textarea class="form-control" rows="1" cols="10" ></textarea>
@@ -70,7 +70,7 @@
                                 </td>
                               </tr>
 
-                             
+
                               <tr>
                                 <th scope="row">En el Acta no aparecen figuras externas al (los) establecimiento (s).
                                 </th>
@@ -90,7 +90,7 @@
 
                               </tbody>
 
-                            
+
                               <tr>
                                 <th scope="row">El establecimiento cuenta con Calendario de sesiones en formato federal con registro de Programado y Realizado (original si es COCASEP local, copia si es COCASEP Jurisdiccional o de Coordinación).</th>
                                 <td>
@@ -128,8 +128,8 @@
                                     <textarea class="form-control" rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
-                              
-                              
+
+
                             </tbody>
 
                             <tbody>
@@ -146,7 +146,7 @@
                                         <input type="radio">
                                     </td>
                                     <td>
-                                        <input type="radio">    
+                                        <input type="radio">
                                     </td>
                                     <td>
                                         <textarea class="form-control" rows="1" cols="10" ></textarea>
@@ -195,7 +195,7 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">En las Minutas se encuentra evidencia de la generación de algún acuerdo relacionado con la gestión para la adquisición de insumos para las Acciones Esenciales por la Seguridad del Paciente. 
+                                    <th scope="row">En las Minutas se encuentra evidencia de la generación de algún acuerdo relacionado con la gestión para la adquisición de insumos para las Acciones Esenciales por la Seguridad del Paciente.
                                     </th>
                                     <td>
                                         <input type="radio">
@@ -220,7 +220,7 @@
                                     </td>
                                   </tr>
 
-                                  <tr>      
+                                  <tr>
                                     <th scope="row">En las Minutas se encuentra evidencia de la generación de alguna acción para mejorar los tiempos de espera y satisfacción del usuario.
 </th>
                                     <td>
@@ -331,7 +331,7 @@
 
                                   <tbody>
                                     <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Formato de Seguimiento-Difusión de Acuerdos</th>
-    
+
                                   </tbody>
                                   <tr>
                                     <th scope="row">El establecimiento cuenta con un Formato de Seguimiento-Difusión de Acuerdos por cada Minuta generada (original si es COCASEP local, copia si es COCASEP Jurisdiccional o de Coordinación) en formato federal
@@ -392,7 +392,7 @@
 
                                   <tbody>
                                     <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Memoria Anual de COCASEP</th>
-    
+
                                   </tbody>
                                   <tr>
                                     <th scope="row">El establecimiento cuenta con la Memoria Anual de COCASEP del año inmediato anterior al actual (original si es COCASEP local, copia si es COCASEP Jurisdiccional o de Coordinación)
@@ -441,7 +441,7 @@
 
                                   <tbody>
                                     <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Programa de Mejora Continua de la Calidad</th>
-    
+
                                   </tbody>
 
                                   <tr>
@@ -600,10 +600,10 @@
                                   </tr>
 
 
-                                  
+
                                   <tbody>
                                     <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Subcomité de Expediente Clínico</th>
-    
+
                                   </tbody>
                                   <tr>
                                     <th scope="row">El establecimiento cuenta con Acta de Instalación del Subcomité de Expediente Clínico.

@@ -25,43 +25,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-{{-- Javascript Sumas --}}
-<script type="text/javascript">
-    function sumar() {
 
-    var total = 0;
 
-    $(".monto").each(function() {
-
-    if (isNaN(parseFloat($(this).val()))) {
-
-    total += 0;
-
-    } else {
-
-    total += parseFloat($(this).val());
-
-    }
-
-    });
-
-    //alert(total);
-    document.getElementById('spTotal').innerHTML = total;
-
-    }
-    </script>
-
-{{-- Javascript Sumas --}}
-
-{{-- desabilitar --}}
-<script type="text/javascript">
-function deshabilita(valor) {
-    for (i=0; rad = document.radio1.rad1[i]; i++)
-      rad.disabled = valor;
-    if (valor) document.radio1.rad1[1].checked = true;
-  }
-</script>
-{{-- desabilitar --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body onload="preloadMap()">
