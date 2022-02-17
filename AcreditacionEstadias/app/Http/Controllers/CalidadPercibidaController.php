@@ -4,37 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Models\CalidadPercibida;
 use Illuminate\Http\Request;
+use  App\Models\Calidadpercibidadata;
 
 
 class CalidadPercibidaController extends Controller
 {
     public function altaprimernivelsec2(){
+        $calidadperc = CalidadPercibida::all();
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2',compact('calidadperc'));
 
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2');
+    }
 
+    public function altaprimernivelsec2Show($id){
+        $calidadperc = CalidadPercibida::all();
+        $data = Calidadpercibidadata::find($id);
+        if(!$data){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $CalidadPercibida_data = unserialize($data->data);
+        //dd($cocasep_data);
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadperc', 'CalidadPercibida_data'));
     }
 
     //Guarda avalpercibido
-    public function guardaravalpercibido(Request $request){
-
-        $CalidadPercibida = new CalidadPercibida;
-        $CalidadPercibida -> id_aval            = $request -> id_aval;
-        //$CalidadPercibida -> nombre_aval        = $request -> nombre_aval;
-        $CalidadPercibida -> estatus_aval       = $request -> estatus_aval;
-        $CalidadPercibida -> observaciones_aval = $request -> observaciones_aval;
-
-       // return redirect()->route('users.avalpercibido')->with('success','Aval creado correctamente');
-       $CalidadPercibida ->save();
-
-       return redirect()->route('avalpercibido');
-
+    public function altaprimernivelsec2Save(Request $request){
+        $data = $request->all();
+        $data = serialize($data); //! Esto es lo que guardaria en Base de dAtos
+        $calidadperc = Calidadpercibidadata::create([
+            'data' => $data
+        ]);
+        return redirect()->back();
     }
-
-    public function avalpercibido(){
-
-    }
-
-
 
 
 }

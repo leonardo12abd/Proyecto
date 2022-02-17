@@ -100,17 +100,22 @@ Route::get('eloquent',[App\Http\Controllers\AcreditacionController::class,'eloqu
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/
 Route::get('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2'])->name('altaprimernivelsec2');
-Route::POST('guardaravalpercibido',[CalidadPercibidaController::class,'guardaravalpercibido'])->name('guardaravalpercibido');
-Route::get('avalpercibido',[App\Http\Controllers\CalidadPercibidaController::class,'avalpercibido'])->name('avalpercibido');
+Route::get('altaprimernivelsec2/{id}',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2Show'])->name('altaprimernivelsec2Show');
+Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2Save'])->name('altaprimernivelsec2Save');
+
 
 
 /** FIN -> CRUD CALIDAD PERCIBIDA */
+
+
 Route::get('altaprimernivelsec3',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec3'])->name('altaprimernivelsec3');
 
+
+/** CRUD COCASEP -> INICIO*/
 Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
 Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Show'])->name('altaprimernivelsec4Show');
 Route::post('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
-
+/** FIN -> CRUD COCASEP */
 
 Route::get('altaprimernivelsec5',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
 

@@ -12,6 +12,9 @@ class CalidadPercibida extends Model
     protected $table = 'aval_ciudadano';
     protected $fillable = [
         'id_aval',
+        'clave_aval',
+        'nombre_aval',
+        'clasificacion_aval',
         'estatus_aval',
         'observaciones_aval'
     ];

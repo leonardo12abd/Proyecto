@@ -14,10 +14,7 @@
                           <center>  <h4 class="card-tittle">Acreditación de Primer Nivel
                                 </h4></center>
 
-                            <input  hidden class="form-control" name="id_primernivel" id="id_primernivel" placeholder="id_primernivel">
-                            @if ($errors->first('id_primernivel'))
-                            <p class="text-warning">{{ $errors->first('id_primernivel') }}</p>
-                            @endif
+
                           <center><label >Fecha de Visita: </label>  <input type="date" name="fecha_primernivel"></center>
                         </div>
 

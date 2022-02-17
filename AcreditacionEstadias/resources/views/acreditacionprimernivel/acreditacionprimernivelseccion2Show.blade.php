@@ -5,17 +5,13 @@
 <div class="content">
     <form action="/altaprimernivelsec2" method="POST">
         {{ csrf_field() }}
-
         <div class="container-fluid">
         <div class="row">
                 <div class="card">
                         <div class="card text-white bg-warning" style="max-heigth: 18rem;">
-
                             <center>
                               <h4 class="card-tittle">Calidad Percibida</h4>
                             </center>
-
-
                         </div>
 
 
@@ -40,13 +36,13 @@
                                 <tr>
                                     <th scope="row">{{$fanta->nombre_aval}}</th>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_{{$key}}"  value="Si" required @if($CalidadPercibida_data['key_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}"  checked value="No" required>
+                                        <input type="radio" name="key_{{$key}}" checked value="No" required @if($CalidadPercibida_data['key_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$CalidadPercibida_data['textarea_'.$key]}}</textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -55,12 +51,12 @@
                     </div>
                 </div>
         </div>
-        <center>
+     <!--    <center>
             <button type="submit" class="btn btn-danger btn-round">
                 <i class="far fa-save"></i> Guardar
             </button>
         </center>
-
+-->
         </div>
 
     </form>

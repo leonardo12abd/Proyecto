@@ -50,9 +50,11 @@
                 </div>
         </div>
 
-        <center><button type="submit" class="btn btn-primary btn-round">
-            <i class="far fa-save"></i> Guardar
-          </button></center>
+        <center>
+                <button type="submit" class="btn btn-primary btn-round">
+                    <i class="far fa-save"></i> Guardar
+                </button>
+        </center>
         </div>
 
     </form>
