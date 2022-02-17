@@ -23,32 +23,32 @@
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col" style="background-color: #E3E3E3"><center> CÉDULA DE MADUREZ MODELO DE GESTIÓN DE CALIDAD</center></th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3">FEBRERO</th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3">JUNIO</th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3">SEPTIEMBRE</th>
-                                <th scope="col" style="background-color: #E3E3E3"></th>
-                                <th scope="col" style="background-color: #E3E3E3">OBSERVACIONES</th>
+                                <th scope="col" style="background-color: #AEB6BF"><center> CÉDULA DE MADUREZ MODELO DE GESTIÓN DE CALIDAD</center></th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF">FEBRERO</th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF">JUNIO</th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF">SEPTIEMBRE</th>
+                                <th scope="col" style="background-color: #AEB6BF"></th>
+                                <th scope="col" style="background-color: #AEB6BF">OBSERVACIONES</th>
                               </tr>
                             </thead>
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col" style="background-color: #888282"></th>
-                                  <th scope="col" style="background-color: #888282"><center>PUNTAJE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>CUMPLE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>NO CUMPLE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>PUNTAJE</th>
-                                  <th scope="col" style="background-color: #888282"><center>CUMPLE</th>
-                                  <th scope="col" style="background-color: #888282"><center>NO CUMPLE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>PUNTAJE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>CUMPLE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>NO CUMPLE</center></th>
-                                  <th scope="col" style="background-color: #888282"><center>OBSERVACIONES</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>PUNTAJE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>CUMPLE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>NO CUMPLE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>PUNTAJE</th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>CUMPLE</th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>NO CUMPLE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>PUNTAJE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>CUMPLE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>NO CUMPLE</center></th>
+                                  <th scope="col" style="background-color: #D6DBDF"><center>OBSERVACIONES</center></th>
                                 </tr>
                               </thead>
                             <tbody>
