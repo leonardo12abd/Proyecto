@@ -6,7 +6,8 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('ÁREA ESTATAL DE CALIDAD') }}
+      {{ __('INSTITUTO DE SALUD DEL ESTADO DE MÉXICO 
+            ÁREA ESTATAL DE CALIDAD') }}
 
     </a>
     <center><span class="material-icons">

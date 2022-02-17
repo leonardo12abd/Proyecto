@@ -20,7 +20,7 @@
 
 
                         {{-- Inicia la primer Seccion --}}
-                    <div class="card-body">
+                      <div class="card-body">
                         <div class="row">
                           <div class="col-3">
                           <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad()">
@@ -28,12 +28,6 @@
                             @foreach ( $unidades as $unidad )
                               <option value="{{ $unidad->clues }}" />
                             @endforeach
-
-                            <!-- <option value="San Francisco">
-                            <option value="New York">
-                            <option value="Seattle">
-                            <option value="Los Angeles">
-                            <option value="Chicago"> -->
                           </datalist>
                             <!-- <select name="clues" id="clues_id" class="form-control" onchange="selectUnidad()" label="hola">
                               <option selected value="-1">Seleccionar...</option>

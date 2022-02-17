@@ -25,6 +25,7 @@ class AcreditacionController extends Controller
         $estratos = Estrato::all();
         $infras = Infraestructura::all();
         $emis = Emi::all();
+
         //return $unidades;
         return view('acreditacionprimernivel.acreditaprimernivel', compact('unidades', 'municipios', 'jurisdicciones','tipologias','estratos','infras','emis'));
 
@@ -60,7 +61,7 @@ public function altaprimernivelsec3(){
 
 //---------------------------------------- Fin Tercera Seccion----------------------------------
 
-//---------------------------------------- INICIO Cuarta Seccion COCACEP----------------------------------
+//---------------------------------------- INICIO Cuarta Seccion----------------------------------
 public function altaprimernivelsec4(){
     $cocaseps = Cocasep::all();
     return view('acreditacionprimernivel.acreditacionprimernivelseccion4', compact('cocaseps'));
@@ -76,8 +77,7 @@ public function altaprimernivelsec4Show($id){
     $cocasep_data = unserialize($data->data);
     //dd($cocasep_data);
     return view('acreditacionprimernivel.acreditacionprimernivelseccion4Show', compact('cocaseps', 'cocasep_data'));
-}
-
+}    
 
 public function altaprimernivelsec4Save(Request $request){
     $data = $request->all();
@@ -92,9 +92,9 @@ public function altaprimernivelsec4Save(Request $request){
 
 //---------------------------------------- INICIO Quinta Seccion----------------------------------
 
-public function altaprimernivelsec5(){
+/*public function altaprimernivelsec5(){
     return view('acreditacionprimernivel.acreditacionprimernivelseccion5');
-}
+}*/
 //---------------------------------------- Fin Quinta Seccion----------------------------------
 
 
