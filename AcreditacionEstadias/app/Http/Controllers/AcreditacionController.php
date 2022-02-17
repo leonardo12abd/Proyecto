@@ -55,9 +55,9 @@ class AcreditacionController extends Controller
 //---------------------------------------- Fin Segunda Seccion----------------------------------
 
 //---------------------------------------- INICIO Tercera Seccion----------------------------------
-public function altaprimernivelsec3(){
+/*public function altaprimernivelsec3(){
     return view('acreditacionprimernivel.acreditacionprimernivelseccion3');
-}
+}*/
 
 //---------------------------------------- Fin Tercera Seccion----------------------------------
 

@@ -82,8 +82,7 @@
                             </tr>
 
                             <tr>
-                                <td>Gestor de calidad</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Gestor de calidad</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -95,8 +94,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Director del establecimiento</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Director del establecimiento</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -108,8 +106,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Responsable estatal de calidad</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Responsable estatal de calidad</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -121,8 +118,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Sello del establecimiento</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Sello del establecimiento</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -134,8 +130,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Nombre del establecimiento </td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Nombre del establecimiento </td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -147,8 +142,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Fecha de elaboración de la tabla</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Fecha de elaboración de la tabla</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -160,8 +154,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Tipo de evaluación(diagnóstica, sumativa, por objetivos, intermedia).</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Tipo de evaluación(diagnóstica, sumativa, por objetivos, intermedia).</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>
@@ -173,8 +166,7 @@
                                 <td><textarea class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <td>Equipo calificador(nombres y firmas de colaboradores que apoyaron el llenado de la cédula)</td>
-                                <td><input class="form-control" type="text"></td>
+                                <td colspan="2" >Equipo calificador(nombres y firmas de colaboradores que apoyaron el llenado de la cédula)</td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><center><input type="radio" class="form-check-input"></center></td>
                                 <td><input class="form-control" type="text"></td>

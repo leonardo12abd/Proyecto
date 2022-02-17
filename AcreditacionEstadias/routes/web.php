@@ -5,6 +5,7 @@ use App\Http\Controllers\DropdownController;
 use App\Http\Controllers\FirstlevelController;
 use App\Http\Controllers\IndicasController;
 use App\Http\Controllers\CalidadPercibidaController;
+use App\Http\Controllers\CtspController;
 
 
 
@@ -110,7 +111,9 @@ Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaControll
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
 
-Route::get('altaprimernivelsec3',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec3'])->name('altaprimernivelsec3');
+Route::get('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3'])->name('altaprimernivelsec3');
+Route::get('altaprimernivelsec3/{id}',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Show'])->name('altaprimernivelsec3Show');
+Route::post('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Save'])->name('altaprimernivelsec3Save');
 
 
 /** CRUD COCASEP -> INICIO*/

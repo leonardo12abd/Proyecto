@@ -37,13 +37,13 @@
                                     <tr>
                                         <th scope="row">{{$ct->nombre_ctsp}}</th>
                                         <td>
-                                            <input type="radio" name="key_{{$key}}" value="Si" required>
+                                            <input type="radio" name="key_{{$key}}" value="Si" required @if($ctsps_data['key_'.$key] == 'Si') checked @endif>
                                         </td>
                                         <td>
-                                            <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                            <input type="radio" name="key_{{$key}}" value="No" required @if($ctsps_data['key_'.$key] == 'No') checked @endif>
                                         </td>
                                         <td>
-                                            <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
+                                            <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"> {{$ctsps_data['textarea_'.$key]}} </textarea>
                                         </td>
                                     </tr>
 
