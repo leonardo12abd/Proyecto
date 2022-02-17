@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content">
-<h1>REPORTE CALIDAD PERCIBIDA</h1>
+<div><H1>aval</H1></div>
 </div>
 
 @endsection

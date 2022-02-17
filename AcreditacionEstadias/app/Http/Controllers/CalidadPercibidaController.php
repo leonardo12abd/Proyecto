@@ -24,10 +24,13 @@ class CalidadPercibidaController extends Controller
         $CalidadPercibida -> observaciones_aval = $request -> observaciones_aval;
 
        // return redirect()->route('users.avalpercibido')->with('success','Aval creado correctamente');
+       $CalidadPercibida ->save();
+
+       return redirect()->route('avalpercibido');
 
     }
 
-    public function reportecalidadpercibida(){
+    public function avalpercibido(){
 
     }
 

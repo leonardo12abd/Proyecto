@@ -13,7 +13,7 @@ class CalidadPercibida extends Model
     protected $fillable = [
         'id_aval',
         'estatus_aval',
-        'observacaiones_aval'
+        'observaciones_aval'
     ];
 
 }

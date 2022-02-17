@@ -11,6 +11,8 @@ use App\Models\Infraestructura;
 use App\Models\Municipio;
 use App\Models\Jurisdiccion;
 use App\Models\Tipologia;
+use App\Models\Cocasep;
+use App\Models\Cocacepdata;
 use Illuminate\Http\Request;
 
 class AcreditacionController extends Controller
@@ -58,9 +60,32 @@ public function altaprimernivelsec3(){
 
 //---------------------------------------- Fin Tercera Seccion----------------------------------
 
-//---------------------------------------- INICIO Cuarta Seccion----------------------------------
+//---------------------------------------- INICIO Cuarta Seccion COCACEP----------------------------------
 public function altaprimernivelsec4(){
-    return view('acreditacionprimernivel.acreditacionprimernivelseccion4');
+    $cocaseps = Cocasep::all();
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion4', compact('cocaseps'));
+}
+public function altaprimernivelsec4Show($id){
+    $cocaseps = Cocasep::all();
+    $data = Cocacepdata::find($id);
+    if(!$data){
+        return response()->json([
+            'message' => 'not found data'
+        ], 404);
+    }
+    $cocasep_data = unserialize($data->data);
+    //dd($cocasep_data);
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion4Show', compact('cocaseps', 'cocasep_data'));
+}
+
+
+public function altaprimernivelsec4Save(Request $request){
+    $data = $request->all();
+    $data = serialize($data); //! Esto es lo que guardaria en Base de dAtos
+    $cocasep = Cocacepdata::create([
+        'data' => $data
+    ]);
+    return redirect()->back();
 }
 //---------------------------------------- Fin cuarta Seccion----------------------------------
 

@@ -16,7 +16,7 @@ const selectUnidad = async () => {
     document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
     document.getElementById("tipologia_primer").value = data.id_tipologia
     document.getElementById("estrato_primer").value = data.claveestrato
-
+    localStorage.setItem('unidadData', JSON.stringify(data))
 
   } catch (error) {
     console.warn({error})
@@ -25,7 +25,7 @@ const selectUnidad = async () => {
     document.getElementById("juridiccion_primer").value = ''
     document.getElementById("tipologia_primer").value = ''
     document.getElementById("estrato_primer").value = ''
-
+    localStorage.setItem('unidadData', null)
   }
 }
 
@@ -129,3 +129,19 @@ const sumarr2 = (index) => {
   document.getElementById(`total2_${index}`).value =total_suma2
 }
 
+
+const exampleJSON = () => {
+var data =  {
+  id_clues:1,
+  tipologia : {
+    otra: '',
+  },
+  estructura_clues: {
+    basica_ampliada: 'basica o ampliada',
+    estomatologia: 'Si o No',
+    rx: 'Si o no',
+    psicologia: 'Si o no',
+    otros: ''
+  }
+}
+}

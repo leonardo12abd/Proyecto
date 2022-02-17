@@ -35,15 +35,15 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <th scope="row">Acta se encuentra actualizada, en formato oficial y número de registro asignado por el Sistema de Registro del Aval Ciudadano). MC/0038/2021.</th>
+                                <th scope="row" name=>Acta se encuentra actualizada, en formato oficial y número de registro asignado por el Sistema de Registro del Aval Ciudadano). MC/0038/2021.</th>
                                 <td>
-                                    <input class="form-check-input" type="radio"  value="NO"  id="estatu1">
+                                    <input class="form-check-input" type="radio"  value="Si"  name="estatus_aval" id="estatu1">
                                 </td>
                                 <td>
-                                    <input class="form-check-input" type="radio"  value="Si"  id="estatu2" checked>
+                                    <input class="form-check-input" type="radio"  value="No"  name="estatus_aval" id="estatu2" >
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control" rows="1" cols="10" name="observaciones_aval"></textarea>
                                 </td>
 
                               </tr>
@@ -57,7 +57,7 @@
                                     <input  type="radio"  value="NO" id="estatu4">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
 
@@ -76,8 +76,8 @@
                                 <td>
                                     <input type="radio"  value="NO" id="estatis6">
                                 </td>
-                                <td><div class="">.</div>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                <td>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
 
@@ -90,7 +90,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -102,7 +102,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -114,7 +114,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -130,7 +130,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -142,7 +142,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -156,7 +156,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -172,7 +172,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -184,7 +184,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -196,7 +196,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -208,7 +208,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -220,7 +220,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -232,7 +232,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -244,7 +244,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                               <tr>
@@ -256,7 +256,7 @@
                                     <input type="radio"  value="NO">
                                 </td>
                                 <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                    <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                 </td>
                               </tr>
                                <tr>
@@ -266,20 +266,11 @@
                                 <th scope="row" colspan="4" style="text-align: justify">Fortalezas(Compromiso del directivo, personal y aval ciudadano. Desempeño en el programa. Trato digno. Organización. Disposición. Iniciativa. Otros) y oportunidades (Actitud, estandarización de procesos, iniciativa, propuestas de mejora, seguimiento a compromisos, otros) detectadas durante la supervisión.</th>
                               </tr>
                               <tr>
-<<<<<<< HEAD
+
                                 <th scope="row">Fortalezas<textarea class="form-control" rows="1" cols="2" ></textarea></th>
                                 <th scope="row">Oportunidades<textarea class="form-control" rows="1" cols="2" ></textarea>
                                 </th>
-=======
-                                <th scope="row">Fortalezas</th>
-                                <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
-                                </td>
-                                <th scope="row">Oportunidades</th>
-                                <td>
-                                    <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
-                                </td>
->>>>>>> 6f109f992a834bbdb4b876b5771443b66a048c5f
+
 
                               </tr>
 
@@ -304,7 +295,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
@@ -317,7 +308,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
@@ -330,7 +321,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
@@ -343,7 +334,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
                                   <tr>
@@ -355,7 +346,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
                                   <tr>
@@ -367,7 +358,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
@@ -380,7 +371,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
@@ -393,7 +384,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
                                   <tr>
@@ -405,7 +396,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
                                   <tr>
@@ -417,7 +408,7 @@
                                         <input type="radio"  value="NO">
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="observaciones_aval" rows="1" cols="10" ></textarea>
+                                        <textarea class="form-control"   rows="1" cols="10" ></textarea>
                                     </td>
                                   </tr>
 
