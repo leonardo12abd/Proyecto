@@ -3,37 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Models\CalidadPercibida;
-use Illuminate\Http\Request;
 use  App\Models\Calidadpercibidadata;
+use Illuminate\Http\Request;
 
 
 class CalidadPercibidaController extends Controller
 {
     public function altaprimernivelsec2(){
-        $calidadperc = CalidadPercibida::all();
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2',compact('calidadperc'));
+        $calidadpers = CalidadPercibida::all();
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2',compact('calidadpers'));
 
     }
 
     public function altaprimernivelsec2Show($id){
-        $calidadperc = CalidadPercibida::all();
-        $data = Calidadpercibidadata::find($id);
-        if(!$data){
+        $calidadpers = CalidadPercibida::all();
+        $data3 = Calidadpercibidadata::find($id);
+        if(!$data3){
             return response()->json([
                 'message' => 'not found data'
             ], 404);
         }
-        $CalidadPercibida_data = unserialize($data->data);
+        $calidadpers_data = unserialize($data3->data3);
         //dd($cocasep_data);
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadperc', 'CalidadPercibida_data'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadpers', 'calidadpers_data'));
     }
 
     //Guarda avalpercibido
     public function altaprimernivelsec2Save(Request $request){
-        $data = $request->all();
-        $data = serialize($data); //! Esto es lo que guardaria en Base de dAtos
-        $calidadperc = Calidadpercibidadata::create([
-            'data' => $data
+        $data3 = $request->all();
+        $data3 = serialize($data3); //! Esto es lo que guardaria en Base de dAtos
+        $calidadper = Calidadpercibidadata::create([
+            'data3' => $data3
         ]);
         return redirect()->back();
     }

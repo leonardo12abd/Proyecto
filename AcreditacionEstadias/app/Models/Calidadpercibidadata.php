@@ -12,6 +12,6 @@ class Calidadpercibidadata extends Model
     protected $table = 'aval_ciudadano_save';
     protected $fillable = [
         'id',
-        'data',
+        'data3',
     ];
 }
