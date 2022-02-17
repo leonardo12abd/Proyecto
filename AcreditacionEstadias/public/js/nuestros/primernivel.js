@@ -106,5 +106,26 @@ const sumarr = (index) => {
   document.getElementById(`total_${index}`).value =total_suma
 }
 
+const sumarr2 = (index) => {
+  const fachada2 = parseInt(document.getElementById(`fachada2_${index}`).value || 0)
+  const salaespera2 = parseInt(document.getElementById(`salaespera2_${index}`).value || 0)
+  const sanitario2 = parseInt(document.getElementById(`sanitario2_${index}`).value || 0)
+  const consultorio2 = parseInt(document.getElementById(`consultorio2_${index}`).value || 0)
+  const medicina2 = parseInt(document.getElementById(`medicinaprev2_${index}`).value || 0)
+  const farmacia2 = parseInt(document.getElementById(`farmacia2_${index}`).value || 0)
+  const esterilizacion2 = parseInt(document.getElementById(`esterilizacion2_${index}`).value || 0)
+  const otrasareas2 = parseInt(document.getElementById(`otrasareas2_${index}`).value || 0)
 
+  var total_suma2 =
+  fachada2 +
+  salaespera2 +
+  sanitario2 +
+  consultorio2 +
+  medicina2 +
+  farmacia2 +
+  esterilizacion2+
+  otrasareas2
+
+  document.getElementById(`total2_${index}`).value =total_suma2
+}
 

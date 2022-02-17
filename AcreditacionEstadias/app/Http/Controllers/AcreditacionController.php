@@ -7,6 +7,7 @@ use App\Models\primernivel;
 use App\Models\Unidad;
 use App\Models\Emi;
 use App\Models\Estrato;
+use App\Models\Infraestructura;
 use App\Models\Municipio;
 use App\Models\Jurisdiccion;
 use App\Models\Tipologia;
@@ -20,9 +21,10 @@ class AcreditacionController extends Controller
         $jurisdicciones = Jurisdiccion::all();
         $tipologias = Tipologia::all();
         $estratos = Estrato::all();
+        $infras = Infraestructura::all();
         $emis = Emi::all();
         //return $unidades;
-        return view('acreditacionprimernivel.acreditaprimernivel', compact('unidades', 'municipios', 'jurisdicciones','tipologias','estratos', 'emis'));
+        return view('acreditacionprimernivel.acreditaprimernivel', compact('unidades', 'municipios', 'jurisdicciones','tipologias','estratos','infras','emis'));
 
     }
 
