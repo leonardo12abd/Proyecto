@@ -30,7 +30,7 @@
                                 <th scope="col" style="background-color: rgb(169, 223, 191);">OBSERVACIONES</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <!--<tbody>
                               <tr>
                                 <th scope="row">El establecimiento cuenta con Acta de COCASEP (original si es COCASEP local, copia si es COCASEP Jurisdiccional o de Coordinación) en formato federal.</th>
                                 <td>
@@ -85,7 +85,7 @@
                                 </td>
                               </tr>
 
-                              <tbody>
+                             <tbody>
                                 <th scope="row" colspan="4" style="background-color: rgb(169, 223, 191);">Calendario de Sesiones Ordinarias del Comité de Calidad y Seguridad del Paciente (COCASEP)</th>
 
                               </tbody>
@@ -221,8 +221,7 @@
                                   </tr>
 
                                   <tr>
-                                    <th scope="row">En las Minutas se encuentra evidencia de la generación de alguna acción para mejorar los tiempos de espera y satisfacción del usuario.
-</th>
+                                    <th scope="row">En las Minutas se encuentra evidencia de la generación de alguna acción para mejorar los tiempos de espera y satisfacción del usuario.</th>
                                     <td>
                                         <input type="radio">
                                     </td>
@@ -235,8 +234,7 @@
                                   </tr>
 
                                   <tr>
-                                    <th scope="row">En las Minutas se encuentra evidencia del seguimiento a los resultados de evaluación de MECIC
-</th>
+                                    <th scope="row">En las Minutas se encuentra evidencia del seguimiento a los resultados de evaluación de MECIC</th>
                                     <td>
                                         <input type="radio">
                                     </td>
@@ -248,8 +246,7 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">En las Minutas se encuentra participación del Aval Ciudadano como INVITADO en por lo menos una sesión al año
-</th>
+                                    <th scope="row">En las Minutas se encuentra participación del Aval Ciudadano como INVITADO en por lo menos una sesión al año</th>
                                     <td>
                                         <input type="radio">
                                     </td>
@@ -261,8 +258,7 @@
                                     </td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">En la Minuta de la última sesión del año se consideró dentro del orden del día la presentación del cronograma de aperturas de buzón del siguiente año.
-</th>
+                                    <th scope="row">En la Minuta de la última sesión del año se consideró dentro del orden del día la presentación del cronograma de aperturas de buzón del siguiente año.</th>
                                     <td>
                                         <input type="radio">
                                     </td>
@@ -634,7 +630,7 @@
                                     </td>
                                   </tr>
 
-                            </tbody>
+                            </tbody>-->
 
                           </table>
                     </div>
