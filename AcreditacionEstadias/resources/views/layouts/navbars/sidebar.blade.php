@@ -5,7 +5,7 @@
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-   <center> <a href="#" class="logo-normal" style="color: black">
+   <center> <a class="logo-normal" style="color: black">
       {{ __('INSTITUTO DE SALUD DEL ESTADO DE MÉXICO
             ÁREA ESTATAL DE CALIDAD') }}
 
@@ -17,15 +17,15 @@
     <ul class="nav">
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
-          <i class="material-icons">dashboard</i>
-            <p>{{ __('Panel de control') }}</p>
+          <i class="material-icons">masks</i>
+            <p>{{ __('INICIO') }}</p>
         </a>
       </li>
       {{-- Select --}}
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
             <i class="material-icons">
-                medical_information
+                emergency
             </i>
           <p>{{ __('Contenido') }}
             <b class="caret"></b>
@@ -90,6 +90,12 @@
 
 
       </li>
+
+
+      {{-- Calidad Percibida --}}
+
+
+
 
        {{-- Select Fin --}}
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">

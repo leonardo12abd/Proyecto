@@ -1,4 +1,4 @@
-@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('Calidad Acreditacion')])
+@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('ÁREA ESTATAL DE CALIDAD')])
 
 @section('content')
 
@@ -12,12 +12,10 @@
         @csrf
 
         <div class="card card-login card-hidden mb-3">
-          <div class="card-header card-header-info text-center">
-            <h4 class="card-title"><strong>{{ __('Calidad Edomex') }}</strong></h4>
+          <div class="card-header card-header-warning text-center">
+            <h4 class="card-title"><strong>{{ __('INSTITUTO DE SALUD DEL ESTADO DE MÉXICO
+                ÁREA ESTATAL DE CALIDAD') }}</strong></h4>
             <div class="social-line">
-
-            <i class="fas fa-laptop-medical"></i>
-
             </div>
           </div>
           <div class="card-body">
@@ -81,10 +79,10 @@
         </div>
       </form>
       <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             @if (Route::has('password.request'))
                 <a href="{{ route('password.request') }}" class="text-light">
-                    <small>{{ __('¿Has olvidado la contraseña?') }}</small>
+                    <center><small>{{ __('¿Has olvidado la contraseña?') }}</small></center>
                 </a>
             @endif
         </div>

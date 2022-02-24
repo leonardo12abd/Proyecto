@@ -38,5 +38,10 @@ class CalidadPercibidaController extends Controller
         return redirect()->back();
     }
 
+    public function reporteavalpercibido(){
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte');
+    }
+
 
 }

@@ -2,13 +2,16 @@
     <div class="container">
         <nav class="float-left">
         <ul>
-</ul> 
+</ul>
         </nav>
         <div class="copyright float-right">
-        &copy;
-        <script>
-            document.write(new Date().getFullYear())
-        </script>, Acreditación Calidad <i class="fas fa-clinic-medical"></i> Marca Registrada
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script> CALIDAD EDOMEX
+            <span class="material-icons">
+                settings_system_daydream
+            </span> Marca Registrada
         </div>
     </div>
 </footer>

@@ -11,12 +11,16 @@
 
                 <div class="card">
                         <div class="card text-white bg-danger" style="max-heigth: 18rem;">
-                          <center>  <h4 class="card-tittle">Acreditación de Primer Nivel
-                                </h4></center>
+                          <center>  <h4 class="card-tittle">
+                                    Acreditación de Primer Nivel
+                                    </h4>
 
-
-                          <center><label >Fecha de Visita: </label>  <input type="date" name="fecha_primernivel"></center>
+                                <div class="col-3">
+                                <label >Fecha de Visita: </label>
+                                <input type="date" name="fecha_primernivel" class="form-control">
+                            </center>
                         </div>
+                </div>
 
 
                         {{-- Inicia la primer Seccion --}}
@@ -754,7 +758,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+
+                        {{-- Recursos HUmanos --}}
+
+                   {{--      <div class="row">
                           <div class="col-md-12">
                             <div id="map_rh"></div>
 
@@ -763,6 +770,72 @@
                             <input onclick="addRH()" value="Agregar fila" type="button">
                           </div>
                         </div>
+ --}}
+
+                        {{-- Recursos HUmanos --}}
+
+
+                        <div class="table-responsive">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr class="table-info">
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"><center>SERVICIO SOCIAL</center></th>
+                                <th colspan="4"><center>PERSONAL ISEM</center></th>
+                                <th scope="col"></th>
+                                <th colspan="6"><center>CAPACITACIONES</center></th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <thead>
+                                <tr class="table-warning">
+                                  <th scope="col"><center>RH</center>
+                                                <center>(requisitar en base a su oferta de servicios)</center></th>
+                                  <th scope="col"><center>Descripción Puesto</center></th>
+                                  <th scope="col"><center>Carta de Asignación Campo Clinico al establecimiento(personal en servicio social)</center> </th>
+                                  <th scope="col">Titulo</th>
+                                  <th scope="col">Cédula</th>
+                                  <th scope="col"><center>Tipo de contratación (base, formalizado, regularizado, comisionado)</center></th>
+                                  <th scope="col"><center>Documento de Adscripción</center></th>
+                                  <th scope="col"><center>Estomatologo Cartilla vacunación</center></th>
+                                  <th scope="col"><center>Prevención de icendios y atencion de emergencias</center></th>
+                                  <th scope="col"><center>Interculturalidad</center></th>
+                                  <th scope="col"><center>Cuidados Paliativos</center></th>
+                                  <th scope="col"><center>Programa integral higiene de manos</center></th>
+                                  <th scope="col"><center>Acciones Escenciales</center></th>
+                                  <th scope="col"><center>Estomatologo RCP basico</center></th>
+                                  <th scope="col"><center>Observaciones</center></th>
+                                </tr>
+                              </thead>
+
+                            <tbody id="map_rh">
+                              <tr>
+                             <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="addRH()" >Agregar Nuevo</button>
+
+
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+
+                          </table>
+                        </div>
+
 
                         <br><br>
 
