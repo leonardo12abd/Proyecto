@@ -6,6 +6,8 @@ use App\Http\Controllers\FirstlevelController;
 use App\Http\Controllers\IndicasController;
 use App\Http\Controllers\CalidadPercibidaController;
 use App\Http\Controllers\CtspController;
+use App\Http\Controllers\ApoyosController;
+
 
 
 
@@ -129,5 +131,7 @@ Route::post('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class
 
 
 
-Route::get('altaprimernivelsec6',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
+Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
+Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Show'])->name('altaprimernivelsec6Show');
+Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec5Save');
 
