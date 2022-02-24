@@ -21,7 +21,9 @@
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
                         <table class="table">
-                            <thead class="thead-dark">
+                            @foreach($apoyos as $key => $apo)
+                            @if($key == 0 || $apoyos[$key-1]->nombre_apoyos != $apo->nombre_apoyos)
++                            <thead class="thead-dark">
                               <tr>
                                 <th scope="col" style="background-color: #AEB6BF"><center> CÉDULA DE MADUREZ MODELO DE GESTIÓN DE CALIDAD</center></th>
                                 <th scope="col" style="background-color: #AEB6BF"></th>
@@ -36,6 +38,7 @@
                                 <th scope="col" style="background-color: #AEB6BF">OBSERVACIONES</th>
                               </tr>
                             </thead>
+                            @endif
                             <thead class="thead-dark">
                                 <tr>
                                   <th scope="col" style="background-color: #D6DBDF"></th>
@@ -50,135 +53,173 @@
                                   <th scope="col" style="background-color: #D6DBDF"><center>NO CUMPLE</center></th>
                                   <th scope="col" style="background-color: #D6DBDF"><center>OBSERVACIONES</center></th>
                                 </tr>
-                              </thead>
+                            </thead>
+
                             <tbody>
-
-                            <tr>
-                                <td>Cuenta con cédula de madurez MGC</td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-
-                            <tr>
-                                <td>Cuenta con firmas:</td>
-                                <td><input disabled class="form-control" type="text"></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><input disabled class="form-control" type="text"></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><input disabled class="form-control" type="text"></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                <td><textarea disabled class="form-control"></textarea></td>
-                            </tr>
-
-                            <tr>
-                                <td colspan="2" >Gestor de calidad</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Director del establecimiento</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Responsable estatal de calidad</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Sello del establecimiento</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Nombre del establecimiento </td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Fecha de elaboración de la tabla</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Tipo de evaluación(diagnóstica, sumativa, por objetivos, intermedia).</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" >Equipo calificador(nombres y firmas de colaboradores que apoyaron el llenado de la cédula)</td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><input class="form-control" type="text"></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><center><input type="radio" class="form-check-input"></center></td>
-                                <td><textarea class="form-control"></textarea></td>
-                            </tr>
-
+                                <tr>
+                                    <th scope="row">{{$apo->nombre_apoyos}}</th>
+                                    <td>
+                                        <input type="text" name="key_{{$key}}"  required>
+                                    </td>                                    
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="key_{{$key}}"  required>
+                                    </td>                                    
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="key_{{$key}}"  required>
+                                    </td>                                    
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                    </td>
+                                    <td>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
+                                    </td>
+                                </tr>
                             </tbody>
-</div>
+                            @endforeach
+                            
+                            <!--<tbody>
+
+                                <tr>
+                                    <td>Cuenta con cédula de madurez MGC</td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Cuenta con firmas:</td>
+                                    <td><input disabled class="form-control" type="text"></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><input disabled class="form-control" type="text"></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><input disabled class="form-control" type="text"></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
+                                    <td><textarea disabled class="form-control"></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" >Gestor de calidad</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Director del establecimiento</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Responsable estatal de calidad</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Sello del establecimiento</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Nombre del establecimiento </td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Fecha de elaboración de la tabla</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Tipo de evaluación(diagnóstica, sumativa, por objetivos, intermedia).</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" >Equipo calificador(nombres y firmas de colaboradores que apoyaron el llenado de la cédula)</td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><center><input type="radio" class="form-check-input"></center></td>
+                                    <td><textarea class="form-control"></textarea></td>
+                                </tr>
+
+                            </tbody>-->
+                    </div>
 
 @endsection
