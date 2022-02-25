@@ -21,9 +21,7 @@
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
                         <table class="table">
-                            @foreach($apoyos as $key => $apo)
-                            @if($key == 0 || $apoyos[$key-1]->nombre_apoyos != $apo->nombre_apoyos)
-+                            <thead class="thead-dark">
+                        <thead class="thead-dark">
                               <tr>
                                 <th scope="col" style="background-color: #AEB6BF"><center> CÉDULA DE MADUREZ MODELO DE GESTIÓN DE CALIDAD</center></th>
                                 <th scope="col" style="background-color: #AEB6BF"></th>
@@ -38,7 +36,6 @@
                                 <th scope="col" style="background-color: #AEB6BF">OBSERVACIONES</th>
                               </tr>
                             </thead>
-                            @endif
                             <thead class="thead-dark">
                                 <tr>
                                   <th scope="col" style="background-color: #D6DBDF"></th>
@@ -54,44 +51,44 @@
                                   <th scope="col" style="background-color: #D6DBDF"><center>OBSERVACIONES</center></th>
                                 </tr>
                             </thead>
-
                             <tbody>
+                            @foreach($apoyos as $key => $apo)
                                 <tr>
                                     <th scope="row">{{$apo->nombre_apoyos}}</th>
                                     <td>
-                                        <input type="text" name="key_{{$key}}"  required>
-                                    </td>                                    
-                                    <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                        <input type="text" name="puntaje_0_{{$key}}"  required>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                        <input type="radio" name="key_0_{{$key}}" value="Si" required>
                                     </td>
                                     <td>
-                                        <input type="text" name="key_{{$key}}"  required>
-                                    </td>                                    
-                                    <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_0_{{$key}}" checked value="No" required>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                        <input type="text" name="puntaje_1_{{$key}}"  required>
                                     </td>
                                     <td>
-                                        <input type="text" name="key_{{$key}}"  required>
-                                    </td>                                    
-                                    <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_1_{{$key}}" value="Si" required>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" checked value="No" required>
+                                        <input type="radio" name="key_1_{{$key}}" checked value="No" required>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="puntaje_2_{{$key}}"  required>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="key_2_{{$key}}" value="Si" required>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="key_2_{{$key}}" checked value="No" required>
                                     </td>
                                     <td>
                                         <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
-                            @endforeach
-                            
+
                             <!--<tbody>
 
                                 <tr>

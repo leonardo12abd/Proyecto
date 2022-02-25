@@ -23,7 +23,8 @@ use App\Http\Controllers\ApoyosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
+    //return view('welcome');
 });
 
 
@@ -135,3 +136,4 @@ Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'
 Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Show'])->name('altaprimernivelsec6Show');
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec5Save');
 
+;
