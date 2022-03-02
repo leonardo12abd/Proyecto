@@ -118,22 +118,27 @@ Route::get('reporteavalciudadano',[App\Http\Controllers\CalidadPercibidaControll
 Route::get('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3'])->name('altaprimernivelsec3');
 Route::get('altaprimernivelsec3/{id}',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Show'])->name('altaprimernivelsec3Show');
 Route::post('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Save'])->name('altaprimernivelsec3Save');
+Route::get('reportecalidadtsp',[App\Http\Controllers\CtspController::class,'reportecalidadtsp'])->name('reportecalidadtsp');
 
 
 /** CRUD COCASEP -> INICIO*/
 Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
 Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Show'])->name('altaprimernivelsec4Show');
 Route::post('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
+Route::get('reportecocasep',[App\Http\Controllers\AcreditacionController::class,'reportecocasep'])->name('reportecocasep');
+
 /** FIN -> CRUD COCASEP */
 
 Route::get('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
 Route::get('altaprimernivelsec5/{id}',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5Show'])->name('altaprimernivelsec5Show');
 Route::post('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5Save'])->name('altaprimernivelsec5Save');
+Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'reporteindicas'])->name('reporteindicas');
 
 
 
 Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
 Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Show'])->name('altaprimernivelsec6Show');
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec5Save');
+Route::get('reporteapei',[App\Http\Controllers\ApoyosController::class,'reporteapei'])->name('reporteapei');
 
 ;

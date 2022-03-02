@@ -12,7 +12,7 @@ class ApoyosController extends Controller
         $apoyos = Apoyo::all();
         return view('acreditacionprimernivel.acreditacionprimernivelseccion6', compact('apoyos'));
     }
-    
+
     public function altaprimernivelsec6Show($id){
         $apoyos = Apoyo::all();
         $data4 = Apoyodata::find($id);
@@ -32,5 +32,10 @@ class ApoyosController extends Controller
             'data4' => $data4
         ]);
         return redirect()->back();
+    }
+
+    public function reporteapei(){
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Reporte');
     }
 }

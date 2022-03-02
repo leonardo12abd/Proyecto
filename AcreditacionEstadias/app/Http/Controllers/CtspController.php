@@ -32,4 +32,9 @@ class CtspController extends Controller
         ]);
         return redirect()->back();
    }
+
+   public function reportecalidadtsp(){
+
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion3Reporte');
+}
 }

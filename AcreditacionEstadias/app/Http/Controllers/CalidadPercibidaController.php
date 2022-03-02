@@ -5,13 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\CalidadPercibida;
 use  App\Models\Calidadpercibidadata;
 use Illuminate\Http\Request;
+use App\Models\Unidad;
+use App\Models\Municipio;
+use App\Models\Tipologia;
+
+use App\Models\Jurisdiccion;
+
 
 
 class CalidadPercibidaController extends Controller
 {
     public function altaprimernivelsec2(){
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
+
         $calidadpers = CalidadPercibida::all();
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2',compact('calidadpers'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2',compact('calidadpers','unidades', 'municipios', 'jurisdicciones','tipologias'));
 
     }
 

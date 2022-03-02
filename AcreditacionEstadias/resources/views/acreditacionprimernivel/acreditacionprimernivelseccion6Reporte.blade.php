@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'CALIDAD PERCIBIDA'])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'APOYOS E INCENTIVOS'])
 @section('content')
 
 
@@ -10,8 +10,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-warning">
-                                <h4 class="card-tittle">CALIDAD PERCIBIDA</h4>
-                                <p class="card-category">Aval Ciudadano</p>
+                                <h4 class="card-tittle">APOYOS E INCENTIVOS</h4>
+                                <p class="card-category">APOYOS E INCENTIVOS</p>
                             </div>
                             <div class="card-body">
 
@@ -26,7 +26,7 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Calidad Percibida</a>
+                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Apoyos e Incentivos</a>
                                     </div>
 
                                     <div class="col-12 text-left">

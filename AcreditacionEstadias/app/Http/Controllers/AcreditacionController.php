@@ -77,7 +77,7 @@ public function altaprimernivelsec4Show($id){
     $cocasep_data = unserialize($data->data);
     //dd($cocasep_data);
     return view('acreditacionprimernivel.acreditacionprimernivelseccion4Show', compact('cocaseps', 'cocasep_data'));
-}    
+}
 
 public function altaprimernivelsec4Save(Request $request){
     $data = $request->all();
@@ -86,6 +86,11 @@ public function altaprimernivelsec4Save(Request $request){
         'data' => $data
     ]);
     return redirect()->back();
+}
+
+public function reportecocasep(){
+
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion4Reporte');
 }
 //---------------------------------------- Fin cuarta Seccion----------------------------------
 

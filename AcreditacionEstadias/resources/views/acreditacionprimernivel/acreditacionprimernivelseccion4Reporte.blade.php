@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'CALIDAD PERCIBIDA'])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'LINEA COCASEP / MEJORA CONTINUA'])
 @section('content')
 
 
@@ -9,9 +9,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header card-header-warning">
-                                <h4 class="card-tittle">CALIDAD PERCIBIDA</h4>
-                                <p class="card-category">Aval Ciudadano</p>
+                            <div class="card-header card-header-success">
+                                <h4 class="card-tittle">LINEA COCASEP / MEJORA CONTINUA</h4>
+                                <p class="card-category">Linea COCASEP</p>
                             </div>
                             <div class="card-body">
 
@@ -26,7 +26,7 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Calidad Percibida</a>
+                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Linea Coasep / Mejora Continua</a>
                                     </div>
 
                                     <div class="col-12 text-left">

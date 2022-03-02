@@ -301,3 +301,204 @@ var data =  {
   }
 }
 }
+
+const changeEstructuraClue = () => {
+
+    const valida = document.getElementById('estructura_clues1').checked
+    if(valida){
+      document.getElementById('get_estructura_clues').innerHTML = `
+       <div>
+          <div class="row">
+
+            <div class="col-3">
+                <label>Estomatología: </label> <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="estomatologia_estruclues" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="estomatologia_estruclues" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+                    </label>
+                  </div>
+            </div>
+            <div class="col-3">
+                <label>Psicología: </label> <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="psicologia_estruclues" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="psicologia_estruclues" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+                    </label>
+                  </div>
+            </div>
+            <div class="col-3">
+                <label>Trabajo Social: </label> <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="tbsocial_estruclues" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="tbsocial_estruclues" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+                    </label>
+                  </div>
+            </div>
+            <div class="col-3">
+                <label>Laboratorio: </label> <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input name="laboratorio_estruclues" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                        <span class="form-check-sign">
+
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input name="laboratorio_estruclues" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                        <span class="form-check-sign">
+
+                        </span>
+                      </label>
+                    </div>
+            </div>
+          </div>
+          <div>
+            <div class="col-3">
+                <label>RX: </label> <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="rx_estruclues" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                      <span class="form-check-sign">
+
+                      </span>
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input name="rx_estruclues" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                      <span class="form-check-sign">
+
+                      </span>
+                    </label>
+                  </div>
+
+            </div>
+            <div class="col-3">
+              <input type="text" name="otro_estruclues" id="" class="form-control" placeholder="Otro:">
+            </div>
+          </div>
+        </div>
+      `
+    }else{
+      // DEJAR VACIO
+      document.getElementById('get_estructura_clues').innerHTML =''
+    }
+  }
+
+
+  const changeEstructuraReal = () => {
+
+    const valida2 = document.getElementById('estructura_real1').checked
+    if(valida2){
+      document.getElementById('get_estructura_real').innerHTML = `
+       <div>
+          <div class="row">
+
+            <div class="col-3">
+   <label>Estomatología: </label> <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input name="estomatologia_estrucreal" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input name="estomatologia_estrucreal" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+        </label>
+      </div>
+</div>
+<div class="col-3">
+    <label>Psicología: </label> <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input name="psicologia_estrucreal" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input name="psicologia_estrucreal" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+        </label>
+      </div>
+</div>
+<div class="col-3">
+    <label>Trabajo Social: </label> <div class="form-check form-check-inline">
+       <label class="form-check-label">
+          <input name="tb_estrucreal" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input name="tb_estrucreal" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+
+        </label>
+      </div>
+</div>
+
+<div class="col-3">
+    <label>Laboratorio: </label> <div class="form-check form-check-inline">
+        <label class="form-check-label">
+           <input name="lb_estrucreal" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+           <span class="form-check-sign">
+
+           </span>
+         </label>
+       </div>
+       <div class="form-check form-check-inline">
+         <label class="form-check-label">
+           <input name="lb_estrucreal" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+           <span class="form-check-sign">
+
+           </span>
+         </label>
+       </div>
+</div>
+
+<div class="col-3">
+    <label>RX: </label> <div class="form-check form-check-inline">
+        <label class="form-check-label">
+           <input name="rx_estrucreal" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+           <span class="form-check-sign">
+
+           </span>
+         </label>
+       </div>
+       <div class="form-check form-check-inline">
+         <label class="form-check-label">
+           <input name="rx_estrucreal" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+           <span class="form-check-sign">
+
+           </span>
+         </label>
+       </div>
+
+</div>
+<div class="col-3">
+<input type="text" name="otro_estrucreal" id="" class="form-control" placeholder="Otro:">
+</div>
+      `
+    }else{
+      // DEJAR VACIO
+      document.getElementById('get_estructura_real').innerHTML =''
+    }
+  }

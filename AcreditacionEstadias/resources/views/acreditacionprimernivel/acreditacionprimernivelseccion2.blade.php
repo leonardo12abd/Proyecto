@@ -1,6 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
+
+<div class="card-body">
 
 <div class="content">
     <form action="/altaprimernivelsec2" method="POST">

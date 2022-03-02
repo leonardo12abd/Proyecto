@@ -32,4 +32,8 @@ class IndicasController extends Controller
           ]);
           return redirect()->back();
      }
+     public function reporteindicas(){
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion5Reporte');
+    }
 }
