@@ -434,7 +434,8 @@
 
         <center><button type="submit" class="btn btn-primary btn-round">
             <i class="far fa-save"></i> Guardar
-          </button></center>
+          </button>
+        </center>
         </div>
     </form>
 

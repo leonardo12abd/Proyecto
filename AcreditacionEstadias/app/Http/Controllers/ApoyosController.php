@@ -22,7 +22,7 @@ class ApoyosController extends Controller
             ], 404);
         }
         $apoyos_data = unserialize($data4->data4);
-        return view('acreditacionprimernivel.acreditacionprimernnivelseccion6Show', compact('apoyos', 'apoyos_data'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Show', compact('apoyos', 'apoyos_data'));
     }
 
     public function altaprimernivelsec6Save(Request $request){
