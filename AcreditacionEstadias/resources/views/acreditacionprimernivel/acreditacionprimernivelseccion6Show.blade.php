@@ -7,7 +7,6 @@
         {{ csrf_field() }}
 
         <div class="container-fluid">
-
         <div class="row">
 
 
@@ -20,7 +19,7 @@
 
 
                         {{-- Inicia la primer Seccion --}}
-                    <div class="table-responsive">
+                    <div class="card-body">
                         <table class="table">
                         <thead class="thead-dark">
                               <tr>
@@ -36,7 +35,7 @@
                                 <th scope="col" style="background-color: #AEB6BF"></th>
                                 <th scope="col" style="background-color: #AEB6BF">OBSERVACIONES</th>
                               </tr>
-                        </thead>
+                            </thead>
                             <thead class="thead-dark">
                                 <tr>
                                   <th scope="col" style="background-color: #D6DBDF"></th>
@@ -57,31 +56,31 @@
                                 <tr>
                                     <th scope="row">{{$apo->nombre_apoyos}}</th>
                                     <td>
-                                        <input type="text" name="puntaje_0_{{$key}}"  required>
+                                        <input type="text" name="puntaje_0_{{$key}}"  required >
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_0_{{$key}}" value="Si" required @if($apoyos_data['key_0_'] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" checked value="No" required>
+                                        <input type="radio" name="key_0_{{$key}}" value="No" required @if($apoyos_data['key_0_'] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_1_{{$key}}"  required>
+                                        <input type="text" name="puntaje_1_{{$key}}" required >
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_1_{{$key}}" value="Si" required @if($apoyos_data['key_1_'] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}" checked value="No" required>
+                                        <input type="radio" name="key_1_{{$key}}"  value="No" required @if($apoyos_data['key_1_'] == 'No') checked @endif>
                                     </td>
                                     <td>
                                         <input type="text" name="puntaje_2_{{$key}}"  required>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_2_{{$key}}" value="Si" required @if($apoyos_data['key_2_'] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" checked value="No" required>
+                                        <input type="radio" name="key_2_{{$key}}" value="No" required @if($apoyos_data['key_2_'] == 'No') checked @endif>
                                     </td>
                                     <td>
                                         <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
@@ -90,8 +89,6 @@
                                 @endforeach
                             </tbody>
 
-<<<<<<< HEAD
-=======
                             <!--<tbody>
 
                                 <tr>
@@ -220,19 +217,11 @@
                                 </tr>
 
                             </tbody>-->
->>>>>>> 58516fb434e001ae10c4dd06887cc01d21f938e1
-                        </table>
+                            <center>
+                                <button type="submit" class="btn btn-primary btn-round">
+                                <i class="far fa-save"></i> Guardar
+                                </button>
+                            </center>
                     </div>
-                </div>
-        </div>
-        <center>
-            <button type="submit" class="btn btn-primary btn-round">
-                <i class="far fa-save"></i> Guardar
-            </button>
-        </center>
-        </div>
-    </form>
-</div>
-
 
 @endsection
