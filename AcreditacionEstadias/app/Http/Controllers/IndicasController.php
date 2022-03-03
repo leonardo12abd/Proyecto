@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Indica;
 use App\Models\Indicadata;
 use Illuminate\Http\Request;
+use App\Models\Unidad;
+use App\Models\Municipio;
+use App\Models\Tipologia;
+use App\Models\Jurisdiccion;
+
 
 class IndicasController extends Controller
 {
      public function altaprimernivelsec5(){
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
           $indicas = Indica::all();
-          return view('acreditacionprimernivel.acreditacionprimernivelseccion5', compact('indicas'));
+          return view('acreditacionprimernivel.acreditacionprimernivelseccion5', compact('indicas','unidades', 'municipios', 'jurisdicciones','tipologias'));
      }
      public function altaprimernivelsec5Show($id){
           $indicas = Indica::all();

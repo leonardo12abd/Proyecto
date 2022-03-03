@@ -63,8 +63,12 @@ class AcreditacionController extends Controller
 
 //---------------------------------------- INICIO Cuarta Seccion----------------------------------
 public function altaprimernivelsec4(){
+    $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
     $cocaseps = Cocasep::all();
-    return view('acreditacionprimernivel.acreditacionprimernivelseccion4', compact('cocaseps'));
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion4', compact('cocaseps','unidades', 'municipios', 'jurisdicciones','tipologias'));
 }
 public function altaprimernivelsec4Show($id){
     $cocaseps = Cocasep::all();

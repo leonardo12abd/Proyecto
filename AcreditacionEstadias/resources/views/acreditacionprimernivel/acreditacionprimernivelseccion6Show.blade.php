@@ -56,167 +56,38 @@
                                 <tr>
                                     <th scope="row">{{$apo->nombre_apoyos}}</th>
                                     <td>
-                                        <input type="text" name="puntaje_0_{{$key}}"  required >
+                                        <input type="text" name="puntaje_0_{{$key}}"  required value="{{ $apoyos_data['puntaje_0_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" value="Si" required @if($apoyos_data['key_0_'] == 'Si') checked @endif>
+                                        <input type="radio" name="key_0_{{$key}}" value="Si" required @if($apoyos_data['key_0_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" value="No" required @if($apoyos_data['key_0_'] == 'No') checked @endif>
+                                        <input type="radio" name="key_0_{{$key}}" value="No" required @if($apoyos_data['key_0_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_1_{{$key}}" required >
+                                        <input type="text" name="puntaje_1_{{$key}}" required value="{{ $apoyos_data['puntaje_1_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}" value="Si" required @if($apoyos_data['key_1_'] == 'Si') checked @endif>
+                                        <input type="radio" name="key_1_{{$key}}" value="Si" required @if($apoyos_data['key_1_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}"  value="No" required @if($apoyos_data['key_1_'] == 'No') checked @endif>
+                                        <input type="radio" name="key_1_{{$key}}"  value="No" required @if($apoyos_data['key_1_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_2_{{$key}}"  required>
+                                        <input type="text" name="puntaje_2_{{$key}}"  required value="{{ $apoyos_data['puntaje_2_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" value="Si" required @if($apoyos_data['key_2_'] == 'Si') checked @endif>
+                                        <input type="radio" name="key_2_{{$key}}" value="Si" required @if($apoyos_data['key_2_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" value="No" required @if($apoyos_data['key_2_'] == 'No') checked @endif>
+                                        <input type="radio" name="key_2_{{$key}}" value="No" required @if($apoyos_data['key_2_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$apoyos_data['textarea_'.$key]}}</textarea>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
-
-                            <!--<tbody>
-
-                                <tr>
-                                    <td>Cuenta con cédula de madurez MGC</td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-
-                                <tr>
-                                    <td>Cuenta con firmas:</td>
-                                    <td><input disabled class="form-control" type="text"></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><input disabled class="form-control" type="text"></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><input disabled class="form-control" type="text"></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><center><input disabled type="radio" class="form-check-input"></center></td>
-                                    <td><textarea disabled class="form-control"></textarea></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="2" >Gestor de calidad</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Director del establecimiento</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Responsable estatal de calidad</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Sello del establecimiento</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Nombre del establecimiento </td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Fecha de elaboración de la tabla</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Tipo de evaluación(diagnóstica, sumativa, por objetivos, intermedia).</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" >Equipo calificador(nombres y firmas de colaboradores que apoyaron el llenado de la cédula)</td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><input class="form-control" type="text"></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><center><input type="radio" class="form-check-input"></center></td>
-                                    <td><textarea class="form-control"></textarea></td>
-                                </tr>
-
-                            </tbody>-->
                             <center>
                                 <button type="submit" class="btn btn-primary btn-round">
                                 <i class="far fa-save"></i> Guardar
@@ -225,3 +96,4 @@
                     </div>
 
 @endsection
+

@@ -6,27 +6,62 @@ const rh_map = [
     accion_escenciales:'', estomatologo_rcp:'', observaciones:''}
 ]
 
-const selectUnidad = async () => {
+const selectUnidad = async ({vista='alta_primer_nivel'}) => {
+  console.log({vista})
   const unidad = document.getElementById("clues_id").value;
   console.log({unidad})
   try {
     const {data} = await fetch(`${url}/api/unidades/${unidad}`).then(res => {
       return res.json()
     })
-    document.getElementById("unidad_id").value = data.id_clues
-    document.getElementById("municipio_primer").value = data.clave_municipio
-    document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
-    document.getElementById("tipologia_primer").value = data.id_tipologia
-    document.getElementById("estrato_primer").value = data.claveestrato
+    if(vista === 'alta_primer_nivel'){
+      document.getElementById("unidad_id").value = data.id_clues
+      document.getElementById("municipio_primer").value = data.clave_municipio
+      document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+      document.getElementById("tipologia_primer").value = data.id_tipologia
+      document.getElementById("estrato_primer").value = data.claveestrato
+    }else if(vista === 'alta_primer_nivel_sec_2'){
+      document.getElementById("unidad_id").value = data.id_clues
+      document.getElementById("municipio_primer").value = data.clave_municipio
+      document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+    }
+    else if(vista === 'alta_primer_nivel_sec_3'){
+        document.getElementById("unidad_id").value = data.id_clues
+        document.getElementById("municipio_primer").value = data.clave_municipio
+        document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+      }
+
+    else if(vista === 'alta_primer_nivel_sec_4'){
+        document.getElementById("unidad_id").value = data.id_clues
+        document.getElementById("municipio_primer").value = data.clave_municipio
+        document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+      }
+      else if(vista === 'alta_primer_nivel_sec_5'){
+        document.getElementById("unidad_id").value = data.id_clues
+        document.getElementById("municipio_primer").value = data.clave_municipio
+        document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+      }
+      else if(vista === 'alta_primer_nivel_sec_6'){
+        document.getElementById("unidad_id").value = data.id_clues
+        document.getElementById("municipio_primer").value = data.clave_municipio
+        document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
+      }
+
     localStorage.setItem('unidadData', JSON.stringify(data))
 
   } catch (error) {
     console.warn({error})
-    document.getElementById("unidad_id").value = ''
-    document.getElementById("municipio_primer").value = ''
-    document.getElementById("juridiccion_primer").value = ''
-    document.getElementById("tipologia_primer").value = ''
-    document.getElementById("estrato_primer").value = ''
+    if(vista === 'alta_primer_nivel'){
+      document.getElementById("unidad_id").value = ''
+      document.getElementById("municipio_primer").value = ''
+      document.getElementById("juridiccion_primer").value = ''
+      document.getElementById("tipologia_primer").value = ''
+      document.getElementById("estrato_primer").value = ''
+    }else if(vista === 'alta_primer_nivel_sec_2'){
+      document.getElementById("unidad_id").value = ''
+      document.getElementById("municipio_primer").value = ''
+      document.getElementById("juridiccion_primer").value = ''
+    }
     localStorage.setItem('unidadData', null)
   }
 }

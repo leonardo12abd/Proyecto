@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Ctsp;
 use App\Models\Ctspdata;
 use Illuminate\Http\Request;
+use App\Models\Unidad;
+use App\Models\Municipio;
+use App\Models\Tipologia;
+
+use App\Models\Jurisdiccion;
 
 class CtspController extends Controller
 {
     public function altaprimernivelsec3(){
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
         $ctsps = Ctsp::all();
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion3', compact('ctsps'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion3', compact('ctsps','unidades', 'municipios', 'jurisdicciones','tipologias'));
    }
    public function altaprimernivelsec3Show($id){
         $ctsps = Ctsp::all();

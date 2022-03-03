@@ -5,12 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Apoyo;
 use App\Models\Apoyodata;
 use Illuminate\Http\Request;
+use App\Models\Unidad;
+use App\Models\Municipio;
+use App\Models\Tipologia;
+use App\Models\Jurisdiccion;
 
 class ApoyosController extends Controller
 {
     public function altaprimernivelsec6(){
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
         $apoyos = Apoyo::all();
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion6', compact('apoyos'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6', compact('apoyos','unidades', 'municipios', 'jurisdicciones','tipologias'));
     }
 
     public function altaprimernivelsec6Show($id){
@@ -22,6 +30,7 @@ class ApoyosController extends Controller
             ], 404);
         }
         $apoyos_data = unserialize($data4->data4);
+        // return $apoyos_data;
         return view('acreditacionprimernivel.acreditacionprimernivelseccion6Show', compact('apoyos', 'apoyos_data'));
     }
 
