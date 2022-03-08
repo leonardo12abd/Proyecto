@@ -10,6 +10,8 @@ use App\Models\Municipio;
 use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
 
+use Illuminate\Support\Facades\Auth;
+
 class ApoyosController extends Controller
 {
     public function altaprimernivelsec6(){
@@ -35,10 +37,16 @@ class ApoyosController extends Controller
     }
 
     public function altaprimernivelsec6Save(Request $request){
+        $user = Auth::user();
+        $user-> id;
+
+       $id_clues = $request -> input('id_clues');
         $data4 = $request->all();
         $data4 = serialize($data4);
         $apoyo = Apoyodata::create([
-            'data4' => $data4
+            'data4' => $data4,
+            'id_clues' => $id_clues,
+            'id_user' => $user->id
         ]);
         return redirect()->back();
     }

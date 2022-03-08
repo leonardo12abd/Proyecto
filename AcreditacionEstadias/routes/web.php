@@ -28,7 +28,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 
@@ -36,6 +36,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware'=>'auth'], function(){
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 // ------------------------ Seccion Vistas ----------------------------------------------------
@@ -88,7 +89,7 @@ Route::get('export', [App\Http\Controllers\UserController::class, 'export'])->na
 //Route::post('import', [App\Http\Controllers\UserController::class, 'import'])->name('import');
 
 
-});
+
 
 //Example ----------------------
 
@@ -138,3 +139,4 @@ Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'repo
 Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
 Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Show'])->name('altaprimernivelsec6Show');
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec6Save');
+});

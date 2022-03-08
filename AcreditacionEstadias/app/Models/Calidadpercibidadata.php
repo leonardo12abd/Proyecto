@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Calidadpercibidadata extends Model
 {
     use HasFactory;
@@ -13,5 +14,7 @@ class Calidadpercibidadata extends Model
     protected $fillable = [
         'id',
         'data3',
+        'id_clues',
+        'id_user'
     ];
 }

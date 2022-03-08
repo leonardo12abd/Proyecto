@@ -19,6 +19,7 @@
                         </div>
 
 
+
                         {{-- Seccion CALIDAD PERCIBIDA --}}
                     <div class="card-body">
                         <center><h4 style="background-color: rgb(247, 220, 111);">Aval Ciudadano</h4></center>

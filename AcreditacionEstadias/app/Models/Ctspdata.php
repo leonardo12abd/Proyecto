@@ -13,5 +13,7 @@ class Ctspdata extends Model
     protected $fillable = [
         'id',
         'data2',
+        'id_clues',
+        'id_user'
     ];
 }

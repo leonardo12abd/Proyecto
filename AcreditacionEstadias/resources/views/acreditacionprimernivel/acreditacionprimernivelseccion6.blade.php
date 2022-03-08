@@ -20,18 +20,13 @@
                         <div class="card-body">
                             <div class="row">
                               <div class="col-3">
-                              <input class="form-control"  list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_6'})">
-                              <datalist id="datalistOptions">
+                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})">
+                              <datalist id="datalistOptions" >
                                 @foreach ( $unidades as $unidad )
-                                  <option value="{{ $unidad->clues }}" />
+                                  <option  value="{{ $unidad->clues }}" />
                                 @endforeach
                               </datalist>
-                                <!-- <select name="clues" id="clues_id" class="form-control" onchange="selectUnidad()" label="hola">
-                                  <option selected value="-1">Seleccionar...</option>
-                                  @foreach ( $unidades as $unidad )
-                                    <option value="{{ $unidad->id_clues }}"> {{ $unidad->clues  }}</option>
-                                  @endforeach
-                                </select> -->
+
                               </div>
                                 <div class="col-3">
                                   <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
@@ -58,6 +53,20 @@
                                     </select>
 
                                   </div>
+
+
+                                  {{-- Inicio Hoy --}}
+                                  <div class="col-3">
+                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
+                                    <option selected value="-1">Selecciona primero una unidad...</option>
+                                    @foreach ( $unidades as $unidad )
+                                        <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+
+{{-- Fin hoy --}}
+
                             </div>
 
 <br>

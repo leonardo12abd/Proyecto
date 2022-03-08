@@ -13,5 +13,7 @@ class Cocacepdata extends Model
     protected $fillable = [
         'id',
         'data',
+        'id_clues',
+        'id_user'
     ];
 }

@@ -13,5 +13,7 @@ class Indicadata extends Model
     protected $fillable = [
         'id',
         'data1',
+        'id_clues',
+        'id_user'
     ];
 }

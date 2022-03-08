@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\CalidadPercibida;
 use  App\Models\Calidadpercibidadata;
 use Illuminate\Http\Request;
@@ -10,7 +11,9 @@ use App\Models\Municipio;
 use App\Models\Tipologia;
 
 use App\Models\Jurisdiccion;
+use SebastianBergmann\Environment\Console;
 
+use Illuminate\Support\Facades\Auth;
 
 
 class CalidadPercibidaController extends Controller
@@ -27,6 +30,10 @@ class CalidadPercibidaController extends Controller
     }
 
     public function altaprimernivelsec2Show($id){
+        $unidades = Unidad::find($id);
+        $municipios = Municipio::find($id);
+        $jurisdicciones = Jurisdiccion::find($id);
+
         $calidadpers = CalidadPercibida::all();
         $data3 = Calidadpercibidadata::find($id);
         if(!$data3){
@@ -36,20 +43,31 @@ class CalidadPercibidaController extends Controller
         }
         $calidadpers_data = unserialize($data3->data3);
         //dd($cocasep_data);
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadpers', 'calidadpers_data'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadpers', 'calidadpers_data','unidades', 'municipios', 'jurisdicciones'));
     }
 
     //Guarda avalpercibido
     public function altaprimernivelsec2Save(Request $request){
+
+        $user = Auth::user();
+         $user-> id;
+
+
         $data3 = $request->all();
         $data3 = serialize($data3); //! Esto es lo que guardaria en Base de dAtos
+        $id_clues = $request -> input('id_clues');
+
         $calidadper = Calidadpercibidadata::create([
-            'data3' => $data3
+            'data3' => $data3,
+            'id_clues' => $id_clues,
+            'id_user' => $user->id
         ]);
+
         return redirect()->back();
     }
 
     public function reporteavalpercibido(){
+
 
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte');
     }

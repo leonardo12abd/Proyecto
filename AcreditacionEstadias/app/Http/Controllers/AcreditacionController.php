@@ -14,6 +14,7 @@ use App\Models\Tipologia;
 use App\Models\Cocasep;
 use App\Models\Cocacepdata;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AcreditacionController extends Controller
 {
@@ -84,10 +85,18 @@ public function altaprimernivelsec4Show($id){
 }
 
 public function altaprimernivelsec4Save(Request $request){
+
+    $user = Auth::user();
+    $user-> id;
     $data = $request->all();
+    $id_clues = $request -> input('id_clues');
     $data = serialize($data); //! Esto es lo que guardaria en Base de dAtos
+
+
     $cocasep = Cocacepdata::create([
-        'data' => $data
+        'data' => $data,
+        'id_clues' => $id_clues,
+            'id_user' => $user->id
     ]);
     return redirect()->back();
 }

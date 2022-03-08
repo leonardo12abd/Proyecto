@@ -10,6 +10,9 @@ use App\Models\Municipio;
 use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
 
+use Illuminate\Support\Facades\Auth;
+
+
 
 class IndicasController extends Controller
 {
@@ -34,10 +37,16 @@ class IndicasController extends Controller
      }
 
      public function altaprimernivelsec5Save(Request $request){
+        $user = Auth::user();
+         $user-> id;
+
+        $id_clues = $request -> input('id_clues');
           $data1 = $request->all();
           $data1 = serialize($data1);
           $indica = Indicadata::create([
-               'data1' => $data1
+               'data1' => $data1,
+               'id_clues' => $id_clues,
+            'id_user' => $user->id
           ]);
           return redirect()->back();
      }

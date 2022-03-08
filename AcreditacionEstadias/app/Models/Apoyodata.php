@@ -14,5 +14,7 @@ class Apoyodata extends Model
     protected $fillable = [
         'id',
         'data4',
+        'id_clues',
+        'id_user'
     ];
 }
