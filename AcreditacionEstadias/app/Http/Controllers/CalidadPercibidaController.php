@@ -30,20 +30,23 @@ class CalidadPercibidaController extends Controller
     }
 
     public function altaprimernivelsec2Show($id){
-        $unidades = Unidad::find($id);
-        $municipios = Municipio::find($id);
-        $jurisdicciones = Jurisdiccion::find($id);
 
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
         $calidadpers = CalidadPercibida::all();
-        $data3 = Calidadpercibidadata::find($id);
+        $data3 = Calidadpercibidadata::with(['user', 'clues'])->find($id);
         if(!$data3){
             return response()->json([
                 'message' => 'not found data'
             ], 404);
         }
-        $calidadpers_data = unserialize($data3->data3);
+        $data3->data3 = unserialize($data3->data3);
+        //return $data3;
+        //return $calidadpers;
         //dd($cocasep_data);
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('calidadpers', 'calidadpers_data','unidades', 'municipios', 'jurisdicciones'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Show', compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
     }
 
     //Guarda avalpercibido
@@ -67,9 +70,9 @@ class CalidadPercibidaController extends Controller
     }
 
     public function reporteavalpercibido(){
-
-
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte');
+        $data =Calidadpercibidadata::with(['clues', 'user'])->get();
+        //return $data[0];
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte', compact('data'));
     }
 
 

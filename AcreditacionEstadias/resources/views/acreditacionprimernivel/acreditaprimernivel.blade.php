@@ -100,13 +100,13 @@
                             <div class="col-12">
                                <center>    <div class="form-check form-check-inline">
                                      <label class="form-check-label">
-                                       <input onchange="changeEstructuraClue()" name="estructura_clues" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
+                                       <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
 
                                      </label>
                                    </div>
                                    <div class="form-check form-check-inline">
                                      <label class="form-check-label">
-                                       <input onchange="changeEstructuraClue()" name="estructura_clues" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
+                                       <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
                                      </label>
                                    </div>
                                  </center>
@@ -187,13 +187,13 @@
                                 <label>Med Gral: </label>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_medgral" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
+                                      <input name="med_gral_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
 
                                     </label>
                                   </div>
                                   <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_medgral" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
+                                      <input name="med_gral_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
 
                                     </label>
                                   </div>
@@ -201,13 +201,13 @@
                             <div class="col-3">
                                <label>Estomatología: </label> <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_estomatologia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                      <input name="estomatologia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
 
                                     </label>
                                   </div>
                                   <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_estomatologia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                      <input name="estomatologia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
 
                                     </label>
                                   </div>
@@ -215,13 +215,13 @@
                             <div class="col-3">
                                 <label>Psicología: </label> <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_psicologia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                      <input name="psicologia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
 
                                     </label>
                                   </div>
                                   <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_psicologia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                      <input name="psicologia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
 
                                     </label>
                                   </div>
@@ -229,13 +229,13 @@
                             <div class="col-3">
                                 <label> Laboratorio: </label> <div class="form-check form-check-inline">
                                    <label class="form-check-label">
-                                      <input name="avfunc_lb" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                      <input name="lab_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
 
                                     </label>
                                   </div>
                                   <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                      <input name="avfunc_lb" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                      <input name="lab_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
 
                                     </label>
                                   </div>
@@ -244,7 +244,7 @@
                             <div class="col-3">
                                 <label>Farmacia: </label> <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                       <input name="avfunc_farmacia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                       <input name="farmacia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
                                        <span class="form-check-sign">
 
                                        </span>
@@ -252,7 +252,7 @@
                                    </div>
                                    <div class="form-check form-check-inline">
                                      <label class="form-check-label">
-                                       <input name="avfunc_farmacia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                       <input name="farmacia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
                                        <span class="form-check-sign">
 
                                        </span>
@@ -263,7 +263,7 @@
                             <div class="col-3">
                                 <label>RX: </label> <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                       <input name="avfunc_rx" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                       <input name="rx_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
                                        <span class="form-check-sign">
 
                                        </span>
@@ -271,7 +271,7 @@
                                    </div>
                                    <div class="form-check form-check-inline">
                                      <label class="form-check-label">
-                                       <input name="avfunc_rx" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                       <input name="rx_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
                                        <span class="form-check-sign">
 
                                        </span>
@@ -280,7 +280,7 @@
 
                             </div>
                             <div class="col-3">
-                            <input type="text" name="avfunc_otro" id="" class="form-control" placeholder="Otro:">
+                            <input type="text" name="otro_avfun" id="" class="form-control" placeholder="Otro:">
                             </div>
                         </div>
 

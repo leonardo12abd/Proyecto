@@ -49,8 +49,28 @@
                                             <th class="text-right">Acciones</th>
                                         </thead>
                                         <tbody>
+                                            @foreach($data as $key => $d )
+                                                <tr>
+                                                    <td>{{$d->id}}</td>
+                                                    <td>{{$d->clues->clues}}</td>
+                                                    <td>{{$d->clues->nombreunidad}}</td>
+                                                    <td>{{$d->user->name}}</td>
+                                                    <td>{{$d->created_at}}</td>
 
-                                            <tr>
+                                                    <td class="td-actions text-right">
+                                                        <a href="#"class="btn btn-info"> <i class="material-icons">person</i></a>
+                                                        <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
+
+                                                        <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
+
+                                                        <button class="btn btn-danger" type="submit">
+                                                            <i class="material-icons">close</i>
+                                                        </button>
+                                                    </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                            <!-- <tr>
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
@@ -69,7 +89,7 @@
 
 
                                                 </td>
-                                            </tr>
+                                            </tr> -->
 
                                         </tbody>
                                     </table>
