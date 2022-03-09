@@ -24,16 +24,20 @@ class ApoyosController extends Controller
     }
 
     public function altaprimernivelsec6Show($id){
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
         $apoyos = Apoyo::all();
-        $data4 = Apoyodata::find($id);
+        $data4 = Apoyodata::with(['user', 'clues'])->find($id);
         if(!$data4){
             return response()->json([
                 'message' => 'not found data'
             ], 404);
         }
-        $apoyos_data = unserialize($data4->data4);
+        $data4->data4 = unserialize($data4->data4);
         // return $apoyos_data;
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Show', compact('apoyos', 'apoyos_data'));
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Show', compact('data4','apoyos','unidades', 'municipios', 'jurisdicciones'));
     }
 
     public function altaprimernivelsec6Save(Request $request){
@@ -52,7 +56,8 @@ class ApoyosController extends Controller
     }
 
     public function reporteapei(){
-
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Reporte');
+        $data =Apoyodata::with(['clues', 'user'])->get();
+        $data=Apoyodata::paginate(4);
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6Reporte', compact('data'));
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'LINEA COCASEP / MEJORA CONTINUA'])
+@extends('layouts.main', ['activePage' => 'reportecocasep', 'titlePage' => 'LINEA COCASEP / MEJORA CONTINUA'])
 @section('content')
 
 
@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header card-header-success">
+                            <div class="card-header card-header-primary">
                                 <h4 class="card-tittle">LINEA COCASEP / MEJORA CONTINUA</h4>
                                 <p class="card-category">Linea COCASEP</p>
                             </div>
@@ -26,7 +26,7 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Linea Coasep / Mejora Continua</a>
+                                        <a href={{ route('altaprimernivelsec4') }} class="btn btn-sm btn-facebook">Alta Linea Coasep / Mejora Continua</a>
                                     </div>
 
                                     <div class="col-12 text-left">
@@ -41,42 +41,42 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th>ID</th>
-                                            <th>Codigo Clues</th>
-                                            <th>Unidad</th>
-                                            <th>Usuario</th>
-                                            <th>Crated_at</th>
-                                            <th class="text-right">Acciones</th>
+                                            <th><center>ID Reporte</center></th>
+                                            <th><center>Codigo Clues</center></th>
+                                            <th><center>Unidad</center></th>
+                                            <th><center>Usuario Encargado</center></th>
+                                            <th><center>Creacion</center></th>
+                                            <th class="text-right"><center>Acciones</center></th>
                                         </thead>
                                         <tbody>
+                                            @foreach($data as $key => $d )
+                                                <tr>
+                                                    <td>{{$d->id}}</td>
+                                                    <td>{{$d->clues->clues}}</td>
+                                                    <td>{{$d->clues->nombreunidad}}</td>
+                                                    <td>{{$d->user->name}}</td>
+                                                    <td>{{$d->created_at}}</td>
 
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td class="td-actions text-right">
-                                                    <a href="#"class="btn btn-info"> <i class="material-icons">person</i></a>
-                                                    <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
+                                                    <td class="td-actions text-right">
+                                                        <a href="#"class="btn btn-info"> <i class="material-icons">person</i></a>
+                                                        <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
-                                                    <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
+                                                        <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
 
-                                                    <button class="btn btn-danger" type="submit">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </form>
+                                                        <button class="btn btn-danger" type="submit">
+                                                            <i class="material-icons">close</i>
+                                                        </button>
+                                                    </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
 
-
-                                                </td>
-                                            </tr>
 
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
                             <div class="card-footer mr-auto">
-
+                                {{ $data->links() }}
                             </div>
                         </div>
                     </div>

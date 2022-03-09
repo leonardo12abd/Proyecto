@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'CALIDAD PERCIBIDA'])
+@extends('layouts.main', ['activePage' => 'Reporecp', 'titlePage' => 'CALIDAD PERCIBIDA'])
 @section('content')
 
 
@@ -26,7 +26,7 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href="#" class="btn btn-sm btn-facebook">Nuevo Reporte Calidad Percibida</a>
+                                        <a href={{ route('altaprimernivelsec2') }} class="btn btn-sm btn-facebook">Alta Calidad Percibida</a>
                                     </div>
 
                                     <div class="col-12 text-left">
@@ -41,12 +41,12 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th>ID</th>
-                                            <th>Codigo Clues</th>
-                                            <th>Unidad</th>
-                                            <th>Usuario</th>
-                                            <th>Crated_at</th>
-                                            <th class="text-right">Acciones</th>
+                                            <th><center>ID Reporte</center></th>
+                                            <th><center>Codigo Clues</center></th>
+                                            <th><center>Unidad</center></th>
+                                            <th><center>Usuario Encargado</center></th>
+                                            <th><center>Creacion</center></th>
+                                            <th class="text-right"><center>Acciones</center></th>
                                         </thead>
                                         <tbody>
                                             @foreach($data as $key => $d )
@@ -70,33 +70,14 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
-                                            <!-- <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td class="td-actions text-right">
-                                                    <a href="#"class="btn btn-info"> <i class="material-icons">person</i></a>
-                                                    <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
-                                                    <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
-
-                                                    <button class="btn btn-danger" type="submit">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </form>
-
-
-                                                </td>
-                                            </tr> -->
 
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="card-footer mr-auto">
-
+                           <div class="card-footer mr-auto">
+                                {{ $data->links() }}
                             </div>
                         </div>
                     </div>

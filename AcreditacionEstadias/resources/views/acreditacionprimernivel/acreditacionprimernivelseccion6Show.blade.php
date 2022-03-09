@@ -16,7 +16,57 @@
                               <h4 class="card-tittle">APOYOS E INCENTIVOS</h4>
                             </center>
                         </div>
+                        <div class="card-body">
+                            <div class="row">
+                              <div class="col-3">
+                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_6'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel_sec_6'})"  value="{{ $data4->clues->clues}}">
+                              <datalist id="datalistOptions" >
+                                @foreach ( $unidades as $unidad )
+                                  <option  value="{{ $unidad->clues }}"  />
+                                @endforeach
+                              </datalist>
 
+                              </div>
+                                <div class="col-3">
+                                  <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
+                                    <option selected value="-1">Selecciona primero una unidad...</option>
+                                    @foreach ( $unidades as $unidad )
+                                      <option value="{{ $unidad->id_clues }}"> {{ $unidad->nombreunidad   }}</option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="municipio_primer" id="municipio_primer" class="form-control"  disabled>
+                                        <option selected value="-1">Selecciona primero una unidad...</option>
+                                        @foreach ( $municipios as $municipio )
+                                          <option value="{{ $municipio->clave_municipio }}"> {{ $municipio->nombremunicipio   }}</option>
+                                        @endforeach
+                                    </select>
+                                  </div>
+                                  <div class="col-3">
+                                    <select name="juridiccion_primer" id="juridiccion_primer" class="form-control" disabled >
+                                        <option selected value="-1">Selecciona primero una unidad...</option>
+                                        @foreach ( $jurisdicciones as $juri )
+                                          <option value="{{ $juri->clavejuridiccion }}"> {{ $juri->nombrejurisdiccion   }}</option>
+                                        @endforeach
+                                    </select>
+
+                                  </div>
+
+
+                                  {{-- Inicio Hoy --}}
+                                  <div class="col-3">
+                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
+                                    <option selected value="-1">Selecciona primero una unidad...</option>
+                                    @foreach ( $unidades as $unidad )
+                                        <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+
+{{-- Fin hoy --}}
+
+                            </div>
 
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
@@ -56,34 +106,34 @@
                                 <tr>
                                     <th scope="row">{{$apo->nombre_apoyos}}</th>
                                     <td>
-                                        <input type="text" name="puntaje_0_{{$key}}"  required value="{{ $apoyos_data['puntaje_0_'.$key] }}">
+                                        <input type="text" name="puntaje_0_{{$key}}"  required value="{{$data4->data4['puntaje_0_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" value="Si" required @if($apoyos_data['key_0_'.$key] == 'Si') checked @endif>
+                                        <input type="radio" name="key_0_{{$key}}" value="Si" required @if($data4->data4['key_0_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_0_{{$key}}" value="No" required @if($apoyos_data['key_0_'.$key] == 'No') checked @endif>
+                                        <input type="radio" name="key_0_{{$key}}" value="No" required @if($data4->data4['key_0_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_1_{{$key}}" required value="{{ $apoyos_data['puntaje_1_'.$key] }}">
+                                        <input type="text" name="puntaje_1_{{$key}}" required value="{{ $data4->data4['puntaje_1_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}" value="Si" required @if($apoyos_data['key_1_'.$key] == 'Si') checked @endif>
+                                        <input type="radio" name="key_1_{{$key}}" value="Si" required @if($data4->data4['key_1_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_1_{{$key}}"  value="No" required @if($apoyos_data['key_1_'.$key] == 'No') checked @endif>
+                                        <input type="radio" name="key_1_{{$key}}"  value="No" required @if($data4->data4['key_1_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_2_{{$key}}"  required value="{{ $apoyos_data['puntaje_2_'.$key] }}">
+                                        <input type="text" name="puntaje_2_{{$key}}"  required value="{{$data4->data4['puntaje_2_'.$key] }}">
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" value="Si" required @if($apoyos_data['key_2_'.$key] == 'Si') checked @endif>
+                                        <input type="radio" name="key_2_{{$key}}" value="Si" required @if($data4->data4['key_2_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_2_{{$key}}" value="No" required @if($apoyos_data['key_2_'.$key] == 'No') checked @endif>
+                                        <input type="radio" name="key_2_{{$key}}" value="No" required @if($data4->data4['key_2_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$apoyos_data['textarea_'.$key]}}</textarea>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$data4->data4['textarea_'.$key]}}</textarea>
                                     </td>
                                 </tr>
                                 @endforeach

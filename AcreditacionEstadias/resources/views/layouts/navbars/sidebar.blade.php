@@ -41,8 +41,8 @@
               </a>
             </li>
 
-            <li class="nav-item{{ $activePage == 'acreditaprimer2' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('altaprimernivelsec2') }} ">
+            <li class="nav-item{{ $activePage == 'Reporecp' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reporteavalciudadano') }} ">
                     <i class="material-icons">
                         pending_actions
                     </i>
@@ -50,24 +50,24 @@
                 </a>
               </li>
 
-              <li class="nav-item{{ $activePage == 'acreditaprimer3' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('altaprimernivelsec3') }} ">
+              <li class="nav-item{{ $activePage == 'Reportectsp' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reportecalidadtsp') }} ">
 
                     <span class="sidebar-auto">   <i class="material-icons">
                         healing
                     </i>{{ __('CALIDAD TÉCNICA Y SEGURIDAD AL PACIENTE') }}  </span>
                 </a>
             </li>
-            <li class="nav-item{{ $activePage == 'acreditaprimer4' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('altaprimernivelsec4') }} ">
+            <li class="nav-item{{ $activePage == 'reportecocasep' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reportecocasep') }} ">
                     <i class="material-icons">
                         leaderboard
                     </i>
                   <span class="sidebar-normal">{{ __('COCASEP') }} </span>
                 </a>
               </li>
-              <li class="nav-item{{ $activePage == 'acreditaprimer5' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('altaprimernivelsec5') }} ">
+              <li class="nav-item{{ $activePage == 'reporteindicas' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reporteindicas') }} ">
                     <i class="material-icons">
                         emergency_recording
                     </i>
@@ -75,8 +75,8 @@
                 </a>
               </li>
 
-              <li class="nav-item{{ $activePage == 'acreditaprimer6' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('altaprimernivelsec6') }} ">
+              <li class="nav-item{{ $activePage == 'reporteapoyo' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('reporteapoyo') }} ">
                     <i class="material-icons">
                         attach_money
                     </i>

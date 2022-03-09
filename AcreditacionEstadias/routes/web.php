@@ -123,10 +123,10 @@ Route::get('reportecalidadtsp',[App\Http\Controllers\CtspController::class,'repo
 
 
 /** CRUD COCASEP -> INICIO*/
-Route::get('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
-Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Show'])->name('altaprimernivelsec4Show');
-Route::post('altaprimernivelsec4',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
-Route::get('reportecocasep',[App\Http\Controllers\AcreditacionController::class,'reportecocasep'])->name('reportecocasep');
+Route::get('altaprimernivelsec4',[App\Http\Controllers\CocasepController::class,'altaprimernivelsec4'])->name('altaprimernivelsec4');
+Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\CocasepController::class,'altaprimernivelsec4Show'])->name('altaprimernivelsec4Show');
+Route::post('altaprimernivelsec4',[App\Http\Controllers\CocasepController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
+Route::get('reportecocasep',[App\Http\Controllers\CocasepController::class,'reportecocasep'])->name('reportecocasep');
 
 /** FIN -> CRUD COCASEP */
 
@@ -139,4 +139,6 @@ Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'repo
 Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
 Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Show'])->name('altaprimernivelsec6Show');
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec6Save');
+Route::get('reporteapoyo',[App\Http\Controllers\ApoyosController::class,'reporteapei'])->name('reporteapoyo');
+
 });

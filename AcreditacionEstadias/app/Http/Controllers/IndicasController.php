@@ -25,15 +25,19 @@ class IndicasController extends Controller
           return view('acreditacionprimernivel.acreditacionprimernivelseccion5', compact('indicas','unidades', 'municipios', 'jurisdicciones','tipologias'));
      }
      public function altaprimernivelsec5Show($id){
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
           $indicas = Indica::all();
-          $data1 = Indicadata::find($id);
+          $data1 = Indicadata::with(['user', 'clues'])->find($id);
           if(!$data1){
                return response()->json([
                     'message' => 'not found data'
                ], 404);
           }
-          $indicas_data = unserialize($data1->data1);
-          return view('acreditacionprimernivel.acreditacionprimernivelseccion5Show', compact('indicas', 'indicas_data'));
+          $data1->data1 = unserialize($data1->data1);
+          return view('acreditacionprimernivel.acreditacionprimernivelseccion5Show', compact('indicas','data1','unidades', 'municipios', 'jurisdicciones'));
      }
 
      public function altaprimernivelsec5Save(Request $request){
@@ -51,7 +55,8 @@ class IndicasController extends Controller
           return redirect()->back();
      }
      public function reporteindicas(){
-
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion5Reporte');
+        $data =Indicadata::with(['clues', 'user'])->get();
+        $data=Indicadata::paginate(4);
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion5Reporte',compact('data'));
     }
 }

@@ -11,6 +11,7 @@ use App\Models\Tipologia;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Jurisdiccion;
+use SebastianBergmann\Environment\Console;
 
 class CtspController extends Controller
 {
@@ -23,15 +24,19 @@ class CtspController extends Controller
         return view('acreditacionprimernivel.acreditacionprimernivelseccion3', compact('ctsps','unidades', 'municipios', 'jurisdicciones','tipologias'));
    }
    public function altaprimernivelsec3Show($id){
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
         $ctsps = Ctsp::all();
-        $data2 = Ctspdata::find($id);
+        $data2 = Ctspdata::with(['user', 'clues'])->find($id);
         if(!$data2){
              return response()->json([
                   'message' => 'not found data'
              ], 404);
         }
-        $ctsps_data = unserialize($data2->data2);
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion3Show', compact('ctsps', 'ctsps_data'));
+        $data2->data2 = unserialize($data2->data2);
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion3Show', compact('data2','ctsps','unidades', 'municipios', 'jurisdicciones'));
    }
 
    public function altaprimernivelsec3Save(Request $request){
@@ -50,7 +55,8 @@ class CtspController extends Controller
    }
 
    public function reportecalidadtsp(){
-
-    return view('acreditacionprimernivel.acreditacionprimernivelseccion3Reporte');
+    $data =Ctspdata::with(['clues', 'user'])->get();
+    $data=Ctspdata::paginate(4);
+    return view('acreditacionprimernivel.acreditacionprimernivelseccion3Reporte', compact('data'));
 }
 }

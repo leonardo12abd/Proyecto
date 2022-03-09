@@ -71,6 +71,7 @@ class CalidadPercibidaController extends Controller
 
     public function reporteavalpercibido(){
         $data =Calidadpercibidadata::with(['clues', 'user'])->get();
+        $data=Calidadpercibidadata::paginate(4);
         //return $data[0];
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte', compact('data'));
     }

@@ -26,7 +26,7 @@
 
                               </div>
                                 <div class="col-3">
-                                  <select name="unidad" id="unidad_id" class="form-control" class="form-control" hidden  disabled>
+                                  <select name="unidad" id="unidad_id" class="form-control" class="form-control" disabled>
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $unidades as $unidad )
                                       <option value="{{ $unidad->id_clues }}"> {{ $unidad->nombreunidad   }}</option>
@@ -54,7 +54,7 @@
 
                                   {{-- Inicio Hoy --}}
                                   <div class="col-3">
-                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" onclick >
+                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $unidades as $unidad )
                                         <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
