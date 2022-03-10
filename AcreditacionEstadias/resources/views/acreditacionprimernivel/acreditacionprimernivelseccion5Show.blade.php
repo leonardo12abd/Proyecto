@@ -13,7 +13,7 @@
                 <div class="card">
                         <div class="card text-white bg-primary" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">INDICAS Y GESTORES DE CALIDAD</h4>
+                              <h4 class="card-tittle">Show INDICAS Y GESTORES DE CALIDAD</h4>
                             </center>
 
                         </div>
@@ -106,9 +106,6 @@
                 </div>
         </div>
 
-        <center><button type="submit" class="btn btn-primary btn-round">
-            <i class="far fa-save"></i> Guardar
-          </button></center>
         </div>
     </form>
 

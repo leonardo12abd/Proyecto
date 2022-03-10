@@ -10,7 +10,7 @@
                 <div class="card">
                         <div class="card text-white bg-success mb-3" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">LINEA CPCASEP/MEJORA CONTINUA</h4>
+                              <h4 class="card-tittle">Show LINEA CPCASEP/MEJORA CONTINUA</h4>
                             </center>
                         </div>
 

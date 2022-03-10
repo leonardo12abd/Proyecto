@@ -13,7 +13,7 @@
                 <div class="card">
                         <div class="card text-white bg-info" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</h4>
+                              <h4 class="card-tittle">Show CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</h4>
                             </center>
                         </div>
                         <div class="card-body">
@@ -105,9 +105,6 @@
                 </div>
         </div>
 
-        <center><button type="submit" class="btn btn-primary btn-round">
-            <i class="far fa-save"></i> Guardar
-          </button></center>
         </div>
     </form>
 

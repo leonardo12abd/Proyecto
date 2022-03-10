@@ -13,7 +13,7 @@
                 <div class="card">
                         <div class="card text-white bg-secondary" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">APOYOS E INCENTIVOS</h4>
+                              <h4 class="card-tittle">Show APOYOS E INCENTIVOS</h4>
                             </center>
                         </div>
                         <div class="card-body">
@@ -138,11 +138,7 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                            <center>
-                                <button type="submit" class="btn btn-primary btn-round">
-                                <i class="far fa-save"></i> Guardar
-                                </button>
-                            </center>
+
                     </div>
 
 @endsection

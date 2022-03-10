@@ -112,7 +112,6 @@ Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaControll
 Route::get('reporteavalciudadano',[App\Http\Controllers\CalidadPercibidaController::class,'reporteavalpercibido'])->name('reporteavalciudadano');
 
 
-
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
 

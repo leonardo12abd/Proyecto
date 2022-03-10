@@ -58,7 +58,7 @@
                                                     <td>{{$d->created_at}}</td>
 
                                                     <td class="td-actions text-right">
-                                                        <a href="#"class="btn btn-info"> <i class="material-icons">person</i></a>
+                                                        <a href="{{ route('altaprimernivelsec4Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">person</i></a>
                                                         <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
                                                         <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">

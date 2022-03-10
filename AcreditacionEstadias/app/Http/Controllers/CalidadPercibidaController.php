@@ -76,5 +76,10 @@ class CalidadPercibidaController extends Controller
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte', compact('data'));
     }
 
+    public function editarcalidadpercibida(){
+
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Edit');
+    }
 
 }

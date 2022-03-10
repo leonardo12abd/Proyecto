@@ -1,10 +1,13 @@
 @extends('layouts.app')
-
 @section('content')
 
+<div class="card-body">
+
 <div class="content">
+
     <form action="/altaprimernivelsec2" method="POST">
         {{ csrf_field() }}
+
 
         <div class="container-fluid">
         <div class="row">
@@ -12,20 +15,21 @@
                         <div class="card text-white bg-warning" style="max-heigth: 18rem;">
 
                             <center>
-                              <h4 class="card-tittle">Show Calidad Percibida</h4>
+                              <h4 class="card-tittle">Editar Calidad Percibida</h4>
                             </center>
 
 
                         </div>
 
 
+
                         <div class="card-body">
                             <div class="row">
                               <div class="col-3">
-                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel_sec_2'})"  value="{{ $data3->clues->clues}}">
+                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})">
                               <datalist id="datalistOptions" >
                                 @foreach ( $unidades as $unidad )
-                                  <option  value="{{ $unidad->clues }}"  />
+                                  <option  value="{{ $unidad->clues }}" />
                                 @endforeach
                               </datalist>
 
@@ -72,11 +76,13 @@
                             </div>
 
 
+
+
                         {{-- Seccion CALIDAD PERCIBIDA --}}
                     <div class="card-body">
                         <center><h4 style="background-color: rgb(247, 220, 111);">Aval Ciudadano</h4></center>
                         <table class="table">
-                          @foreach($calidadpers as $key => $cpers)
+                            @foreach($calidadpers as $key => $cpers)
                             @if($key == 0 || $calidadpers[$key-1]->clasificacion_aval != $cpers->clasificacion_aval)
                             <thead class="thead-dark">
                                 <tr>
@@ -93,13 +99,13 @@
                                 <tr>
                                     <th scope="row">{{$cpers->nombre_aval}}</th>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required @if($data3->data3['key_'.$key] == 'Si') checked @endif>
+                                        <input type="radio" name="key_{{$key}}" value="Si" required>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" value="No" required @if($data3->data3['key_'.$key] == 'No') checked @endif>
+                                        <input type="radio" name="key_{{$key}}"  checked value="No" required>
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$data3->data3['textarea_'.$key]}}</textarea>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
                                     </td>
                                 </tr>
                             </tbody>
@@ -108,6 +114,11 @@
                     </div>
                 </div>
         </div>
+        <center>
+            <button type="submit" class="btn btn-danger btn-round">
+                <i class="far fa-save"></i> Guardar
+            </button>
+        </center>
 
         </div>
 
