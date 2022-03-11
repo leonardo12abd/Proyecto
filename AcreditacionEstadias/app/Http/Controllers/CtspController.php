@@ -51,12 +51,20 @@ class CtspController extends Controller
              'id_clues' => $id_clues,
             'id_user' => $user->id
         ]);
-        return redirect()->back();
+        return redirect()->route('reporteavalciudadano')->with('success','Reporte Calidad Técnica creado correctamente');
    }
 
-   public function reportecalidadtsp(){
-    $data =Ctspdata::with(['clues', 'user'])->get();
-    $data=Ctspdata::paginate(4);
-    return view('acreditacionprimernivel.acreditacionprimernivelseccion3Reporte', compact('data'));
-}
+    public function reportecalidadtsp(){
+        $data =Ctspdata::with(['clues', 'user'])->get();
+        $data=Ctspdata::paginate(4);
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion3Reporte', compact('data'));
+    }
+
+    public function borrarctsp($id){
+        $Ctspdata = Ctspdata::find($id);
+        $Ctspdata->delete();
+        return redirect()->route('reportecalidadtsp')->with('error','CTSP eliminado exitosamente');
+
+    }
+
 }

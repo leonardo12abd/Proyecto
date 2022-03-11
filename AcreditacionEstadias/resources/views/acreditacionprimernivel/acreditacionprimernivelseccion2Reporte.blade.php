@@ -58,11 +58,14 @@
                                                     <td>{{$d->created_at}}</td>
 
                                                     <td class="td-actions text-right">
-                                                        <a href="{{ route('altaprimernivelsec2Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">person</i></a>
+                                                        <a href="{{ route('altaprimernivelsec2Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
                                                         <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
-                                                        <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
 
+
+                                                    <form action="{{ route('borrarcalidadperc',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote Aval Ciudadano?')">
+                                                        @csrf
+                                                        @method('DELETE')
                                                         <button class="btn btn-danger" type="submit">
                                                             <i class="material-icons">close</i>
                                                         </button>

@@ -53,7 +53,7 @@ class CocasepController extends Controller
             'id_clues' => $id_clues,
                 'id_user' => $user->id
         ]);
-        return redirect()->back();
+        return redirect()->route('reportecocasep')->with('success','Reporte COCASEP creado correctamente');
     }
 
     public function reportecocasep(){
@@ -61,5 +61,12 @@ class CocasepController extends Controller
         $data=Cocacepdata::paginate(4);
 
         return view('acreditacionprimernivel.acreditacionprimernivelseccion4Reporte',compact('data'));
+    }
+
+    public function borrarcocasep($id){
+        $Cocacepdata = Cocacepdata::find($id);
+        $Cocacepdata->delete();
+        return redirect()->route('reportecocasep')->with('error','Cocasep eliminado exitosamente');
+
     }
 }

@@ -65,8 +65,8 @@ class CalidadPercibidaController extends Controller
             'id_clues' => $id_clues,
             'id_user' => $user->id
         ]);
+        return redirect()->route('reportecalidadtsp')->with('success','Reporte Aval Ciudadano creado correctamente');
 
-        return redirect()->back();
     }
 
     public function reporteavalpercibido(){
@@ -80,6 +80,14 @@ class CalidadPercibidaController extends Controller
 
 
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2Edit');
+    }
+
+
+    public function borrarcalidadperc($id){
+        $Calidadpercibidadata = Calidadpercibidadata::find($id);
+        $Calidadpercibidadata->delete();
+        return redirect()->route('reporteavalciudadano')->with('error','Aval eliminado exitosamente');
+
     }
 
 }

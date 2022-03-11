@@ -62,12 +62,13 @@
                                                         <a href="{{ route('altaprimernivelsec3Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">person</i></a>
                                                         <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
-                                                        <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al usuario ?')">
-
-                                                        <button class="btn btn-danger" type="submit">
-                                                            <i class="material-icons">close</i>
-                                                        </button>
-                                                    </form>
+                                                        <form action="{{ route('borrarctsp',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote CTSP?')">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-danger" type="submit">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </form>
                                                     </td>
                                                 </tr>
                                             @endforeach

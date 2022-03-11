@@ -9,10 +9,6 @@ use App\Exports\UsersExport;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
 
-use App\Models\town;
-use App\Models\CLUES;
-use App\Models\Codigos;
-
 
 
 class UserController extends Controller

@@ -10,7 +10,7 @@
                 <div class="card">
                         <div class="card text-white bg-success mb-3" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">Show LINEA CPCASEP/MEJORA CONTINUA</h4>
+                              <h4 class="card-tittle">Show LINEA COCASEP/MEJORA CONTINUA</h4>
                             </center>
                         </div>
 
@@ -54,7 +54,7 @@
 
                                   {{-- Inicio Hoy --}}
                                   <div class="col-3">
-                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
+                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" disabled hidden onclick >
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $unidades as $unidad )
                                         <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>

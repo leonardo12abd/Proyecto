@@ -52,12 +52,19 @@ class ApoyosController extends Controller
             'id_clues' => $id_clues,
             'id_user' => $user->id
         ]);
-        return redirect()->back();
+        return redirect()->route('reporteapoyo')->with('success','Reporte Apoyos E Incentivos creado correctamente');
     }
 
     public function reporteapei(){
         $data =Apoyodata::with(['clues', 'user'])->get();
         $data=Apoyodata::paginate(4);
         return view('acreditacionprimernivel.acreditacionprimernivelseccion6Reporte', compact('data'));
+    }
+
+    public function borrarapoyos($id){
+        $Apoyodata = Apoyodata::find($id);
+        $Apoyodata->delete();
+        return redirect()->route('reporteapoyo')->with('error','Apoyos e Incentivos eliminado exitosamente');
+
     }
 }

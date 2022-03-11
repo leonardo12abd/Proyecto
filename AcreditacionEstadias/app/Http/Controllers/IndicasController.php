@@ -52,11 +52,18 @@ class IndicasController extends Controller
                'id_clues' => $id_clues,
             'id_user' => $user->id
           ]);
-          return redirect()->back();
-     }
+          return redirect()->route('reporteindicas')->with('success','Reporte INDICAS creado correctamente');
+        }
      public function reporteindicas(){
         $data =Indicadata::with(['clues', 'user'])->get();
         $data=Indicadata::paginate(4);
         return view('acreditacionprimernivel.acreditacionprimernivelseccion5Reporte',compact('data'));
+    }
+
+    public function borraindicas($id){
+        $Indicadata = Indicadata::find($id);
+        $Indicadata->delete();
+        return redirect()->route('reporteindicas')->with('error','Indicas eliminado exitosamente');
+
     }
 }
