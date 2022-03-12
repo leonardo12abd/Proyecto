@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CalidadPercibidaExport;
 use App\Models\User;
 use App\Models\CalidadPercibida;
 use  App\Models\Calidadpercibidadata;
@@ -14,6 +15,9 @@ use App\Models\Jurisdiccion;
 use SebastianBergmann\Environment\Console;
 
 use Illuminate\Support\Facades\Auth;
+
+use Maatwebsite\Excel\Facades\Excel;
+
 
 
 class CalidadPercibidaController extends Controller
@@ -65,7 +69,7 @@ class CalidadPercibidaController extends Controller
             'id_clues' => $id_clues,
             'id_user' => $user->id
         ]);
-        return redirect()->route('reportecalidadtsp')->with('success','Reporte Aval Ciudadano creado correctamente');
+        return redirect()->route('reporteavalciudadano')->with('success','Reporte Aval Ciudadano creado correctamente');
 
     }
 
@@ -88,6 +92,10 @@ class CalidadPercibidaController extends Controller
         $Calidadpercibidadata->delete();
         return redirect()->route('reporteavalciudadano')->with('error','Aval eliminado exitosamente');
 
+    }
+
+    public function exportcalidadperc(){
+        return Excel::download(new CalidadPercibidaExport, 'calidadpercibida.xlsx');
     }
 
 }

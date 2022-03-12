@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Exports\CtspsExport;
 use App\Models\Ctsp;
 use App\Models\Ctspdata;
 use Illuminate\Http\Request;
@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Jurisdiccion;
 use SebastianBergmann\Environment\Console;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CtspController extends Controller
 {
@@ -65,6 +66,10 @@ class CtspController extends Controller
         $Ctspdata->delete();
         return redirect()->route('reportecalidadtsp')->with('error','CTSP eliminado exitosamente');
 
+    }
+
+    public function exportctsp(){
+        return Excel::download(new CtspsExport, 'ctsp.xlsx');
     }
 
 }

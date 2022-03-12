@@ -69,4 +69,5 @@ class CocasepController extends Controller
         return redirect()->route('reportecocasep')->with('error','Cocasep eliminado exitosamente');
 
     }
+
 }

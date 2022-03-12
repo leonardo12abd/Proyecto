@@ -100,6 +100,7 @@ Route::get('altaprimernivelsec2/{id}',[App\Http\Controllers\CalidadPercibidaCont
 Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2Save'])->name('altaprimernivelsec2Save');
 Route::get('reporteavalciudadano',[App\Http\Controllers\CalidadPercibidaController::class,'reporteavalpercibido'])->name('reporteavalciudadano');
 Route::delete('borrarcalidadperc/{id}',[App\Http\Controllers\CalidadPercibidaController::class,'borrarcalidadperc'])->name('borrarcalidadperc');
+Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController::class, 'exportcalidadperc'])->name('exportcalidadperc');
 
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
@@ -109,6 +110,7 @@ Route::get('altaprimernivelsec3/{id}',[App\Http\Controllers\CtspController::clas
 Route::post('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Save'])->name('altaprimernivelsec3Save');
 Route::get('reportecalidadtsp',[App\Http\Controllers\CtspController::class,'reportecalidadtsp'])->name('reportecalidadtsp');
 Route::delete('borrarctsp/{id}',[App\Http\Controllers\CtspController::class,'borrarctsp'])->name('borrarctsp');
+Route::get('exportctsp', [App\Http\Controllers\CtspController::class, 'exportctsp'])->name('exportctsp');
 
 
 /** CRUD COCASEP -> INICIO*/
