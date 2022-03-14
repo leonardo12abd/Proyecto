@@ -13,7 +13,7 @@ use App\Models\Tipologia;
 
 use App\Models\Jurisdiccion;
 use SebastianBergmann\Environment\Console;
-
+use PDF;
 use Illuminate\Support\Facades\Auth;
 
 use Maatwebsite\Excel\Facades\Excel;
@@ -98,4 +98,18 @@ class CalidadPercibidaController extends Controller
         return Excel::download(new CalidadPercibidaExport, 'calidadpercibida.xlsx');
     }
 
+
+    public function pdfcalidadperc()
+    {
+        $Calidadpercibidadata = Calidadpercibidadata::all();
+        return view('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
+    }
+
+    public function downloadPDFviewpdfcalidadperc()
+    {
+        $Calidadpercibidadata = Calidadpercibidadata::all();
+        $pdf = PDF::loadView('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
+        return $pdf->download('PDFClasj.pdf');
+
+    }
 }

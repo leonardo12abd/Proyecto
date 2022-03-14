@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CocasepExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Unidad;
 use App\Models\Municipio;
 use App\Models\Jurisdiccion;
@@ -69,5 +71,10 @@ class CocasepController extends Controller
         return redirect()->route('reportecocasep')->with('error','Cocasep eliminado exitosamente');
 
     }
+
+    public function exportcocasep(){
+        return Excel::download(new CocasepExport, 'cocasep.xlsx');
+    }
+
 
 }

@@ -33,7 +33,7 @@
                                         <a href="#" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
-                                        <a href="#" class="btn btn-success btn-round">
+                                        <a href="{{ route('exportcocasep') }}" class="btn btn-success btn-round">
                                             <i class="fas fa-file-excel"></i>  Excel
                                         </a>
                                     </div>

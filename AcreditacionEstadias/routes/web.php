@@ -101,7 +101,8 @@ Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaControll
 Route::get('reporteavalciudadano',[App\Http\Controllers\CalidadPercibidaController::class,'reporteavalpercibido'])->name('reporteavalciudadano');
 Route::delete('borrarcalidadperc/{id}',[App\Http\Controllers\CalidadPercibidaController::class,'borrarcalidadperc'])->name('borrarcalidadperc');
 Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController::class, 'exportcalidadperc'])->name('exportcalidadperc');
-
+Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfcalidadperc'])->name('viewpdfcalidadperc');
+Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
 
@@ -119,7 +120,7 @@ Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\CocasepController::c
 Route::post('altaprimernivelsec4',[App\Http\Controllers\CocasepController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
 Route::get('reportecocasep',[App\Http\Controllers\CocasepController::class,'reportecocasep'])->name('reportecocasep');
 Route::delete('borrarcocasep/{id}',[App\Http\Controllers\CocasepController::class,'borrarcocasep'])->name('borrarcocasep');
-
+Route::get('exportcocasep', [App\Http\Controllers\CocasepController::class, 'exportcocasep'])->name('exportcocasep');
 /** FIN -> CRUD COCASEP */
 
 Route::get('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
@@ -127,6 +128,7 @@ Route::get('altaprimernivelsec5/{id}',[App\Http\Controllers\IndicasController::c
 Route::post('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5Save'])->name('altaprimernivelsec5Save');
 Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'reporteindicas'])->name('reporteindicas');
 Route::delete('borraindicas/{id}',[App\Http\Controllers\IndicasController::class,'borraindicas'])->name('borraindicas');
+Route::get('exportindicas', [App\Http\Controllers\IndicasController::class, 'exportindicas'])->name('exportindicas');
 
 
 Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
@@ -134,5 +136,7 @@ Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::cl
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec6Save');
 Route::get('reporteapoyo',[App\Http\Controllers\ApoyosController::class,'reporteapei'])->name('reporteapoyo');
 Route::delete('borrarapoyos/{id}',[App\Http\Controllers\ApoyosController::class,'borrarapoyos'])->name('borrarapoyos');
+Route::get('exportapoyos', [App\Http\Controllers\ApoyosController::class, 'exportapoyos'])->name('exportapoyos');
+
 
 });

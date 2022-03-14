@@ -13,6 +13,10 @@ use App\Models\Jurisdiccion;
 use Illuminate\Support\Facades\Auth;
 
 
+use App\Exports\IndicasExport;
+use Maatwebsite\Excel\Facades\Excel;
+
+
 
 class IndicasController extends Controller
 {
@@ -65,5 +69,9 @@ class IndicasController extends Controller
         $Indicadata->delete();
         return redirect()->route('reporteindicas')->with('error','Indicas eliminado exitosamente');
 
+    }
+
+    public function exportindicas(){
+        return Excel::download(new IndicasExport, 'indicas.xlsx');
     }
 }

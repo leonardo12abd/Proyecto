@@ -11,6 +11,8 @@ use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
 
 use Illuminate\Support\Facades\Auth;
+use App\Exports\ApoyosExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ApoyosController extends Controller
 {
@@ -66,5 +68,9 @@ class ApoyosController extends Controller
         $Apoyodata->delete();
         return redirect()->route('reporteapoyo')->with('error','Apoyos e Incentivos eliminado exitosamente');
 
+    }
+
+    public function exportapoyos(){
+        return Excel::download(new ApoyosExport, 'Apoyos.xlsx');
     }
 }

@@ -30,7 +30,7 @@
                                     </div>
 
                                     <div class="col-12 text-left">
-                                        <a href="#" class="btn btn-danger btn-round">
+                                        <a href="{{ route('downloadPDFviewpdfcalidadperc') }}" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
                                         <a href="{{ route('exportcalidadperc') }}" class="btn btn-success btn-round">
