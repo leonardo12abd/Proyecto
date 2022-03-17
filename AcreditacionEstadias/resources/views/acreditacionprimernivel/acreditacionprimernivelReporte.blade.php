@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'Reportectsp', 'titlePage' => 'CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE'])
+@extends('layouts.main', ['activePage' => 'ReporteAcreditacion', 'titlePage' => 'ACREDITACION'])
 @section('content')
 
 
@@ -9,9 +9,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header card-header-info">
-                                <h4 class="card-tittle">CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</h4>
-                                <p class="card-category">CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</p>
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-tittle">Acreditación Primer Nivel</h4>
+                                <p class="card-category">Acreditación</p>
                             </div>
                             <div class="card-body">
 
@@ -26,16 +26,16 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href={{ route('altaprimernivelsec3') }}  class="btn btn-facebook btn-round">
-                                            <i class="material-icons">monitor_weight</i>  alta Calidad tecnica y seguridad del paciente
-                                        </a>
+                                        <a href="{{ route('altaprimernivel') }}" class="btn btn-facebook btn-round">
+                                        <i class="material-icons">note_add</i>Alta Acreditación Primer Nivel
+                                    </a>
                                     </div>
 
                                     <div class="col-12 text-left">
                                         <a href="#" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
-                                        <a href="{{ route('exportctsp') }}" class="btn btn-success btn-round">
+                                        <a href="#" class="btn btn-success btn-round">
                                             <i class="fas fa-file-excel"></i>  Excel
                                         </a>
                                     </div>
@@ -43,7 +43,8 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th><center>ID Reporte</center></th>
+                                            <th><center>Clave Reporte</center></th>
+                                            <th><center>Fecha de Visita</center></th>
                                             <th><center>Codigo Clues</center></th>
                                             <th><center>Unidad</center></th>
                                             <th><center>Usuario Encargado</center></th>
@@ -54,23 +55,22 @@
                                             @foreach($data as $key => $d )
                                                 <tr>
                                                     <td>{{$d->id}}</td>
-                                                    <td>{{$d->clues->clues }}</td>
-                                                    <td>{{$d->clues->nombreunidad  }}</td>
-                                                    <td>{{$d->user->name }}</td>
-
+                                                    <td>{{$d->fecha_primernivel}}</td>
+                                                    <td>{{$d->clues->clues}}</td>
+                                                    <td>{{$d->clues->nombreunidad}}</td>
+                                                    <td>{{ $d->user->name }}</td>
                                                     <td>{{$d->created_at}}</td>
 
                                                     <td class="td-actions text-right">
-                                                        <a href="{{ route('altaprimernivelsec3Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
+                                                        <a href="#" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
                                                         <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
-
-                                                        <form action="{{ route('borrarctsp',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote CTSP?')">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button class="btn btn-danger" type="submit">
-                                                                <i class="material-icons">close</i>
-                                                            </button>
-                                                        </form>
+                                                    <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote Aval Ciudadano?')">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger" type="submit">
+                                                            <i class="material-icons">close</i>
+                                                        </button>
+                                                    </form>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -80,7 +80,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="card-footer mr-auto">
+                           <div class="card-footer mr-auto">
                                 {{ $data->links() }}
                             </div>
                         </div>

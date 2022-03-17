@@ -76,15 +76,10 @@ class CalidadPercibidaController extends Controller
     public function reporteavalpercibido(){
         $data =Calidadpercibidadata::with(['clues', 'user'])->get();
         $data=Calidadpercibidadata::paginate(4);
-        //return $data[0];
+
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2Reporte', compact('data'));
     }
 
-    public function editarcalidadpercibida(){
-
-
-        return view('acreditacionprimernivel.acreditacionprimernivelseccion2Edit');
-    }
 
 
     public function borrarcalidadperc($id){
@@ -105,11 +100,45 @@ class CalidadPercibidaController extends Controller
         return view('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
     }
 
-    public function downloadPDFviewpdfcalidadperc()
+    /*public function downloadPDFviewpdfcalidadperc()
     {
         $Calidadpercibidadata = Calidadpercibidadata::all();
         $pdf = PDF::loadView('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
         return $pdf->download('PDFClasj.pdf');
 
+    }*/
+
+    public function edit($id){
+
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+        $calidadpers = CalidadPercibida::all();
+        $data3 = Calidadpercibidadata::with(['user', 'clues'])->find($id);
+        if(!$data3){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $data3->data3 = unserialize($data3->data3);
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion2edit',compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
     }
+
+    public function update($id, Request $request){
+
+        $data = Calidadpercibidadata::find($id);
+        $data3 = $request->all();
+        $data3 = serialize($data3);
+        $id_clues = $request -> input('id_clues');
+
+        $data->data3 = $data3;
+        $data->id_clues = $id_clues;
+        $data->save();
+
+        return redirect()->back();
+
+    }
+
 }

@@ -23,6 +23,7 @@ class CocasepController extends Controller
             $tipologias = Tipologia::all();
         $cocaseps = Cocasep::all();
         return view('acreditacionprimernivel.acreditacionprimernivelseccion4', compact('cocaseps','unidades', 'municipios', 'jurisdicciones','tipologias'));
+
     }
     public function altaprimernivelsec4Show($id){
         $unidades=Unidad::all();

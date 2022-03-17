@@ -57,7 +57,7 @@
 
                                   {{-- Inicio Hoy --}}
                                   <div class="col-3">
-                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
+                                    <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden   onclick >
                                     <option selected value="-1">Selecciona primero una unidad...</option>
                                     @foreach ( $unidades as $unidad )
                                         <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>

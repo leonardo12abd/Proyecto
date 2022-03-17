@@ -26,7 +26,9 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href={{ route('altaprimernivelsec6') }} class="btn btn-sm btn-facebook">Alta Apoyos e Incentivos</a>
+                                        <a href={{ route('altaprimernivelsec6') }} class="btn btn-facebook btn-round">
+                                            <i class="material-icons">health_and_safety</i>  alta Apoyos e incentivos
+                                        </a>
                                     </div>
 
                                     <div class="col-12 text-left">
@@ -41,7 +43,7 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th><center>ID Reporte</center></th>
+                                            <th><center>Clave Reporte</center></th>
                                             <th><center>Codigo Clues</center></th>
                                             <th><center>Unidad</center></th>
                                             <th><center>Usuario Encargado</center></th>

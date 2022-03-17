@@ -26,8 +26,9 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href={{ route('altaprimernivelsec4') }} class="btn btn-sm btn-facebook">Alta Linea Coasep / Mejora Continua</a>
-                                    </div>
+                                        <a href={{ route('altaprimernivelsec4') }}  class="btn btn-facebook btn-round">
+                                            <i class="material-icons">personal_injury</i>  alta Linea COCASEP/MEJORA CONTINUA
+                                        </a>
 
                                     <div class="col-12 text-left">
                                         <a href="#" class="btn btn-danger btn-round">

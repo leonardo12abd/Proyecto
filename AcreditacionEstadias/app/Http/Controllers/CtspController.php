@@ -68,8 +68,8 @@ class CtspController extends Controller
 
     }
 
-    public function exportctsp(){
-        return Excel::download(new CtspsExport, 'ctsp.xlsx');
-    }
+        public function exportctsp(){
+            return Excel::download(new CtspsExport, 'ctsp.xlsx');
+        }
 
 }

@@ -26,7 +26,9 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href={{ route('altaprimernivelsec5') }} class="btn btn-sm btn-facebook">Alta Indicas y Gestores de Calidad</a>
+                                        <a href={{ route('altaprimernivelsec5') }} class="btn btn-facebook btn-round">
+                                            <i class="material-icons">emergency</i>  alta Indicas
+                                        </a>
                                     </div>
 
                                     <div class="col-12 text-left">

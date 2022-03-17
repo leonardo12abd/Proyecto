@@ -65,528 +65,145 @@
                                 </select>
 
                               </div>
-                        </div>
 
-                        {{-- Tipología --}}
-
-                        <br>
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                          <center>  <h4 class="card-tittle">Tipología</h4> </center>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-6">
-                              <select name="tipologia_primer" id="tipologia_primer" class="form-control"  disabled>
-                                  <option selected value="-1">Selecciona primero una unidad...</option>
-                                  @foreach ( $tipologias as $tipologia )
-                                    <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
-                                  @endforeach
-                              </select>
-                            </div>
-                            <div class="col-6">
-                              <label> Otra:</label><center> <textarea name="otra_tipologia" id="" cols="30" rows="3" class="form-control" placeholder="Introduzca alguna que halla faltado ingresar"></textarea></center>
-                            </div>
-                        </div>
-
-                        {{-- Estructura CLUES --}}
-
-                        <br>
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                           <center> <h4 class="card-tittle">Estructura(CLUES)</i></h4></center>
-                        </div>
-                        <br>
-                        <div class="row">
-                          <div class="row">
-                            <div class="col-12">
-                               <center>    <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
-
-                                     </label>
-                                   </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
-                                     </label>
-                                   </div>
-                                 </center>
-                             </div>
-                          </div>
-
-                          <div id="get_estructura_clues">
-                            <!-- NO VA NADA -->
-                          </div>
-
-
-                        </div>
-
-
-{{-- Estructura Real --}}
-                        <br>
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                          <center> <h4 class="card-tittle">Estructura Real</h4></center>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="row">
-                              <div class="col-12">
-                                 <center>    <div class="form-check form-check-inline">
-                                       <label class="form-check-label">
-                                         <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real0" value="basica" checked> Básica
-
-                                       </label>
-                                     </div>
-                                     <div class="form-check form-check-inline">
-                                       <label class="form-check-label">
-                                         <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real1" value="ampliada"> Ampliada
-                                       </label>
-                                     </div>
-                                   </center>
-                               </div>
-                            </div>
-
-                            <div id="get_estructura_real">
-                              <!-- NO VA NADA -->
-                            </div>
-
-
-                          </div>
-
-                        {{-- Estrato --}}
-                        <br>
-
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                           <center> <h4 class="card-tittle">Estrato  </h4>  </center>
-                        </div>
-                        <br>
-                        <div class="row">
-                          <div class="col-8">
-                            <select name="estrato_primer" id="estrato_primer" class="form-control" disabled >
+                              <div class="col-3">
+                                <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
                                 <option selected value="-1">Selecciona primero una unidad...</option>
-                                @foreach ( $estratos as $estrato )
-                                  <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
+                                @foreach ( $unidades as $unidad )
+                                    <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
                                 @endforeach
-                            </select>
-                          </div>
-                         <div class="col-4">
-                                <label>Abasto de medicamento: </label>
-                                <input type="text" name="estrato_abastom" id="" placeholder="Porcentaje %" class="form-control">
-
+                                </select>
                             </div>
 
-                            {{-- Cierra div=row --}}
                         </div>
 
-                        <br>
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;"">
-                           <center> <h4 class="card-tittle">Aviso de Funcionamiento </h4> </center>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <label>Med Gral: </label>
+
+
+                        <div class="card-body">
+                          <div class="row">
+                            @foreach ($primernivel as $key=>$fanta )
+                              @if($key == 0 || $primernivel[$key-1]->clasificacion_primer != $fanta->clasificacion_primer)
+                                <div class="col-12">
+                                  <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                      <center> <h4 class="card-tittle">{{ $fanta->clasificacion_primer }}</h4> </center>
+                                  </div>
+                                </div>
+                              @endif
+                              <div class="col-4">
+                                <label> {{ $fanta->nombre_primer }} </label>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="med_gral_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="med_gral_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                               <label>Estomatología: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="estomatologia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="estomatologia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                                <label>Psicología: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="psicologia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="psicologia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                                <label> Laboratorio: </label> <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                      <input name="lab_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="lab_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-
-                            <div class="col-3">
-                                <label>Farmacia: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                       <input name="farmacia_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input name="farmacia_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-                            </div>
-
-                            <div class="col-3">
-                                <label>RX: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                       <input name="rx_avfun" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input name="rx_avfun" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-
-                            </div>
-                            <div class="col-3">
-                            <input type="text" name="otro_avfun" id="" class="form-control" placeholder="Otro:">
-                            </div>
-                        </div>
-
-                        {{-- Responsable Sanitario Actualizado --}}
-
-                        <br>
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                        <center>    <h4 class="card-tittle">Responsable Sanitario Actualizado  </h4> </center>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <label>Med Gral: </label>
+                                  <label class="form-check-label">
+                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                  </label>
+                                </div>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_medgral" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
+                                  <label class="form-check-label">
+                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                                  </label>
+                                </div>
 
-                                    </label>
+
+
+                                @if ($fanta->nombre_primer == 'Otro')
+
+                                  <div >
+                                    <textarea cols="30" rows="3" class="form-control" name="textarea_{{$key}}" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
                                   </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_medgral" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
+                                @endif
 
-                                    </label>
+
+                                @if ($fanta->nombre_primer == 'Tipologia')
+                                  <div>
+                                    <select name="tipologia_primer" id="tipologia_primer" class="form-control"  disabled>
+                                        <option selected value="-1">Selecciona primero una unidad...</option>
+                                        @foreach ( $tipologias as $tipologia )
+                                          <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
+                                        @endforeach
+                                    </select>
                                   </div>
-                            </div>
-                            <div class="col-3">
-                               <label>Estomatología: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_estomatologia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+                                @endif
 
-                                    </label>
+                                @if ($fanta->nombre_primer == 'Estrato')
+                                <div>
+                                    <select name="estrato_primer" id="estrato_primer" class="form-control" disabled >
+                                        <option selected value="-1">Selecciona primero una unidad...</option>
+                                        @foreach ( $estratos as $estrato )
+                                          <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                              @endif
+
+                              @if ($fanta->nombre_primer == 'Abasto de Medicamento')
+                                  <div>
+                                    <input type="text" name="abasto_estrato" id="" placeholder="Porcentaje %" class="form-control">
                                   </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_estomatologia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+                              @endif
+                                    {{-- Basica Clues --}}
+                               @if ($fanta->nombre_primer == 'Basica_Clues')
 
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                                <label>Psicología: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_psicologia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_psicologia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                                <label> Laboratorio: </label> <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                      <input name="respsanact_lb" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="respsanact_lb" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-
-                            <div class="col-3">
-                                <label>Farmacia: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                       <input name="respsanact_farmacia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
+                               <div class="row">
+                                <div class="row">
+                                  <div class="col-12">
+                                     <center>
+                                          <div class="form-check form-check-inline">
+                                           <label class="form-check-label">
+                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
+                                           </label>
+                                         </div>
+                                         <div class="form-check form-check-inline">
+                                           <label class="form-check-label">
+                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
+                                           </label>
+                                         </div>
+                                       </center>
                                    </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input name="respsanact_farmacia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                       <span class="form-check-sign">
+                                </div>
 
-                                       </span>
-                                     </label>
-                                   </div>
-                            </div>
-
-                            <div class="col-3">
-                                <label>RX: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                       <input name="respsanact_rx" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input name="respsanact_rx" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                       <span class="form-check-sign">
-
-                                       </span>
-                                     </label>
-                                   </div>
-
-                            </div>
-                            <div class="col-3">
-                            <input type="text" name="respsanact_otro" id="" class="form-control" placeholder="Otro:">
-                            </div>
-                        </div>
-
-                        <br>
-                        {{-- Servicio subrogados(Incluidos en el contrato) --}}
-                        <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                          <center>  <h4 class="card-tittle">Servicio subrogados(Incluidos en el contrato) </h4></center>
-                        </div>
-                        <br>
-                        <div class="row">
-
-                            <div class="col-6">
-                               <label>Permiso SEMARNAT generador RPBI: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="servsubrogados_permsemarnat" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="servsubrogados_permsemarnat" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-6">
-                              <label>Permiso SEMARNAT transporte </label> <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                     <input name="servsubrogados_permsemarnat" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                     <span class="form-check-sign">
-
-                                     </span>
-                                   </label>
-                                 </div>
-                                 <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                     <input name="servsubrogados_permsemarnat" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                     <span class="form-check-sign">
-
-                                     </span>
-                                   </label>
-                                 </div>
-                           </div>
-                           <div class="col-3">
-                            <label>RPBI: </label>
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input name="servsubrogados_rpbi" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
-                                  <span class="form-check-sign">
-
-                                  </span>
-                                </label>
+                                <div id="get_estructura_clues">
+                                  <!-- NO VA NADA -->
+                                </div>
                               </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input name="servsubrogados_rpbi" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
-                                  <span class="form-check-sign">
+                              @endif
 
-                                  </span>
-                                </label>
+                                {{-- Basica real --}}
+                                @if ($fanta->nombre_primer == 'Ampliada_Real')
+
+                                <div class="row">
+                                  <div class="row">
+                                    <div class="col-12">
+                                       <center>    <div class="form-check form-check-inline">
+                                             <label class="form-check-label">
+                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real0" value="basica" checked> Básica
+
+                                             </label>
+                                           </div>
+                                           <div class="form-check form-check-inline">
+                                             <label class="form-check-label">
+                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real1" value="ampliada"> Ampliada
+                                             </label>
+                                           </div>
+                                         </center>
+                                     </div>
+                                  </div>
+
+                                  <div id="get_estructura_real">
+                                    <!-- NO VA NADA -->
+                                  </div>
+
+
+                                </div>
+
+                              @endif
+
+
+                                {{--  FIN --}}
                               </div>
+                            @endforeach
+
+                          </div>
                         </div>
 
-                            <div class="col-3">
-                                <label>Farmacia: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="servsubrogados_farmacia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="servsubrogados_farmacia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-                            <div class="col-3">
-                                <label> Vigilancia: </label> <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                      <input name="servsubrogados_vg" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-
-                                    </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input name="servsubrogados_vg" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-
-                                    </label>
-                                  </div>
-                            </div>
-
-                            <div class="col-3">
-                                <label>Fumigación: </label> <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                       <input name="servsubrogados_fumigacion" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                       <span class="form-check-sign">
-
-                                     </label>
-                                   </div>
-                                   <div class="form-check form-check-inline">
-                                     <label class="form-check-label">
-                                       <input name="servsubrogados_fumigacion" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                       <span class="form-check-sign">
-
-                                     </label>
-                                   </div>
-                            </div>
-                        </div>
-                        <br>
-
-                         {{-- Servicio subrogados(Incluidos en el contrato) --}}
-                         <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                        <center>  <h4 class="card-tittle">Mantenimiento y conservación al inmueble </h4></center>
-                      </div>
-
-                      <br>
-                      <div class="row">
-                         <div class="col-3">
-                          <label>Programado: </label>
-                          <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input name="servsubrogados_rpbi" class="form-check-input" type="radio" id="inlineradio1" value="SI">SI
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                              </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <label class="form-check-label">
-                                <input name="servsubrogados_rpbi" class="form-check-input" type="radio" id="inlineradio2" value="NO">NO
-                                <span class="form-check-sign">
-                                    <span class="check"></span>
-                                </span>
-                              </label>
-                            </div>
-                      </div>
-
-                          <div class="col-3">
-                              <label>Realizado: </label> <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input name="servsubrogados_farmacia" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                    <span class="form-check-sign">
-                                        <span class="check"></span>
-                                    </span>
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input name="servsubrogados_farmacia" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                    <span class="form-check-sign">
-                                        <span class="check"></span>
-                                    </span>
-                                  </label>
-                                </div>
-                          </div>
-                          <div class="col-3">
-                              <label> En proceso: </label> <div class="form-check form-check-inline">
-                                 <label class="form-check-label">
-                                    <input name="servsubrogados_vg" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                    <span class="form-check-sign">
-                                        <span class="check"></span>
-                                    </span>
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input name="servsubrogados_vg" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                    <span class="form-check-sign">
-                                        <span class="check"></span>
-                                    </span>
-                                  </label>
-                                </div>
-                          </div>
-
-                          <div class="col-3">
-                              <label>Sin Actividad: </label> <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                     <input name="servsubrogados_fumigacion" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                     <span class="form-check-sign">
-
-                                     </span>
-                                   </label>
-                                 </div>
-                                 <div class="form-check form-check-inline">
-                                   <label class="form-check-label">
-                                     <input name="servsubrogados_fumigacion" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                                     <span class="form-check-sign">
-
-                                     </span>
-                                   </label>
-                                 </div>
-                          </div>
-                      </div>
-                      {{-- Termina la primer Seccion --}}
-
-                      </div>
                       {{-- Inicia la segunda seccion --}}
 
                       <br><br>

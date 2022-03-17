@@ -33,8 +33,8 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'acreditaprimer' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('altaprimernivel') }}">
+            <li class="nav-item{{ $activePage == 'ReporteAcreditacion' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('reporteprimernivel') }}">
                 <i class="material-icons">
                     task
                 </i>                <span class="sidebar-normal">{{ __('ACREDITACIÓN') }} </span>

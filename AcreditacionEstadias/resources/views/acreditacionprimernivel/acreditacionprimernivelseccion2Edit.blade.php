@@ -5,9 +5,9 @@
 
 <div class="content">
 
-    <form action="/altaprimernivelsec2" method="POST">
+    <form action="{{ route('updatecalidadperc',$data3->id) }}" method="PUT">
         {{ csrf_field() }}
-
+        @method('PUT')
 
         <div class="container-fluid">
         <div class="row">
@@ -26,8 +26,8 @@
                         <div class="card-body">
                             <div class="row">
                               <div class="col-3">
-                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})">
-                              <datalist id="datalistOptions" >
+                                <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel_sec_2'})"  value="{{ $data3->clues->clues}}">
+                                <datalist id="datalistOptions" >
                                 @foreach ( $unidades as $unidad )
                                   <option  value="{{ $unidad->clues }}" />
                                 @endforeach
@@ -99,13 +99,13 @@
                                 <tr>
                                     <th scope="row">{{$cpers->nombre_aval}}</th>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}" value="Si" required>
+                                        <input type="radio" name="key_{{$key}}" value="Si" @if($data3->data3['key_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="radio" name="key_{{$key}}"  checked value="No" required>
+                                        <input type="radio" name="key_{{$key}}"  checked value="No" @if($data3->data3['key_'.$key] == 'Si') checked @endif>
                                     </td>
                                     <td>
-                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10"></textarea>
+                                        <textarea class="form-control" name="textarea_{{$key}}" rows="1" cols="10">{{$data3->data3['textarea_'.$key]}}</textarea>
                                     </td>
                                 </tr>
                             </tbody>

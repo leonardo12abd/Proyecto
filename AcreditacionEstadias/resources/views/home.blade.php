@@ -7,7 +7,7 @@
 
 
             <center>
-                <img src="{{ asset('img/foto.jpeg') }}" width="850" height="500">
+                <img  src="{{ asset('img/foto.jpeg') }}" width="850" height="500" >
             </center>
 
 

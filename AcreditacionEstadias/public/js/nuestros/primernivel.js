@@ -16,6 +16,7 @@ const selectUnidad = async ({vista='alta_primer_nivel'}) => {
       return res.json()
     })
     if(vista === 'alta_primer_nivel'){
+        document.getElementById("id_clues").value = data.id_clues
       document.getElementById("unidad_id").value = data.id_clues
       document.getElementById("municipio_primer").value = data.clave_municipio
       document.getElementById("juridiccion_primer").value = data.clavejurisdiccion

@@ -26,7 +26,9 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href={{ route('altaprimernivelsec2') }} class="btn btn-sm btn-facebook">Alta Calidad Percibida</a>
+                                        <a href={{ route('altaprimernivelsec2') }} class="btn btn-facebook btn-round">
+                                        <i class="material-icons">note_add</i>Alta Calidad Percibida
+                                    </a>
                                     </div>
 
                                     <div class="col-12 text-left">
@@ -54,15 +56,12 @@
                                                     <td>{{$d->id}}</td>
                                                     <td>{{$d->clues->clues}}</td>
                                                     <td>{{$d->clues->nombreunidad}}</td>
-                                                    <td>{{$d->user->name}}</td>
+                                                    <td>{{ $d->user->name }}</td>
                                                     <td>{{$d->created_at}}</td>
 
                                                     <td class="td-actions text-right">
                                                         <a href="{{ route('altaprimernivelsec2Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
-                                                        <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
-
-
-
+                                                        <a href="{{ route('editcalidad',$d->id) }}"class="btn btn-warning"><i class="material-icons">edit</i></a>
                                                     <form action="{{ route('borrarcalidadperc',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote Aval Ciudadano?')">
                                                         @csrf
                                                         @method('DELETE')

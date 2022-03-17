@@ -81,7 +81,6 @@ Route::get('/dowloadpdf',[App\Http\Controllers\UserController::class, 'downloadP
 
 
 
-
 //-----------------------------------Excel Download ---------------------------
  //-------------------------- Table Usuers ---------------------------
 //Route::get('importExportView', [App\Http\Controllers\UserController::class, 'importExportView']);
@@ -91,8 +90,10 @@ Route::get('export', [App\Http\Controllers\UserController::class, 'export'])->na
 
 
 Route::get('altaprimernivel',[App\Http\Controllers\AcreditacionController::class,'altaprimernivel'])->name('altaprimernivel');
-Route::POST('guardarprimernivel',[App\Http\Controllers\AcreditacionController::class,'guardarprimernivel'])->name('guardarprimernivel');
 Route::get('eloquent',[App\Http\Controllers\AcreditacionController::class,'eloquent'])->name('eloquent');
+Route::post('guardarprimernivel',[App\Http\Controllers\AcreditacionController::class,'altaprimerSave'])->name('guardarprimernivel');
+Route::get('reporteprimernivel',[App\Http\Controllers\AcreditacionController::class,'reporteprimernivel'])->name('reporteprimernivel');
+
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/
 Route::get('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2'])->name('altaprimernivelsec2');
@@ -103,6 +104,9 @@ Route::delete('borrarcalidadperc/{id}',[App\Http\Controllers\CalidadPercibidaCon
 Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController::class, 'exportcalidadperc'])->name('exportcalidadperc');
 Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfcalidadperc'])->name('viewpdfcalidadperc');
 Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
+Route::get('altaprimernivelsec2/{id}/edit',[App\Http\Controllers\CalidadPercibidaController::class,'edit'])->name('editcalidad');
+Route::put('/update/{id}',[App\Http\Controllers\UserController::class, 'update'])->name('updatecalidadperc');
+
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
 

@@ -26,7 +26,9 @@
 
                                 <div class="row">
                                     <div class="col-12 text-right">
-                                        <a href="{{ route('users.create') }}" class="btn btn-sm btn-facebook">Añadir Usuario</a>
+                                        <a href="{{ route('users.create') }}" class="btn btn-primary btn-round">
+                                        <i class="material-icons">person_add</i>  Añadir Usuario
+                                    </a>
                                     </div>
 
                                     <div class="col-12 text-left">
@@ -67,6 +69,7 @@
                                                         <i class="material-icons">close</i>
                                                     </button>
                                                 </form>
+
 
 
                                                 </td>
