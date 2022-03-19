@@ -27,7 +27,7 @@
                       <div class="card-body">
                         <div class="row">
                           <div class="col-3">
-                          <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})">
+                          <input class="form-control" list="datalistOptions" id="clues_id"  placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})" required>
                           <datalist id="datalistOptions">
                             @foreach ( $unidades as $unidad )
                               <option value="{{ $unidad->clues }}" />
@@ -336,14 +336,14 @@
                                             @foreach ( $infras as $key => $infra )
                                             <tr>
                                               <th scope="row">{{ $infra ->nombre_infra}} </th>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="fachada2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->fachada_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="salaespera2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->saladeespera_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="sanitario2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->sanitarios_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="consultorio2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->consultorios_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="medicinaprev2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->medicinaprev_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="farmacia2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->farmacia_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="areaesterilizacion2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->esterilizacion_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" min="0" class="form-control" type="text" id="otrasareas2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->otrasareas_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="fachada2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->fachada_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="salaespera2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->saladeespera_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="sanitario2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->sanitarios_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="consultorio2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->consultorios_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="medicinaprev2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->medicinaprev_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="farmacia2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->farmacia_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="areaesterilizacion2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->esterilizacion_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="otrasareas2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->otrasareas_infra_is_required == 0) disabled @endif></td>
                                             </tr>
                                             @endforeach
                                           </tbody>
@@ -390,16 +390,16 @@
                                               @foreach ( $emis as $key => $emi )
                                               <tr>
                                                 <th scope="row">{{ $emi ->nombre_emi}} </th>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="salaespera_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->saladeespera_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="consultorio_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->consultorios_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="medicinaprev_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->medicinaprev_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="areaesterilizacion_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->areaesterilizacion_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="estomatologia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->estomatologia_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="psicologia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->psicologia_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="archivo_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->archivo_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="farmacia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->farmacia_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="otrasareas_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->otrasareas_emi_is_required == 0) disabled @endif></td>
-                                                <td><input type="number" min="0" class="form-control" type="text" id="total_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->total_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_11{{$key}}" min="0" class="form-control" type="text" id="salaespera_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->saladeespera_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_12{{$key}}" min="0" class="form-control" type="text" id="consultorio_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->consultorios_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_13{{$key}}" min="0" class="form-control" type="text" id="medicinaprev_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->medicinaprev_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_14{{$key}}" min="0" class="form-control" type="text" id="areaesterilizacion_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->areaesterilizacion_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_15{{$key}}" min="0" class="form-control" type="text" id="estomatologia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->estomatologia_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_16{{$key}}" min="0" class="form-control" type="text" id="psicologia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->psicologia_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_17{{$key}}" min="0" class="form-control" type="text" id="archivo_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->archivo_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_18{{$key}}" min="0" class="form-control" type="text" id="farmacia_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->farmacia_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_19{{$key}}" min="0" class="form-control" type="text" id="otrasareas_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->otrasareas_emi_is_required == 0) disabled @endif></td>
+                                                <td><input type="number" name="key_20{{$key}}" min="0" class="form-control" type="text" id="total_{{$key}}" onchange="sumarr({{$key}})" onkeypress="sumarr({{$key}})" @if($emi->total_emi_is_required == 0) disabled @endif></td>
                                               </tr>
                                               @endforeach
                                             </tbody>

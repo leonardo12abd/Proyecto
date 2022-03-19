@@ -51,7 +51,7 @@ class AcreditacionController extends Controller
 
         ]);
 
-        return redirect()->route('altaprimernivel');
+        return redirect()->route('reporteprimernivel')->with('success','Reporte Acreditación Creado correctamente');;
     }
 
     public function reporteprimernivel(){
@@ -60,6 +60,15 @@ class AcreditacionController extends Controller
 
         return view('acreditacionprimernivel.acreditacionprimernivelReporte', compact('data'));
     }
+
+    public function borrarprimernivel($id){
+        $Primerniveldata = Primerniveldata::find($id);
+        $Primerniveldata->delete();
+        return redirect()->route('reporteprimernivel')->with('error','Reporte de Acreditacion eliminado exitosamente');
+
+    }
+
+
 
 }
 

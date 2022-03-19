@@ -93,6 +93,7 @@ Route::get('altaprimernivel',[App\Http\Controllers\AcreditacionController::class
 Route::get('eloquent',[App\Http\Controllers\AcreditacionController::class,'eloquent'])->name('eloquent');
 Route::post('guardarprimernivel',[App\Http\Controllers\AcreditacionController::class,'altaprimerSave'])->name('guardarprimernivel');
 Route::get('reporteprimernivel',[App\Http\Controllers\AcreditacionController::class,'reporteprimernivel'])->name('reporteprimernivel');
+Route::delete('borrarprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'borrarprimernivel'])->name('borrarprimernivel');
 
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/

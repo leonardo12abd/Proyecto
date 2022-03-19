@@ -64,8 +64,8 @@
                                                     <td class="td-actions text-right">
                                                         <a href="#" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
                                                         <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
-                                                    <form action="#" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote Aval Ciudadano?')">
-                                                        @csrf
+                                                        <form action="{{ route('borrarprimernivel',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar este Repote de Acreditacion?')">
+                                                            @csrf
                                                         @method('DELETE')
                                                         <button class="btn btn-danger" type="submit">
                                                             <i class="material-icons">close</i>
