@@ -17,7 +17,7 @@
                         <div class="card-body">
                             <div class="row">
                               <div class="col-3">
-                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})">
+                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})" required>
                               <datalist id="datalistOptions" >
                                 @foreach ( $unidades as $unidad )
                                   <option  value="{{ $unidad->clues }}" />

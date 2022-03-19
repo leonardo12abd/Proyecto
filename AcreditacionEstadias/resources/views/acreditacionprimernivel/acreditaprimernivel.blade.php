@@ -17,7 +17,7 @@
 
                                 <div class="col-3">
                                 <label >Fecha de Visita: </label>
-                                <input type="date" name="fecha_primernivel" class="form-control">
+                                <input type="date" name="fecha_primernivel" class="form-control" required>
                             </center>
                         </div>
                 </div>

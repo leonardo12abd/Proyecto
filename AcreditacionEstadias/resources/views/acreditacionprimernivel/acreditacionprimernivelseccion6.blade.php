@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <div class="row">
                               <div class="col-3">
-                              <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})">
+                              <input class="form-control" list="datalistOptions"  id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel_sec_2'})" required>
                               <datalist id="datalistOptions" >
                                 @foreach ( $unidades as $unidad )
                                   <option  value="{{ $unidad->clues }}" />
@@ -109,7 +109,7 @@
                                 <tr>
                                     <th scope="row">{{$apo->nombre_apoyos}}</th>
                                     <td>
-                                        <input type="text" name="puntaje_0_{{$key}}"  required>
+                                        <input type="number"  class="form-control" name="puntaje_0_{{$key}}"  required>
                                     </td>
                                     <td>
                                         <input type="radio" name="key_0_{{$key}}" value="Si" required>
@@ -118,7 +118,7 @@
                                         <input type="radio" name="key_0_{{$key}}" checked value="No" required>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_1_{{$key}}"  required>
+                                        <input type="number"  class="form-control" name="puntaje_1_{{$key}}"  required>
                                     </td>
                                     <td>
                                         <input type="radio" name="key_1_{{$key}}" value="Si" required>
@@ -127,7 +127,7 @@
                                         <input type="radio" name="key_1_{{$key}}" checked value="No" required>
                                     </td>
                                     <td>
-                                        <input type="text" name="puntaje_2_{{$key}}"  required>
+                                        <input type="number"   class="form-control" name="puntaje_2_{{$key}}"  required>
                                     </td>
                                     <td>
                                         <input type="radio" name="key_2_{{$key}}" value="Si" required>
