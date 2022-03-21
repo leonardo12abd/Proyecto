@@ -69,6 +69,7 @@
                                                             <i class="material-icons">close</i>
                                                         </button>
                                                     </form>
+                                                    <a href="#" class="btn btn-primary"> <i class="material-icons">picture_as_pdf</i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach

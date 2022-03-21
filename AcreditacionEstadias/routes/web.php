@@ -106,7 +106,7 @@ Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController
 Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfcalidadperc'])->name('viewpdfcalidadperc');
 Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
 Route::get('altaprimernivelsec2/{id}/edit',[App\Http\Controllers\CalidadPercibidaController::class,'edit'])->name('editcalidad');
-Route::put('/update/{id}',[App\Http\Controllers\UserController::class, 'update'])->name('updatecalidadperc');
+Route::put('/update/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'update'])->name('updatecalidadperc');
 
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 

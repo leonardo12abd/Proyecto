@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use App\Models\primernivel;
 use Illuminate\Support\Facades\Auth;
 
+
 class AcreditacionController extends Controller
 {
     public function altaprimernivel(){

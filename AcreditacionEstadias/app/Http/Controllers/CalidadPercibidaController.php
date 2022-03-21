@@ -97,16 +97,18 @@ class CalidadPercibidaController extends Controller
     public function pdfcalidadperc()
     {
         $Calidadpercibidadata = Calidadpercibidadata::all();
+
         return view('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
     }
 
-    /*public function downloadPDFviewpdfcalidadperc()
+    public function downloadPDFviewpdfcalidadperc()
     {
         $Calidadpercibidadata = Calidadpercibidadata::all();
-        $pdf = PDF::loadView('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
+        $data3 = Calidadpercibidadata::with(['user', 'clues']);
+        $pdf = PDF::loadView('acreditacionprimernivel.pdfcalidadpercibida', compact('data3','Calidadpercibidadata'));
         return $pdf->download('PDFClasj.pdf');
 
-    }*/
+    }
 
     public function edit($id){
 
@@ -131,13 +133,13 @@ class CalidadPercibidaController extends Controller
         $data = Calidadpercibidadata::find($id);
         $data3 = $request->all();
         $data3 = serialize($data3);
-        $id_clues = $request -> input('id_clues');
+       // $id_clues = $request -> input('id_clues');
 
         $data->data3 = $data3;
-        $data->id_clues = $id_clues;
+       // $data->id_clues = $id_clues;
         $data->save();
 
-        return redirect()->back();
+        return redirect()->route('reporteavalciudadano')->with('success','Reporte Aval Ciudadano editado correctamente');
 
     }
 

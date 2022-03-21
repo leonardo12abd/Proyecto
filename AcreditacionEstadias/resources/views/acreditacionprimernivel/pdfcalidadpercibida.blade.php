@@ -12,19 +12,18 @@
 <br><br>
     <center><table>
         <thead>
-            <th  >id User</th>
-            <th  >data3</th>
-            <th  >created</th>
-            <th>id_user</th>
+            <th  >Clave reoprte</th>
+
+            <th  >Fecha de Creacion</th>
+            <th>Usuario encargado de la creacio</th>
 
         </thead>
         <tbody>
             @foreach ($Calidadpercibidadata as $clpcd)
                 <tr>
                     <td>{{ $clpcd->id }}</td>
-                    <td>{{ $clpcd->data3 }}</td>
                     <td>{{ $clpcd->created_at }}</td>
-                    <td>{{ $clpcd->id_user }}</td>
+                    <td>{{ $clpcd->user->name }}</td>
                 </tr>
             @endforeach
         </tbody>
