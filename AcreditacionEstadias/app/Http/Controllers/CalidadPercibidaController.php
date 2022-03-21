@@ -128,7 +128,7 @@ class CalidadPercibidaController extends Controller
         return view('acreditacionprimernivel.acreditacionprimernivelseccion2edit',compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
     }
 
-    public function update($id, Request $request){
+    public function updatecalidad($id, Request $request){
 
         $data = Calidadpercibidadata::find($id);
         $data3 = $request->all();

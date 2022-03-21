@@ -74,4 +74,38 @@ class IndicasController extends Controller
     public function exportindicas(){
         return Excel::download(new IndicasExport, 'indicas.xlsx');
     }
+
+
+    public function edit($id){
+
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+          $indicas = Indica::all();
+          $data1 = Indicadata::with(['user', 'clues'])->find($id);
+          if(!$data1){
+               return response()->json([
+                    'message' => 'not found data'
+               ], 404);
+          }
+          $data1->data1 = unserialize($data1->data1);
+          return view('acreditacionprimernivel.acreditacionprimernivelseccion5edit', compact('indicas','data1','unidades', 'municipios', 'jurisdicciones'));
+         }
+
+
+         public function updateindicas($id, Request $request){
+
+            $data = Indicadata::find($id);
+            $data1 = $request->all();
+            $data1 = serialize($data1);
+           // $id_clues = $request -> input('id_clues');
+
+            $data->data1 = $data1;
+           // $data->id_clues = $id_clues;
+            $data->save();
+
+            return redirect()->route('reporteindicas')->with('success','Reporte INDICAS Editado correctamente');
+
+        }
 }

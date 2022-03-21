@@ -73,4 +73,36 @@ class ApoyosController extends Controller
     public function exportapoyos(){
         return Excel::download(new ApoyosExport, 'Apoyos.xlsx');
     }
+
+    public function edit($id){
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+        $apoyos = Apoyo::all();
+        $data4 = Apoyodata::with(['user', 'clues'])->find($id);
+        if(!$data4){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $data4->data4 = unserialize($data4->data4);
+        // return $apoyos_data;
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion6edit', compact('data4','apoyos','unidades', 'municipios', 'jurisdicciones'));
+    }
+
+    public function updateapoyos($id, Request $request){
+
+        $data = Apoyodata::find($id);
+        $data4 = $request->all();
+        $data4 = serialize($data4);
+       // $id_clues = $request -> input('id_clues');
+
+        $data->data4 = $data4;
+       // $data->id_clues = $id_clues;
+        $data->save();
+
+        return redirect()->route('reporteapoyo')->with('success','Reporte Apoyos editado correctamente');
+
+    }
 }

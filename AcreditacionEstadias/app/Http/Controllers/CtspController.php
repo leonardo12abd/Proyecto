@@ -72,4 +72,37 @@ class CtspController extends Controller
             return Excel::download(new CtspsExport, 'ctsp.xlsx');
         }
 
+        public function edit($id){
+
+            $unidades=Unidad::all();
+            $municipios=Municipio::all();
+            $tipologia=Tipologia::all();
+            $jurisdicciones=Jurisdiccion::all();
+            $ctsps = Ctsp::all();
+            $data2 = Ctspdata::with(['user', 'clues'])->find($id);
+            if(!$data2){
+             return response()->json([
+                  'message' => 'not found data'
+             ], 404);
+        }
+            $data2->data2 = unserialize($data2->data2);
+
+            return view('acreditacionprimernivel.acreditacionprimernivelseccion3edit',compact('data2','ctsps','unidades', 'municipios', 'jurisdicciones'));
+        }
+
+        public function update($id, Request $request){
+
+            $data = Ctspdata::find($id);
+            $data2 = $request->all();
+            $data2 = serialize($data2);
+           // $id_clues = $request -> input('id_clues');
+
+            $data->data2 = $data2;
+           // $data->id_clues = $id_clues;
+            $data->save();
+
+            return redirect()->route('reportecalidadtsp')->with('success','Reporte Calidad Tecnica editado correctamente');
+
+        }
+
 }

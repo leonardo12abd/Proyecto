@@ -61,7 +61,7 @@
 
                                                     <td class="td-actions text-right">
                                                         <a href="{{ route('altaprimernivelsec6Show',$d->id) }}" class="btn btn-info"> <i class="material-icons">sticky_note_2</i></a>
-                                                        <a href="#"class="btn btn-warning"><i class="material-icons">edit</i></a>
+                                                        <a href="{{ route('editapoyos',$d->id) }}"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
                                                             <form action="{{ route('borrarapoyos',$d->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('¿Seguro que deseas eliminar este Repote Apoyo?')">
                                                                 @csrf

@@ -3,8 +3,9 @@
 @section('content')
 
 <div class="content">
-    <form action="#" method="POST">
+    <form action="{{ route('updateapoyos',$data4->id) }}" method="POST">
         {{ csrf_field() }}
+        @method('PUT')
 
         <div class="container-fluid">
         <div class="row">
@@ -124,7 +125,7 @@
                                         <input type="radio" name="key_1_{{$key}}"  value="No" required @if($data4->data4['key_1_'.$key] == 'No') checked @endif>
                                     </td>
                                     <td>
-                                        <input type="number"  class="form-control" name="puntaje_2_{{$key}}"  required value="{{$data4->data4['puntaje_2_'.$key] }}">
+                                        <input type="number"  class="form-control"" name="puntaje_2_{{$key}}"  required value="{{$data4->data4['puntaje_2_'.$key] }}">
                                     </td>
                                     <td>
                                         <input type="radio" name="key_2_{{$key}}" value="Si" required @if($data4->data4['key_2_'.$key] == 'Si') checked @endif>
@@ -138,6 +139,19 @@
                                 </tr>
                                 @endforeach
                             </tbody>
+                        </table>
+                    </div>
+                        </div>
+                </div>
+        </div>
+        <center>
+            <button type="submit" class="btn btn-danger btn-round">
+                <i class="far fa-save"></i> Actualizar
+            </button>
+        </center>
+    </div>
+    </form>
+</div>
 
                     </div>
 

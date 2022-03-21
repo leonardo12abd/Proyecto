@@ -106,7 +106,7 @@ Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController
 Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfcalidadperc'])->name('viewpdfcalidadperc');
 Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
 Route::get('altaprimernivelsec2/{id}/edit',[App\Http\Controllers\CalidadPercibidaController::class,'edit'])->name('editcalidad');
-Route::put('/update/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'update'])->name('updatecalidadperc');
+Route::put('/updatecalidad/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'updatecalidad'])->name('updatecalidad');
 
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 
@@ -117,6 +117,9 @@ Route::post('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'a
 Route::get('reportecalidadtsp',[App\Http\Controllers\CtspController::class,'reportecalidadtsp'])->name('reportecalidadtsp');
 Route::delete('borrarctsp/{id}',[App\Http\Controllers\CtspController::class,'borrarctsp'])->name('borrarctsp');
 Route::get('exportctsp', [App\Http\Controllers\CtspController::class, 'exportctsp'])->name('exportctsp');
+Route::get('altaprimernivelsec3/{id}/edit',[App\Http\Controllers\CtspController::class,'edit'])->name('editctsp');
+Route::put('/update/{id}',[App\Http\Controllers\CtspController::class, 'update'])->name('updatectsp');
+
 
 
 /** CRUD COCASEP -> INICIO*/
@@ -126,6 +129,9 @@ Route::post('altaprimernivelsec4',[App\Http\Controllers\CocasepController::class
 Route::get('reportecocasep',[App\Http\Controllers\CocasepController::class,'reportecocasep'])->name('reportecocasep');
 Route::delete('borrarcocasep/{id}',[App\Http\Controllers\CocasepController::class,'borrarcocasep'])->name('borrarcocasep');
 Route::get('exportcocasep', [App\Http\Controllers\CocasepController::class, 'exportcocasep'])->name('exportcocasep');
+Route::get('altaprimernivelsec4/{id}/edit',[App\Http\Controllers\CocasepController::class,'edit'])->name('editcocasep');
+Route::put('/updatecocasep/{id}',[App\Http\Controllers\CocasepController::class, 'updatecocasep'])->name('updatecocasep');
+
 /** FIN -> CRUD COCASEP */
 
 Route::get('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5'])->name('altaprimernivelsec5');
@@ -134,6 +140,8 @@ Route::post('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class
 Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'reporteindicas'])->name('reporteindicas');
 Route::delete('borraindicas/{id}',[App\Http\Controllers\IndicasController::class,'borraindicas'])->name('borraindicas');
 Route::get('exportindicas', [App\Http\Controllers\IndicasController::class, 'exportindicas'])->name('exportindicas');
+Route::get('altaprimernivelsec5/{id}/edit',[App\Http\Controllers\IndicasController::class,'edit'])->name('editindicas');
+Route::put('/updateindicas/{id}',[App\Http\Controllers\IndicasController::class, 'updateindicas'])->name('updateindicas');
 
 
 Route::get('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6'])->name('altaprimernivelsec6');
@@ -142,6 +150,7 @@ Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,
 Route::get('reporteapoyo',[App\Http\Controllers\ApoyosController::class,'reporteapei'])->name('reporteapoyo');
 Route::delete('borrarapoyos/{id}',[App\Http\Controllers\ApoyosController::class,'borrarapoyos'])->name('borrarapoyos');
 Route::get('exportapoyos', [App\Http\Controllers\ApoyosController::class, 'exportapoyos'])->name('exportapoyos');
-
+Route::get('altaprimernivelsec6/{id}/edit',[App\Http\Controllers\ApoyosController::class,'edit'])->name('editapoyos');
+Route::put('/updateapoyos/{id}',[App\Http\Controllers\ApoyosController::class, 'updateapoyos'])->name('updateapoyos');
 
 });

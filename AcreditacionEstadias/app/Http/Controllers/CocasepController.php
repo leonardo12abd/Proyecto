@@ -77,5 +77,39 @@ class CocasepController extends Controller
         return Excel::download(new CocasepExport, 'cocasep.xlsx');
     }
 
+    public function edit($id){
+
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+        $cocaseps = Cocasep::all();
+        $data9 = Cocacepdata::with(['user', 'clues'])->find($id);
+        if(!$data9){
+         return response()->json([
+              'message' => 'not found data'
+         ], 404);
+    }
+        $data9->data9 = unserialize($data9->data9);
+
+        return view('acreditacionprimernivel.acreditacionprimernivelseccion4edit',compact('cocaseps','cocaseps','data9', 'unidades', 'municipios', 'jurisdicciones'));
+    }
+
+
+    public function updatecocasep($id, Request $request){
+
+        $data = Cocacepdata::find($id);
+        $data9 = $request->all();
+        $data9 = serialize($data9);
+       // $id_clues = $request -> input('id_clues');
+
+        $data->data9 = $data9;
+       // $data->id_clues = $id_clues;
+        $data->save();
+
+        return redirect()->route('reportecocasep')->with('success','Reporte Cocasep editado correctamente');
+
+    }
+
 
 }
