@@ -65,10 +65,10 @@
 
 {{-- Fin hoy --}}
 
-                            </div>
+
 
                         {{-- Inicia la primer Seccion --}}
-                    <div class="card-body">
+                        <div class="table-responsive">
                         <table class="table">
                         <thead class="thead-dark">
                               <tr>
@@ -137,8 +137,9 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-
-                    </div>
+                        </table>
+                        </div>
+                </div>
 
 @endsection
 
