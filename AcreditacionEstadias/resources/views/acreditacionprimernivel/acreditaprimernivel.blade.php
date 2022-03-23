@@ -316,18 +316,18 @@
                                           <center>  <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACIÓN AL INMUEBLE  <i class="fas fa-screwdriver"></i>
                                                 </h4></center>
                                         </div>
-                                        <table class="table-responsive">
+                                        <table class="table table-bordered">
                                           <thead>
                                             <tr>
-                                              <th scope="col">REQUERIMIENTO</th>
-                                              <th scope="col">FACHADA</th>
-                                              <th scope="col">SALA DE ESPERA</th>
-                                              <th scope="col">SANITARIOS</th>
-                                              <th scope="col">CONSULTORIOS</th>
-                                              <th scope="col">MEDICINA PREVENTIVA</th>
-                                              <th scope="col">FARMACIA</th>
-                                              <th scope="col">ESTERILIZACION</th>
-                                              <th scope="col">OTRAS ÁREAS</th>
+                                              <th class="table-success">REQUERIMIENTO</th>
+                                              <th class="table-success">FACHADA</th>
+                                              <th class="table-success">SALA DE ESPERA</th>
+                                              <th class="table-success">SANITARIOS</th>
+                                              <th class="table-success">CONSULTORIOS</th>
+                                              <th class="table-success">MEDICINA PREVENTIVA</th>
+                                              <th class="table-success">FARMACIA</th>
+                                              <th class="table-success">ESTERILIZACION</th>
+                                              <th class="table-success">OTRAS ÁREAS</th>
 
 
                                             </tr>
@@ -351,8 +351,7 @@
                                 </div>
                             </div>
                         </div>
-<br>
-<br>
+
 
                         {{-- Termina la Tercera seccion --}}
 
@@ -369,20 +368,21 @@
                                                 </h4>
                                         </center>
                                         </div>
-                                        <table class="table-responsive">
+                                        <div class="table-responsive">
+                                        <table class="table table-bordered">
                                             <thead>
                                               <tr>
-                                                <th scope="col">REQUERIMIENTO</th>
-                                                <th scope="col">SALA DE ESPERA</th>
-                                                <th scope="col">CONSULTORIOS</th>
-                                                <th scope="col">MEDICINA PREVENTIVA</th>
-                                                <th scope="col">ÁREA ESTERILIZACIÓN</th>
-                                                <th scope="col">ESTOMATOLOGIA</th>
-                                                <th scope="col">PSICOLOGIA</th>
-                                                <th scope="col">ARCHIVO</th>
-                                                <th scope="col">FARMACIA</th>
-                                                <th scope="col">OTRAS ÁREAS</th>
-                                                <th scope="col">TOTAL</th>
+                                                <th class="table-info">REQUERIMIENTO</th>
+                                                <th class="table-info">SALA DE ESPERA</th>
+                                                <th class="table-info">CONSULTORIOS</th>
+                                                <th class="table-info">MEDICINA PREVENTIVA</th>
+                                                <th class="table-info">ÁREA ESTERILIZACIÓN</th>
+                                                <th class="table-info">ESTOMATOLOGIA</th>
+                                                <th class="table-info">PSICOLOGIA</th>
+                                                <th class="table-info">ARCHIVO</th>
+                                                <th class="table-info">FARMACIA</th>
+                                                <th class="table-info">OTRAS ÁREAS</th>
+                                                <th class="table-info">TOTAL</th>
 
                                               </tr>
                                             </thead>
@@ -405,7 +405,7 @@
                                             </tbody>
 
                                         </table>
-
+                                        </div>
 
                                 </div>
                                 </div>
