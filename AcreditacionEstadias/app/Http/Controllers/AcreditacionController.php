@@ -69,6 +69,29 @@ class AcreditacionController extends Controller
 
     }
 
+    public function altaprimernivelShow($id){
+
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
+        $estratos = Estrato::all();
+        $infras = Infraestructura::all();
+        $emis = Emi::all();
+        $primernivel = primernivel::all();
+        $data20 = Primerniveldata::with(['user', 'clues'])->find($id);
+        if(!$data20){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $data20->data20 = unserialize($data20->data20);
+       return view('acreditacionprimernivel.acreditacionprimernivelShow', compact('data20','primernivel','emis','infras','unidades', 'municipios','jurisdicciones', 'tipologias', 'estratos'));
+        //return $data20;
+
+    }
+
+
 
 
 }

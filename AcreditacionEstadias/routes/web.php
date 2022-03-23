@@ -94,6 +94,7 @@ Route::get('eloquent',[App\Http\Controllers\AcreditacionController::class,'eloqu
 Route::post('guardarprimernivel',[App\Http\Controllers\AcreditacionController::class,'altaprimerSave'])->name('guardarprimernivel');
 Route::get('reporteprimernivel',[App\Http\Controllers\AcreditacionController::class,'reporteprimernivel'])->name('reporteprimernivel');
 Route::delete('borrarprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'borrarprimernivel'])->name('borrarprimernivel');
+Route::get('altaprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelShow'])->name('altaprimernivelShow');
 
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/
@@ -107,6 +108,8 @@ Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController
 Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
 Route::get('altaprimernivelsec2/{id}/edit',[App\Http\Controllers\CalidadPercibidaController::class,'edit'])->name('editcalidad');
 Route::put('/updatecalidad/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'updatecalidad'])->name('updatecalidad');
+Route::get('viewsec2/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'viewsec2'])->name('pdfprueba');
+Route::get('pdfDownload/{id}',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfDownload'])->name('descargapdf');
 
 /** FIN -> CRUD CALIDAD PERCIBIDA */
 

@@ -32,7 +32,7 @@
                                     </div>
 
                                     <div class="col-12 text-left">
-                                        <a href="{{ route('downloadPDFviewpdfcalidadperc') }}" class="btn btn-danger btn-round">
+                                        <a href="#" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
                                         <a href="{{ route('exportcalidadperc') }}" class="btn btn-success btn-round">
@@ -69,7 +69,9 @@
                                                             <i class="material-icons">close</i>
                                                         </button>
                                                     </form>
-                                                    <a href="#" class="btn btn-primary"> <i class="material-icons">picture_as_pdf</i></a>
+                                                    {{-- <a href="{{ route('descargapdf',$d->id) }}" class="btn btn-danger"> <i class="material-icons">download    </i></a>
+                                                    <a href="{{ route('pdfprueba',$d->id) }}" class="btn btn-red"> <i class="material-icons">visibility</i></a>
+ --}}
                                                     </td>
                                                 </tr>
                                             @endforeach

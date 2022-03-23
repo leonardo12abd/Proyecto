@@ -143,4 +143,35 @@ class CalidadPercibidaController extends Controller
 
     }
 
+
+    public function viewsec2($id){
+
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+        $calidadpers = CalidadPercibida::all();
+        $data3 = Calidadpercibidadata::with(['user', 'clues'])->find($id);
+        if(!$data3){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $data3->data3 = unserialize($data3->data3);
+        return view('acreditacionprimernivel.pdfprueba', compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
+      }
+
+      public function pdfDownload($id)
+      {
+        $unidades=Unidad::all();
+        $municipios=Municipio::all();
+        $tipologia=Tipologia::all();
+        $jurisdicciones=Jurisdiccion::all();
+        $calidadpers = CalidadPercibida::all();
+        $data3 = Calidadpercibidadata::with(['user', 'clues'])->find($id);
+        $data3->data3 = unserialize($data3->data3);
+          $pdf = PDF::loadView('acreditacionprimernivel.pdfprueba',compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
+          return $pdf->download('prueba.pdf');
+
+      }
 }

@@ -1,8 +1,8 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Acreditacion Primer NIvel '])
+@extends('layouts.app')
 @section('content')
 
 <div class="content">
-    <form action="{{ route('guardarprimernivel') }}" method="POST">
+    <form action="#" method="POST">
         {{ csrf_field() }}
 
         <div class="container-fluid">
@@ -17,18 +17,19 @@
 
                                 <div class="col-3">
                                 <label >Fecha de Visita: </label>
-                                <input type="date" name="fecha_primernivel" class="form-control" required>
+                                <input type="date" name="fecha_primernivel" class="form-control"
+
                             </center>
                         </div>
-
+                </div>
 
 
                         {{-- Inicia la primer Seccion --}}
                       <div class="card-body">
                         <div class="row">
                           <div class="col-3">
-                          <input class="form-control" list="datalistOptions" id="clues_id"  placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})" required>
-                          <datalist id="datalistOptions">
+                            <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel'})"  value="{{ $data20->clues->clues}}">
+                            <datalist id="datalistOptions">
                             @foreach ( $unidades as $unidad )
                               <option value="{{ $unidad->clues }}" />
                             @endforeach
@@ -77,7 +78,7 @@
 
                         </div>
 
-
+{{-- Termina Selecciopn de Clues y todo eso --}}
 
                         <div class="card-body">
                           <div class="row">
@@ -93,12 +94,12 @@
                                 <label> {{ $fanta->nombre_primer }} </label>
                                 <div class="form-check form-check-inline">
                                   <label class="form-check-label">
-                                    <input name="key_{{$key}}" type="radio" id="inlineradio1" value="SI"> SI
+                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label class="form-check-label">
-                                    <input name="key_{{$key}}"  type="radio" id="inlineradio2" value="NO"> NO
+                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio2" value="NO" > NO
                                   </label>
                                 </div>
 
@@ -148,12 +149,12 @@
                                      <center>
                                           <div class="form-check form-check-inline">
                                            <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues0" value="basica" checked> Básica
+                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
                                            </label>
                                          </div>
                                          <div class="form-check form-check-inline">
                                            <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues1" value="ampliada"> Ampliada
+                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
                                            </label>
                                          </div>
                                        </center>
@@ -224,7 +225,7 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+
                         {{-- Recursos HUmanos --}}
 
                    {{--      <div class="row">
@@ -418,15 +419,14 @@
                             </div>
 
                     </div>
-                    <center><button type="submit" class="btn btn-primary btn-round">
-                      <i class="far fa-save"></i> Guardar
-                    </button></center>
                 </div>
 
 
                 </div>
 
-
+                <center><button type="submit" class="btn btn-primary btn-round">
+                    <i class="far fa-save"></i> Guardar
+                  </button></center>
 
         </div>
     </form>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main', ['activePage' => '', 'titlePage' => ' '])
 @section('content')
 
 <div class="card-body">
