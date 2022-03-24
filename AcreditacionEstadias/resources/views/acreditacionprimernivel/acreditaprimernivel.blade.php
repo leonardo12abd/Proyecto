@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Acreditacion Primer NIvel '])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Alta Acreditacion Primer NIvel '])
 @section('content')
 
 <div class="content">
@@ -16,8 +16,8 @@
                                     </h4>
 
                                 <div class="col-3">
-                                <label >Fecha de Visita: </label>
-                                <input type="date" name="fecha_primernivel" class="form-control" required>
+                                <label class="text-white">Fecha de Visita: </label>
+                                <input type="date" name="fecha_primernivel" class="form-control text-white" required>
                             </center>
                         </div>
 
@@ -77,6 +77,7 @@
 
                         </div>
 
+
                         {{-- Inicia Form --}}
                         <div class="card-body">
                             <div class="row">
@@ -85,14 +86,16 @@
                                         <center> <h4 class="card-tittle">Tipologia</h4> </center>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <input type="number" name="tipologiarural" class="form-control" placeholder="Rural______Nucleos básicos">
-                                </div>
-                                <div class="col-3">
-                                    <input type="number" name="tipologiaurbana" class="form-control" placeholder="Urbana_____Nucleos básicos">
-                                </div>
+
                                 <div class="col-6">
-                                    <input type="number" name="ncbasicos" class="form-control" placeholder="Nucleos básicos existentes">
+                                    <select name="tipologia_primer" id="tipologia_primer" class="form-control"   disabled>
+                                        <option selected value="-1">Selecciona primero una unidad...</option>
+                                        @foreach ( $tipologias as $tipologia )
+                                        <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
+                                        @endforeach
+                                    </select>
+
+
                                 </div>
                                 <div class="col-4">
                                     <textarea name="textarea_tipologia" id="" cols="30" rows="5" class="form-control" placeholder="Otra:"></textarea>
@@ -312,7 +315,7 @@
                         </div>
 
 
-                        <br><br>
+                        <br>
 
                         {{-- Termina la segunda seccion --}}
                         {{-- Inicia la Tercera seccion --}}

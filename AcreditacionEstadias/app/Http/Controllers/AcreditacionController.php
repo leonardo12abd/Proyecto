@@ -40,9 +40,6 @@ class AcreditacionController extends Controller
         $user-> id;
         $id_clues = $request -> input('id_clues');
         $date = $request -> input('fecha_primernivel');
-        $tipologiarural = $request->input('tipologiarural');
-        $tipologiaurbana = $request->input('tipologiaurbana');
-        $ncbasicos = $request->input('ncbasicos');
         $textarea_tipologia = $request->input('textarea_tipologia');
         $tipo__estructura = $request->input('tipo__estructura');
         $estructura_real = $request->input('estructura_real');
@@ -55,9 +52,6 @@ class AcreditacionController extends Controller
             'id_clues' => $id_clues,
             'id_user' => $user->id,
             'fecha_primernivel'=>$date,
-            'tipologiarural'=>$tipologiarural,
-            'tipologiaurbana'=>$tipologiaurbana,
-            'ncbasicos'=>$ncbasicos,
             'textarea_tipologia'=>$textarea_tipologia,
             'tipo__estructura'=>$tipo__estructura,
             'estructura_real'=>$estructura_real

@@ -14,9 +14,6 @@ class Primerniveldata extends Model
     protected $fillable = [
         'id',
         'fecha_primernivel',
-        'tipologiarural',
-        'tipologiaurbana',
-        'ncbasicos',
         'textarea_tipologia',
         'tipo__estructura',
         'estructura_real',

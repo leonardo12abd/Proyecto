@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => ' '])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Alta Calidad Tecnica y Seguridad del Paciente'])
 
 @section('content')
 

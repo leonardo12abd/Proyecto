@@ -74,6 +74,7 @@
                         {{-- Seccion CALIDAD PERCIBIDA --}}
                     <div class="card-body">
                         <center><h4 style="background-color: rgb(247, 220, 111);">Aval Ciudadano</h4></center>
+                        <div class="table-responsive">
                         <table class="table">
                           @foreach($calidadpers as $key => $cpers)
                             @if($key == 0 || $calidadpers[$key-1]->clasificacion_aval != $cpers->clasificacion_aval)
@@ -104,6 +105,7 @@
                             </tbody>
                         @endforeach
                         </table>
+                        </div>
                     </div>
                 </div>
         </div>

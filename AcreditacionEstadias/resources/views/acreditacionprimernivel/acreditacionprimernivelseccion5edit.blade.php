@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => ' '])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Editar Indicas'])
 @section('content')
 
 <div class="content">
@@ -13,7 +13,7 @@
                 <div class="card">
                         <div class="card text-white bg-primary" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">Show INDICAS Y GESTORES DE CALIDAD</h4>
+                              <h4 class="card-tittle">INDICAS Y GESTORES DE CALIDAD</h4>
                             </center>
 
                         </div>

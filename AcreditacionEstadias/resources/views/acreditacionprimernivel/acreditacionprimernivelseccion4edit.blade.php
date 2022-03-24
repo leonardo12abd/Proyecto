@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => ' '])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Editar LINEA COCASEP/MEJORA CONTINUA'])
 
 @section('content')
 

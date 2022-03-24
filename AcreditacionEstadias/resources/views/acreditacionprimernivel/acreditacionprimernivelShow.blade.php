@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Mostrar Acreditacion Primer NIvel '])
 @section('content')
 
 <div class="content">
@@ -8,205 +8,208 @@
         <div class="container-fluid">
         <div class="row">
 
+            <div class="card">
+                <div class="card text-white bg-danger" style="max-heigth: 18rem;">
+                  <center>  <h4 class="card-tittle">
+                            Acreditación de Primer Nivel
+                            </h4>
 
-                <div class="card">
-                        <div class="card text-white bg-danger" style="max-heigth: 18rem;">
-                          <center>  <h4 class="card-tittle">
-                                    Acreditación de Primer Nivel
-                                    </h4>
-
-                                <div class="col-3">
-                                <label >Fecha de Visita: </label>
-                                <input type="date" name="fecha_primernivel" class="form-control"
-
-                            </center>
-                        </div>
+                        <div class="col-3">
+                        <label >Fecha de Visita: </label>
+                        <input type="date" name="fecha_primernivel" class="form-control" required>
+                    </center>
                 </div>
 
 
-                        {{-- Inicia la primer Seccion --}}
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-3">
-                            <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel'})"  value="{{ $data20->clues->clues}}">
-                            <datalist id="datalistOptions">
-                            @foreach ( $unidades as $unidad )
-                              <option value="{{ $unidad->clues }}" />
+
+                {{-- Inicia la primer Seccion --}}
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-3">
+                    <input class="form-control" list="datalistOptions" id="clues_id" placeholder="Unidad" onchange="selectUnidad({vista: 'alta_primer_nivel'})" onmousemove="selectUnidad({vista: 'alta_primer_nivel'})"  value="{{ $data20->clues->clues}}">                  <datalist id="datalistOptions">
+                    @foreach ( $unidades as $unidad )
+                      <option value="{{ $unidad->clues }}" />
+                    @endforeach
+                  </datalist>
+                    <!-- <select name="clues" id="clues_id" class="form-control" onchange="selectUnidad()" label="hola">
+                      <option selected value="-1">Seleccionar...</option>
+                      @foreach ( $unidades as $unidad )
+                        <option value="{{ $unidad->id_clues }}"> {{ $unidad->clues  }}</option>
+                      @endforeach
+                    </select> -->
+                  </div>
+                    <div class="col-3">
+                      <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
+                        <option selected value="-1">Selecciona primero una unidad...</option>
+                        @foreach ( $unidades as $unidad )
+                          <option value="{{ $unidad->id_clues }}"> {{ $unidad->nombreunidad   }}</option>
+                        @endforeach
+                      </select>
+                    </div>
+                    <div class="col-3">
+                        <select name="municipio_primer" id="municipio_primer" class="form-control"  disabled>
+                            <option selected value="-1">Selecciona primero una unidad...</option>
+                            @foreach ( $municipios as $municipio )
+                              <option value="{{ $municipio->clave_municipio }}"> {{ $municipio->nombremunicipio   }}</option>
                             @endforeach
-                          </datalist>
-                            <!-- <select name="clues" id="clues_id" class="form-control" onchange="selectUnidad()" label="hola">
-                              <option selected value="-1">Seleccionar...</option>
-                              @foreach ( $unidades as $unidad )
-                                <option value="{{ $unidad->id_clues }}"> {{ $unidad->clues  }}</option>
-                              @endforeach
-                            </select> -->
-                          </div>
-                            <div class="col-3">
-                              <select name="unidad" id="unidad_id" class="form-control" class="form-control"  disabled>
-                                <option selected value="-1">Selecciona primero una unidad...</option>
-                                @foreach ( $unidades as $unidad )
-                                  <option value="{{ $unidad->id_clues }}"> {{ $unidad->nombreunidad   }}</option>
-                                @endforeach
-                              </select>
+                        </select>
+                      </div>
+                      <div class="col-3">
+                        <select name="juridiccion_primer" id="juridiccion_primer" class="form-control" disabled >
+                            <option selected value="-1">Selecciona primero una unidad...</option>
+                            @foreach ( $jurisdicciones as $juri )
+                              <option value="{{ $juri->clavejuridiccion }}"> {{ $juri->nombrejurisdiccion   }}</option>
+                            @endforeach
+                        </select>
+
+                      </div>
+
+                      <div class="col-3">
+                        <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
+                        <option selected value="-1">Selecciona primero una unidad...</option>
+                        @foreach ( $unidades as $unidad )
+                            <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
+                        @endforeach
+                        </select>
+                    </div>
+
+                </div>
+
+                {{-- Inicia Form --}}
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                <center> <h4 class="card-tittle">Tipologia</h4> </center>
                             </div>
-                            <div class="col-3">
-                                <select name="municipio_primer" id="municipio_primer" class="form-control"  disabled>
-                                    <option selected value="-1">Selecciona primero una unidad...</option>
-                                    @foreach ( $municipios as $municipio )
-                                      <option value="{{ $municipio->clave_municipio }}"> {{ $municipio->nombremunicipio   }}</option>
-                                    @endforeach
-                                </select>
-                              </div>
-                              <div class="col-3">
-                                <select name="juridiccion_primer" id="juridiccion_primer" class="form-control" disabled >
-                                    <option selected value="-1">Selecciona primero una unidad...</option>
-                                    @foreach ( $jurisdicciones as $juri )
-                                      <option value="{{ $juri->clavejuridiccion }}"> {{ $juri->nombrejurisdiccion   }}</option>
-                                    @endforeach
-                                </select>
+                        </div>
+                        <div class="col-3">
+                            <input type="number" name="tipologiarural" class="form-control" placeholder="Rural______Nucleos básicos">
+                        </div>
+                        <div class="col-3">
+                            <input type="number" name="tipologiaurbana" class="form-control" placeholder="Urbana_____Nucleos básicos">
+                        </div>
+                        <div class="col-6">
+                            <input type="number" name="ncbasicos" class="form-control" placeholder="Nucleos básicos existentes">
+                        </div>
+                        <div class="col-4">
+                            <textarea name="textarea_tipologia" id="" cols="30" rows="5" class="form-control" placeholder="Otra:"></textarea>
+                        </div>
+                    </div>
+                </div>
 
-                              </div>
-
-                              <div class="col-3">
-                                <select name="id_clues" id="id_clues" class="form-control" class="form-control" hidden onclick >
-                                <option selected value="-1">Selecciona primero una unidad...</option>
-                                @foreach ( $unidades as $unidad )
-                                    <option value="{{ $unidad->id_clues }}"> {{ $unidad->id_clues}}</option>
-                                @endforeach
-                                </select>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                <center> <h4 class="card-tittle">Estructura Clues</h4> </center>
                             </div>
-
+                            <center>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues0" value="basica" checked> Básica
+                                    </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues1" value="ampliada"> Ampliada
+                                </label>
+                              </div>
+                            </center>
+                            <div id="get_estructura_clues">
+                                <!-- NO VA NADA -->
+                              </div>
                         </div>
 
-{{-- Termina Selecciopn de Clues y todo eso --}}
+                    </div>
+                </div>
 
-                        <div class="card-body">
-                          <div class="row">
-                            @foreach ($primernivel as $key=>$fanta )
-                              @if($key == 0 || $primernivel[$key-1]->clasificacion_primer != $fanta->clasificacion_primer)
-                                <div class="col-12">
-                                  <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                                      <center> <h4 class="card-tittle">{{ $fanta->clasificacion_primer }}</h4> </center>
-                                  </div>
-                                </div>
-                              @endif
-                              <div class="col-4">
-                                <label> {{ $fanta->nombre_primer }} </label>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                <center> <h4 class="card-tittle">Estructura Real</h4> </center>
+                            </div>
+                            <center>
                                 <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                                  </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <label class="form-check-label">
-                                    <input name="key_{{$key}}" class="form-check-input" type="radio" id="inlineradio2" value="NO" > NO
-                                  </label>
-                                </div>
-
-
-
-                                @if ($fanta->nombre_primer == 'Otro')
-
-                                  <div >
-                                    <textarea cols="30" rows="3" class="form-control" name="textarea_{{$key}}" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
-                                  </div>
-                                @endif
-
-
-                                @if ($fanta->nombre_primer == 'Tipologia')
-                                  <div>
-                                    <select name="tipologia_primer" id="tipologia_primer" class="form-control"  disabled>
-                                        <option selected value="-1">Selecciona primero una unidad...</option>
-                                        @foreach ( $tipologias as $tipologia )
-                                          <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
-                                        @endforeach
-                                    </select>
-                                  </div>
-                                @endif
-
-                                @if ($fanta->nombre_primer == 'Estrato')
-                                <div>
-                                    <select name="estrato_primer" id="estrato_primer" class="form-control" disabled >
-                                        <option selected value="-1">Selecciona primero una unidad...</option>
-                                        @foreach ( $estratos as $estrato )
-                                          <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                              @endif
-
-                              @if ($fanta->nombre_primer == 'Abasto de Medicamento')
-                                  <div>
-                                    <input type="text" name="abasto_estrato" id="" placeholder="Porcentaje %" class="form-control">
-                                  </div>
-                              @endif
-                                    {{-- Basica Clues --}}
-                               @if ($fanta->nombre_primer == 'Basica_Clues')
-
-                               <div class="row">
-                                <div class="row">
-                                  <div class="col-12">
-                                     <center>
-                                          <div class="form-check form-check-inline">
-                                           <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues0" value="basica" checked> Básica
-                                           </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                           <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura" class="form-check-input" type="radio" id="estructura_clues1" value="ampliada"> Ampliada
-                                           </label>
-                                         </div>
-                                       </center>
-                                   </div>
-                                </div>
-
-                                <div id="get_estructura_clues">
-                                  <!-- NO VA NADA -->
-                                </div>
+                                    <label class="form-check-label">
+                                        <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real0" value="basica" checked> Básica
+                                    </label>
                               </div>
-                              @endif
-
-                                {{-- Basica real --}}
-                                @if ($fanta->nombre_primer == 'Ampliada_Real')
-
-                                <div class="row">
-                                  <div class="row">
-                                    <div class="col-12">
-                                       <center>    <div class="form-check form-check-inline">
-                                             <label class="form-check-label">
-                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real0" value="basica" checked> Básica
-
-                                             </label>
-                                           </div>
-                                           <div class="form-check form-check-inline">
-                                             <label class="form-check-label">
-                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real1" value="ampliada"> Ampliada
-                                             </label>
-                                           </div>
-                                         </center>
-                                     </div>
-                                  </div>
-
-                                  <div id="get_estructura_real">
-                                    <!-- NO VA NADA -->
-                                  </div>
-
-
-                                </div>
-
-                              @endif
-
-
-                                {{--  FIN --}}
+                              <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real1"  value="ampliada"> Ampliada
+                                </label>
                               </div>
-                            @endforeach
-
-                          </div>
+                            </center>
+                            <div id="get_estructura_real">
+                                <!-- NO VA NADA -->
+                              </div>
                         </div>
 
-                      {{-- Inicia la segunda seccion --}}
+                    </div>
+                </div>
 
+                {{-- Termina form --}}
+
+
+                <div class="col-3">
+                    <select name="tipologia_primer" id="tipologia_primer" class="form-control"  hidden disabled>
+                        <option selected value="-1">Selecciona primero una unidad...</option>
+                        @foreach ( $tipologias as $tipologia )
+                          <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+
+                <div class="col-3">
+                    <select name="estrato_primer" id="estrato_primer" class="form-control" hidden disabled >
+                        <option selected value="-1">Selecciona primero una unidad...</option>
+                        @foreach ( $estratos as $estrato )
+                          <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    @foreach ($primernivel as $key=>$fanta )
+                      @if($key == 0 || $primernivel[$key-1]->clasificacion_primer != $fanta->clasificacion_primer)
+                        <div class="col-12">
+                          <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                              <center> <h4 class="card-tittle">{{ $fanta->clasificacion_primer }}</h4> </center>
+                          </div>
+                        </div>
+                      @endif
+                      <div class="col-4">
+                        <label> {{ $fanta->nombre_primer }} </label>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input name="key_0{{$key}}" type="radio" id="inlineradio1" value="SI"> SI
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input name="key_0{{$key}}"  type="radio" id="inlineradio2" value="NO"> NO
+                          </label>
+                        </div>
+
+
+
+
+                        @if ($fanta->nombre_primer == 'Otros')
+
+                        <div >
+                          <textarea cols="30" rows="3" class="form-control" name="textarea_{{$key}}" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
+                        </div>
+                      @endif
+
+                        {{--  FIN --}}
+                      </div>
+                    @endforeach
+
+                  </div>
+                </div>
                       <br><br>
 
 
@@ -317,18 +320,18 @@
                                           <center>  <h4 class="card-tittle">NECESIDADES DE MANTENIMIENTO Y CONSERVACIÓN AL INMUEBLE  <i class="fas fa-screwdriver"></i>
                                                 </h4></center>
                                         </div>
-                                        <table class="table-responsive">
-                                          <thead>
-                                            <tr>
-                                              <th scope="col">REQUERIMIENTO</th>
-                                              <th scope="col">FACHADA</th>
-                                              <th scope="col">SALA DE ESPERA</th>
-                                              <th scope="col">SANITARIOS</th>
-                                              <th scope="col">CONSULTORIOS</th>
-                                              <th scope="col">MEDICINA PREVENTIVA</th>
-                                              <th scope="col">FARMACIA</th>
-                                              <th scope="col">ESTERILIZACION</th>
-                                              <th scope="col">OTRAS ÁREAS</th>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                              <tr>
+                                                <th class="table-success">REQUERIMIENTO</th>
+                                                <th class="table-success">FACHADA</th>
+                                                <th class="table-success">SALA DE ESPERA</th>
+                                                <th class="table-success">SANITARIOS</th>
+                                                <th class="table-success">CONSULTORIOS</th>
+                                                <th class="table-success">MEDICINA PREVENTIVA</th>
+                                                <th class="table-success">FARMACIA</th>
+                                                <th class="table-success">ESTERILIZACION</th>
+                                                <th class="table-success">OTRAS ÁREAS</th>
 
 
                                             </tr>
@@ -370,20 +373,21 @@
                                                 </h4>
                                         </center>
                                         </div>
-                                        <table class="table-responsive">
-                                            <thead>
-                                              <tr>
-                                                <th scope="col">REQUERIMIENTO</th>
-                                                <th scope="col">SALA DE ESPERA</th>
-                                                <th scope="col">CONSULTORIOS</th>
-                                                <th scope="col">MEDICINA PREVENTIVA</th>
-                                                <th scope="col">ÁREA ESTERILIZACIÓN</th>
-                                                <th scope="col">ESTOMATOLOGIA</th>
-                                                <th scope="col">PSICOLOGIA</th>
-                                                <th scope="col">ARCHIVO</th>
-                                                <th scope="col">FARMACIA</th>
-                                                <th scope="col">OTRAS ÁREAS</th>
-                                                <th scope="col">TOTAL</th>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                  <tr>
+                                                    <th class="table-info">REQUERIMIENTO</th>
+                                                    <th class="table-info">SALA DE ESPERA</th>
+                                                    <th class="table-info">CONSULTORIOS</th>
+                                                    <th class="table-info">MEDICINA PREVENTIVA</th>
+                                                    <th class="table-info">ÁREA ESTERILIZACIÓN</th>
+                                                    <th class="table-info">ESTOMATOLOGIA</th>
+                                                    <th class="table-info">PSICOLOGIA</th>
+                                                    <th class="table-info">ARCHIVO</th>
+                                                    <th class="table-info">FARMACIA</th>
+                                                    <th class="table-info">OTRAS ÁREAS</th>
+                                                    <th class="table-info">TOTAL</th>
 
                                               </tr>
                                             </thead>
@@ -406,7 +410,7 @@
                                             </tbody>
 
                                         </table>
-
+                                        </div>
 
                                 </div>
                                 </div>

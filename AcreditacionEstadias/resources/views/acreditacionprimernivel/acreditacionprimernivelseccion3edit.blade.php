@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => '', 'titlePage' => ' '])
+@extends('layouts.main', ['activePage' => '', 'titlePage' => 'Editar Calidad Técnica y Seguridad al Paciente'])
 
 @section('content')
 
@@ -14,7 +14,7 @@
                 <div class="card">
                         <div class="card text-white bg-info" style="max-heigth: 18rem;">
                             <center>
-                              <h4 class="card-tittle">Show CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</h4>
+                              <h4 class="card-tittle">CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</h4>
                             </center>
                         </div>
                         <div class="card-body">
