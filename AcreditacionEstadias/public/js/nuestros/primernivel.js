@@ -337,96 +337,93 @@ const changeEstructuraClue = () => {
     const valida = document.getElementById('estructura_clues1').checked
     if(valida){
       document.getElementById('get_estructura_clues').innerHTML = `
-       <div>
-          <div class="row">
+      <div>
+      <div class="row">
 
-            <div class="col-3">
-                <label>Estomatología: </label> <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="estomatologia_estructura" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+        <div class="col-3">
+<label>Estomatología: </label> <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input name="estomatologia_clues"   type="radio" id="inlineradio1" value="SI"> SI
 
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="estomatologia_estructura" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input name="estomatologia_clues"   type="radio" id="inlineradio2" value="NO"> NO
 
-                    </label>
-                  </div>
-            </div>
-            <div class="col-3">
-                <label>Psicología: </label> <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="psicologia_estructura" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+    </label>
+  </div>
+</div>
+<div class="col-3">
+<label>Psicología: </label> <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input name="psicologia_clues"   type="radio" id="inlineradio1" value="SI"> SI
 
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="psicologia_estructura" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input name="psicologia_clues"   type="radio" id="inlineradio2" value="NO"> NO
 
-                    </label>
-                  </div>
-            </div>
-            <div class="col-3">
-                <label>Trabajo Social: </label> <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="trabajo_social_estructura" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+    </label>
+  </div>
+</div>
+<div class="col-3">
+<label>Trabajo Social: </label> <div class="form-check form-check-inline">
+   <label class="form-check-label">
+      <input name="trabajo_social_clues"   type="radio" id="inlineradio1" value="SI"> SI
 
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="trabajo_social_estructura" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input name="trabajo_social_clues"   type="radio" id="inlineradio2" value="NO"> NO
 
-                    </label>
-                  </div>
-            </div>
-            <div class="col-3">
-                <label>Laboratorio: </label> <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input name="laboratorio_estructura" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                        <span class="form-check-sign">
+    </label>
+  </div>
+</div>
 
-                        </span>
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <label class="form-check-label">
-                        <input name="laboratorio_estructura" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                        <span class="form-check-sign">
+<div class="col-3">
+<label>Laboratorio: </label> <div class="form-check form-check-inline">
+    <label class="form-check-label">
+       <input name="laboratorio_clues"   type="radio" id="inlineradio1" value="SI"> SI
+       <span class="form-check-sign">
 
-                        </span>
-                      </label>
-                    </div>
-            </div>
-          </div>
-          <div>
-            <div class="col-3">
-                <label>RX: </label>
-                 <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="rx_estructura" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
-                      <span class="form-check-sign">
+       </span>
+     </label>
+   </div>
+   <div class="form-check form-check-inline">
+     <label class="form-check-label">
+       <input name="laboratorio_clues"   type="radio" id="inlineradio2" value="NO"> NO
+       <span class="form-check-sign">
 
-                      </span>
-                    </label>
-                </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input name="rx_estructura" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
-                      <span class="form-check-sign">
+       </span>
+     </label>
+   </div>
+</div>
 
-                      </span>
-                    </label>
-                  </div>
+<div class="col-3">
+<label>RX: </label> <div class="form-check form-check-inline">
+    <label class="form-check-label">
+       <input name="rx_clues"   type="radio" id="inlineradio1" value="SI"> SI
+       <span class="form-check-sign">
 
-            </div>
-            <div class="col-3">
-              <input type="text" name="otro_estructura" id="" class="form-control" placeholder="Otro:">
-            </div>
+       </span>
+     </label>
+   </div>
+   <div class="form-check form-check-inline">
+     <label class="form-check-label">
+       <input name="rx_clues"  type="radio" id="inlineradio2" value="NO"> NO
+       <span class="form-check-sign">
 
-        </div>
+       </span>
+     </label>
+   </div>
+
+</div>
+<div class="col-3">
+<input type="text" name="otro_clues" id="" class="form-control" placeholder="Otro:">
+</div>
       `
     }else{
       // DEJAR VACIO
@@ -446,13 +443,13 @@ const changeEstructuraClue = () => {
             <div class="col-3">
    <label>Estomatología: </label> <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="estomatologia_real" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+          <input name="estomatologia_real"   type="radio" id="inlineradio1" value="SI"> SI
 
         </label>
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="estomatologia_real" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+          <input name="estomatologia_real"   type="radio" id="inlineradio2" value="NO"> NO
 
         </label>
       </div>
@@ -460,13 +457,13 @@ const changeEstructuraClue = () => {
 <div class="col-3">
     <label>Psicología: </label> <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="psicologia_real" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+          <input name="psicologia_real"   type="radio" id="inlineradio1" value="SI"> SI
 
         </label>
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="psicologia_real" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+          <input name="psicologia_real"   type="radio" id="inlineradio2" value="NO"> NO
 
         </label>
       </div>
@@ -474,13 +471,13 @@ const changeEstructuraClue = () => {
 <div class="col-3">
     <label>Trabajo Social: </label> <div class="form-check form-check-inline">
        <label class="form-check-label">
-          <input name="trabajo_social_real" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+          <input name="trabajo_social_real"   type="radio" id="inlineradio1" value="SI"> SI
 
         </label>
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="trabajo_social_real" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+          <input name="trabajo_social_real"   type="radio" id="inlineradio2" value="NO"> NO
 
         </label>
       </div>
@@ -489,7 +486,7 @@ const changeEstructuraClue = () => {
 <div class="col-3">
     <label>Laboratorio: </label> <div class="form-check form-check-inline">
         <label class="form-check-label">
-           <input name="laboratorio_real" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+           <input name="laboratorio_real"   type="radio" id="inlineradio1" value="SI"> SI
            <span class="form-check-sign">
 
            </span>
@@ -497,7 +494,7 @@ const changeEstructuraClue = () => {
        </div>
        <div class="form-check form-check-inline">
          <label class="form-check-label">
-           <input name="laboratorio_real" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+           <input name="laboratorio_real"   type="radio" id="inlineradio2" value="NO"> NO
            <span class="form-check-sign">
 
            </span>
@@ -508,7 +505,7 @@ const changeEstructuraClue = () => {
 <div class="col-3">
     <label>RX: </label> <div class="form-check form-check-inline">
         <label class="form-check-label">
-           <input name="rx_real" class="form-check-input" type="radio" id="inlineradio1" value="SI"> SI
+           <input name="rx_real"   type="radio" id="inlineradio1" value="SI"> SI
            <span class="form-check-sign">
 
            </span>
@@ -516,7 +513,7 @@ const changeEstructuraClue = () => {
        </div>
        <div class="form-check form-check-inline">
          <label class="form-check-label">
-           <input name="rx_real" class="form-check-input" type="radio" id="inlineradio2" value="NO"> NO
+           <input name="rx_real"  type="radio" id="inlineradio2" value="NO"> NO
            <span class="form-check-sign">
 
            </span>

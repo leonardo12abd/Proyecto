@@ -77,8 +77,102 @@
 
                         </div>
 
+                        {{-- Inicia Form --}}
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                        <center> <h4 class="card-tittle">Tipologia</h4> </center>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" name="tipologiarural" class="form-control" placeholder="Rural______Nucleos básicos">
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" name="tipologiaurbana" class="form-control" placeholder="Urbana_____Nucleos básicos">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" name="ncbasicos" class="form-control" placeholder="Nucleos básicos existentes">
+                                </div>
+                                <div class="col-4">
+                                    <textarea name="textarea_tipologia" id="" cols="30" rows="5" class="form-control" placeholder="Otra:"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                        <center> <h4 class="card-tittle">Estructura Clues</h4> </center>
+                                    </div>
+                                    <center>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues0" value="basica" checked> Básica
+                                            </label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                          <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues1" value="ampliada"> Ampliada
+                                        </label>
+                                      </div>
+                                    </center>
+                                    <div id="get_estructura_clues">
+                                        <!-- NO VA NADA -->
+                                      </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card text-white bg-success" style="max-heigth: 18rem;">
+                                        <center> <h4 class="card-tittle">Estructura Real</h4> </center>
+                                    </div>
+                                    <center>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real0" value="basica" checked> Básica
+                                            </label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                          <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real1"  value="ampliada"> Ampliada
+                                        </label>
+                                      </div>
+                                    </center>
+                                    <div id="get_estructura_real">
+                                        <!-- NO VA NADA -->
+                                      </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {{-- Termina form --}}
 
 
+                        <div class="col-3">
+                            <select name="tipologia_primer" id="tipologia_primer" class="form-control"  hidden disabled>
+                                <option selected value="-1">Selecciona primero una unidad...</option>
+                                @foreach ( $tipologias as $tipologia )
+                                  <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+
+                        <div class="col-3">
+                            <select name="estrato_primer" id="estrato_primer" class="form-control" hidden disabled >
+                                <option selected value="-1">Selecciona primero una unidad...</option>
+                                @foreach ( $estratos as $estrato )
+                                  <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="card-body">
                           <div class="row">
                             @foreach ($primernivel as $key=>$fanta )
@@ -93,109 +187,24 @@
                                 <label> {{ $fanta->nombre_primer }} </label>
                                 <div class="form-check form-check-inline">
                                   <label class="form-check-label">
-                                    <input name="key_{{$key}}" type="radio" id="inlineradio1" value="SI"> SI
+                                    <input name="key_0{{$key}}" type="radio" id="inlineradio1" value="SI"> SI
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label class="form-check-label">
-                                    <input name="key_{{$key}}"  type="radio" id="inlineradio2" value="NO"> NO
+                                    <input name="key_0{{$key}}"  type="radio" id="inlineradio2" value="NO"> NO
                                   </label>
                                 </div>
 
 
 
-                                @if ($fanta->nombre_primer == 'Otro')
 
-                                  <div >
-                                    <textarea cols="30" rows="3" class="form-control" name="textarea_{{$key}}" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
-                                  </div>
-                                @endif
+                                @if ($fanta->nombre_primer == 'Otros')
 
-
-                                @if ($fanta->nombre_primer == 'Tipologia')
-                                  <div>
-                                    <select name="tipologia_primer" id="tipologia_primer" class="form-control"  disabled>
-                                        <option selected value="-1">Selecciona primero una unidad...</option>
-                                        @foreach ( $tipologias as $tipologia )
-                                          <option value="{{ $tipologia->id_tipologia }}"> {{ $tipologia->nombre_tipologia   }}</option>
-                                        @endforeach
-                                    </select>
-                                  </div>
-                                @endif
-
-                                @if ($fanta->nombre_primer == 'Estrato')
-                                <div>
-                                    <select name="estrato_primer" id="estrato_primer" class="form-control" disabled >
-                                        <option selected value="-1">Selecciona primero una unidad...</option>
-                                        @foreach ( $estratos as $estrato )
-                                          <option value="{{ $estrato->claveestrato }}"> {{ $estrato->estrato  }}</option>
-                                        @endforeach
-                                    </select>
+                                <div >
+                                  <textarea cols="30" rows="3" class="form-control" name="textarea_{{$key}}" placeholder="Introduzca alguna que halla faltado ingresar"></textarea>
                                 </div>
                               @endif
-
-                              @if ($fanta->nombre_primer == 'Abasto de Medicamento')
-                                  <div>
-                                    <input type="text" name="abasto_estrato" id="" placeholder="Porcentaje %" class="form-control">
-                                  </div>
-                              @endif
-                                    {{-- Basica Clues --}}
-                               @if ($fanta->nombre_primer == 'Basica_Clues')
-
-                               <div class="row">
-                                <div class="row">
-                                  <div class="col-12">
-                                     <center>
-                                          <div class="form-check form-check-inline">
-                                           <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues0" value="basica" checked> Básica
-                                           </label>
-                                         </div>
-                                         <div class="form-check form-check-inline">
-                                           <label class="form-check-label">
-                                             <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues1" value="ampliada"> Ampliada
-                                           </label>
-                                         </div>
-                                       </center>
-                                   </div>
-                                </div>
-
-                                <div id="get_estructura_clues">
-                                  <!-- NO VA NADA -->
-                                </div>
-                              </div>
-                              @endif
-
-                                {{-- Basica real --}}
-                                @if ($fanta->nombre_primer == 'Ampliada_Real')
-
-                                <div class="row">
-                                  <div class="row">
-                                    <div class="col-12">
-                                       <center>    <div class="form-check form-check-inline">
-                                             <label class="form-check-label">
-                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real0" value="basica" checked> Básica
-
-                                             </label>
-                                           </div>
-                                           <div class="form-check form-check-inline">
-                                             <label class="form-check-label">
-                                               <input onchange="changeEstructuraReal()" name="estructura_real"  class="form-check-input" type="radio" id="estructura_real1" value="ampliada"> Ampliada
-                                             </label>
-                                           </div>
-                                         </center>
-                                     </div>
-                                  </div>
-
-                                  <div id="get_estructura_real">
-                                    <!-- NO VA NADA -->
-                                  </div>
-
-
-                                </div>
-
-                              @endif
-
 
                                 {{--  FIN --}}
                               </div>
