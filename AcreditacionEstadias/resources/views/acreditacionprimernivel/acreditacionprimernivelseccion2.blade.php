@@ -117,7 +117,7 @@
                 </div>
         </div>
         <center>
-            <button type="submit" class="btn btn-danger btn-round">
+            <button type="submit" class="btn btn-danger btn-lg btn-block">
                 <i class="far fa-save"></i> Guardar
             </button>
         </center>

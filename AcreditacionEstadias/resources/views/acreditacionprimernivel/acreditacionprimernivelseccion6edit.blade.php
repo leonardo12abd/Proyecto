@@ -70,6 +70,7 @@
 
                         {{-- Inicia la primer Seccion --}}
                     <div class="card-body">
+                        <div class="table-responsive">
                         <table class="table">
                         <thead class="thead-dark">
                               <tr>
@@ -139,16 +140,17 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                     </div>
                         </div>
                 </div>
         </div>
-        <center>
-            <button type="submit" class="btn btn-danger btn-round">
-                <i class="far fa-save"></i> Actualizar
-            </button>
-        </center>
     </div>
+    <center>
+        <button type="submit" class="btn btn-danger btn-lg btn-block">
+            <i class="far fa-save"></i> Actualizar
+        </button>
+    </center>
     </form>
 </div>
 

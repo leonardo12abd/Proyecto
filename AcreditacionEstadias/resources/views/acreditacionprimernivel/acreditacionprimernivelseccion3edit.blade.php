@@ -105,12 +105,12 @@
                     </div>
                 </div>
         </div>
-        <center>
-            <button type="submit" class="btn btn-danger btn-round">
-                <i class="far fa-save"></i> Actualizar
-            </button>
-        </center>
-        </div>
+    </div>
+    <center>
+        <button type="submit" class="btn btn-danger btn-lg btn-block">
+            <i class="far fa-save"></i> Actualizar
+        </button>
+    </center>
     </form>
 
 </div>

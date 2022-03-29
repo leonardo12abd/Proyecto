@@ -90,121 +90,121 @@ const preloadMap = () => {
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
+                                            <input   type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
                                             <label class="form-check-label" for="inlineRadio1">SI</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
+                                            <input   type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
                                             <label class="form-check-label" for="inlineRadio2">NO</label>
                                         </div>
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
+                                        <input   type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
+                                        <input   type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="ced_rh_${index}" value="${rh.cedula}>
+                                        <input   type="radio" name="inlineRadioOptions3" id="ced_rh_${index}" value="${rh.cedula}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="ced_rh_${index}" value="${rh.cedula}>
+                                        <input   type="radio" name="inlineRadioOptions3" id="ced_rh_${index}" value="${rh.cedula}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="t_contra_rh_${index}" value="${rh.tipo_contratacion}>
+                                        <input   type="radio" name="inlineRadioOptions4" id="t_contra_rh_${index}" value="${rh.tipo_contratacion}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="t_contra_rh_${index}" value="${rh.tipo_contratacion}>
+                                        <input   type="radio" name="inlineRadioOptions4" id="t_contra_rh_${index}" value="${rh.tipo_contratacion}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="doc_ads_rh_${index}" value="${rh.doc_adscripcion}>
+                                        <input   type="radio" name="inlineRadioOptions5" id="doc_ads_rh_${index}" value="${rh.doc_adscripcion}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="doc_ads_rh_${index}" value="${rh.doc_adscripcion}>
+                                        <input   type="radio" name="inlineRadioOptions5" id="doc_ads_rh_${index}" value="${rh.doc_adscripcion}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="est_cart_rh_${index}" value="${rh.estomatologo_cartilla}>
+                                  <input   type="radio" name="inlineRadioOptions6" id="est_cart_rh_${index}" value="${rh.estomatologo_cartilla}>
                                   <label class="form-check-label" for="inlineRadio1">SI</label>
                                   </div>
                               <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="est_cart_rh_${index}" value="${rh.estomatologo_cartilla}>
+                                  <input   type="radio" name="inlineRadioOptions6" id="est_cart_rh_${index}" value="${rh.estomatologo_cartilla}>
                                   <label class="form-check-label" for="inlineRadio2">NO</label>
                               </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="prev_inc_rh_${index}" value="${rh.prev_incendios}>
+                                        <input   type="radio" name="inlineRadioOptions7" id="prev_inc_rh_${index}" value="${rh.prev_incendios}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="prev_inc_rh_${index}" value="${rh.prev_incendios}>
+                                        <input   type="radio" name="inlineRadioOptions7" id="prev_inc_rh_${index}" value="${rh.prev_incendios}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="interc_rh_${index}" value="${rh.interculturalidad}>
+                                        <input   type="radio" name="inlineRadioOptions8" id="interc_rh_${index}" value="${rh.interculturalidad}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="interc_rh_${index}" value="${rh.interculturalidad}>
+                                        <input   type="radio" name="inlineRadioOptions8" id="interc_rh_${index}" value="${rh.interculturalidad}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                         </div>
                                         </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="cuid_pas_rh_${index}" value="${rh.cuidados_paliativos}>
+                                        <input   type="radio" name="inlineRadioOptions9" id="cuid_pas_rh_${index}" value="${rh.cuidados_paliativos}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="cuid_pas_rh_${index}" value="${rh.cuidados_paliativos}>
+                                        <input   type="radio" name="inlineRadioOptions9" id="cuid_pas_rh_${index}" value="${rh.cuidados_paliativos}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="program_rh_${index}" value="${rh.programa_higiene}>
+                                        <input   type="radio" name="inlineRadioOptions10" id="program_rh_${index}" value="${rh.programa_higiene}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="program_rh_${index}" value="${rh.programa_higiene}>
+                                    <input   type="radio" name="inlineRadioOptions10" id="program_rh_${index}" value="${rh.programa_higiene}>
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                     </td>
                                     <td>
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="accion_rh_${index}" value="${rh.accion_escenciales}>
+                                    <input   type="radio" name="inlineRadioOptions11" id="accion_rh_${index}" value="${rh.accion_escenciales}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="accion_rh_${index}" value="${rh.accion_escenciales}>
+                                        <input   type="radio" name="inlineRadioOptions11" id="accion_rh_${index}" value="${rh.accion_escenciales}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="estomatologo_rcp_rh_${index}" value="${rh.estomatologo_rcp}>
+                                        <input   type="radio" name="inlineRadioOptions12" id="estomatologo_rcp_rh_${index}" value="${rh.estomatologo_rcp}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="estomatologo_rcp_rh_${index}" value="${rh.estomatologo_rcp}>
+                                        <input   type="radio" name="inlineRadioOptions12" id="estomatologo_rcp_rh_${index}" value="${rh.estomatologo_rcp}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>

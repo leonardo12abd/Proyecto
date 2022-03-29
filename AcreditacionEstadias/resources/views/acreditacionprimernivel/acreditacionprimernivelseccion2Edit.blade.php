@@ -12,7 +12,7 @@
                         <div class="card text-white bg-warning" style="max-heigth: 18rem;">
 
                             <center>
-                              <h4 class="card-tittle">Show Calidad Percibida</h4>
+                              <h4 class="card-tittle">Calidad Percibida</h4>
                             </center>
 
 
@@ -110,14 +110,14 @@
                     </div>
                 </div>
         </div>
+
+
+        </div>
         <center>
-            <button type="submit" class="btn btn-danger btn-round">
+            <button type="submit" class="btn btn-danger btn-lg btn-block">
                 <i class="far fa-save"></i> Actualizar
             </button>
         </center>
-
-        </div>
-
     </form>
 
 </div>

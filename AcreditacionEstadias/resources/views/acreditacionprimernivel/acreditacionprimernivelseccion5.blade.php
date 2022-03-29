@@ -100,11 +100,11 @@
                 </div>
         </div>
 
-        <center><button type="submit" class="btn btn-primary btn-round">
-            <i class="far fa-save"></i> Guardar
-          </button>
-        </center>
-        </div>
+    </div>
+    <center><button type="submit" class="btn btn-primary btn-lg btn-block">
+        <i class="far fa-save"></i> Guardar
+      </button>
+    </center>
     </form>
 
 </div>
