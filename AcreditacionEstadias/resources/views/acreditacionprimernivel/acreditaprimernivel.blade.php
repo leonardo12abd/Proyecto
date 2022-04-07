@@ -318,12 +318,7 @@
 
                         <br>
 
-                        <select name="clavepuesto" class="form-select" value="${rh.desc_puesto}" onchange="saveData(${index})" id="desc_rh_${index} aria-label="Default select example">
-                            <option selected>Selecciona un puesto</option>
-                            <@foreach($puestos as $p)
-                                    <option value="{{$p->clavepuesto}}">{{$p->nombrepuesto}}</option>
-                                @endforeach>
-                          </select>
+                       
 
 
 
@@ -439,18 +434,19 @@
                         {{-- Espacio donde termina los divs --}}
                             </div>
 
+                            
+                                        <center><button type="submit" class="btn btn-succes">
+                                            <i class="far fa-save"></i> Guardar
+                                          </button></center>
                     </div>
                 </div>
 
 
             </div>
 
-
-
         </div>
-        <center><button type="submit" class="btn btn-primary btn-lg btn-block">
-          <i class="far fa-save"></i> Guardar
-        </button></center>
+        
+        
     </form>
     </div>
 @endsection

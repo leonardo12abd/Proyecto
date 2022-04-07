@@ -38,7 +38,7 @@ class AcreditacionController extends Controller
 
     public function altaprimerSave(Request $request){
 
-        return $request->all();
+        //return $request->all();
 
         $user = Auth::user();
         $user-> id;
