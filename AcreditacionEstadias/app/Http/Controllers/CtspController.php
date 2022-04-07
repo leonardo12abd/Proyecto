@@ -52,7 +52,7 @@ class CtspController extends Controller
              'id_clues' => $id_clues,
             'id_user' => $user->id
         ]);
-        return redirect()->route('reporteavalciudadano')->with('success','Reporte Calidad Técnica creado correctamente');
+        return redirect()->route('reportecalidadtsp')->with('success','Reporte Calidad Técnica creado correctamente');
    }
 
     public function reportecalidadtsp(){

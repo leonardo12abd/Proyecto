@@ -1,10 +1,14 @@
-const url = 'http://localhost:8000'
+//const url = 'http://www.acreditacionclues.com/public'
 
+const url = 'http://localhost:8000'
 const rh_map = [
   {name: '', desc_puesto: '', servicio_social: '', carta_asignacion:'', titulo:'', cadula:'', tipo_contratacion:'',
     doc_adscripcion:'', estomatologo_cartilla:'', prev_incendios:'', interculturalidad:'', cuidados_paliativos:'', programa_higiene:'',
     accion_escenciales:'', estomatologo_rcp:'', observaciones:''}
 ]
+
+
+
 
 const selectUnidad = async ({vista='alta_primer_nivel'}) => {
   console.log('entraste a la funcion select unidad')
@@ -69,8 +73,9 @@ const selectUnidad = async ({vista='alta_primer_nivel'}) => {
     localStorage.setItem('unidadData', null)
   }
 }
-
+/** */
 const preloadMap = () => {
+
     const tbody = document.getElementById("map_rh");
 
     tbody.innerHTML = '';
@@ -82,29 +87,35 @@ const preloadMap = () => {
 
                                   <th><input value="${rh.name}"  onchange="saveData(${index})" id="name_rh_${index}" /></th>
                                   <td>
-                                    <select  value="${rh.desc_puesto}" onchange="saveData(${index})" id="desc_rh_${index}>
-                                        <option selected>Open this select menu</option>
-                                        <option value=""></option>}
+
+
+                                    <select name="clavepuesto_position_${index}" class="form-select" value="${rh.desc_puesto}" onchange="saveData(${index})" id="desc_rh_${index} aria-label="Default select example">
+                                      <option selected>Selecciona un puesto</option>
+
+                                      @foreach($puestos as $p)
+                                              <option value="{{$p->clavepuesto}}">{{$p->nombrepuesto}}</option>
+                                      @endforeach
 
                                     </select>
+
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                            <input   type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
+                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="${rh.servicio_social}>
                                             <label class="form-check-label" for="inlineRadio1">SI</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input   type="radio" name="inlineRadioOptions1" id="social_rh_${index}" value="${rh.servicio_social}>
+                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="${rh.servicio_social}>
                                             <label class="form-check-label" for="inlineRadio2">NO</label>
                                         </div>
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                        <input   type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
+                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="si">
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="inlineRadioOptions2" id="titu_rh_${index}" value="${rh.titulo}>
+                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="no">
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
@@ -231,6 +242,7 @@ const deleteCasilla = (index) => {
 }
 
 const saveData = (index) => {
+  console.log({index})
   const name = document.getElementById(`name_rh_${index}`).value
   const desc = document.getElementById(`desc_rh_${index}`).value
   const social= document.getElementById(`social_rh_${index}`).value
@@ -432,6 +444,8 @@ const changeEstructuraClue = () => {
   }
 
 //Estructura Real
+
+
   const changeEstructuraReal = () => {
 
     const valida2 = document.getElementById('estructura_real1').checked

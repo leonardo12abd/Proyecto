@@ -89,8 +89,8 @@ class CalidadPercibidaController extends Controller
 
     }
 
-    public function exportcalidadperc(){
-        return Excel::download(new CalidadPercibidaExport, 'calidadpercibida.xlsx');
+    public function exportcalidadperc($id){
+        return Excel::download(new CalidadPercibidaExport($id), 'calidadpercibida.xlsx');
     }
 
 

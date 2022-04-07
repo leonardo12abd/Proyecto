@@ -5,7 +5,7 @@
 
 <div class="content">
 
-    <form action="/altaprimernivelsec2" method="POST">
+    <form action="{{ route('altaprimernivelsec2Save') }}" method="POST">
         {{ csrf_field() }}
 
 
@@ -111,20 +111,20 @@
                                 </tr>
                             </tbody>
                         @endforeach
-                        </table>
-                    </div>
-                    </div>
+                    </table>
                 </div>
+            </div>
         </div>
-        <center>
-            <button type="submit" class="btn btn-danger btn-lg btn-block">
-                <i class="far fa-save"></i> Guardar
-            </button>
-        </center>
+</div>
 
-        </div>
 
-    </form>
+</div>
+<center>
+    <button type="submit" class="btn btn-danger btn-lg btn-block">
+        <i class="far fa-save"></i> crear
+    </button>
+</center>
+</form>
 
 </div>
 @endsection

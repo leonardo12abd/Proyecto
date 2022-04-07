@@ -103,7 +103,7 @@ Route::get('altaprimernivelsec2/{id}',[App\Http\Controllers\CalidadPercibidaCont
 Route::post('altaprimernivelsec2',[App\Http\Controllers\CalidadPercibidaController::class,'altaprimernivelsec2Save'])->name('altaprimernivelsec2Save');
 Route::get('reporteavalciudadano',[App\Http\Controllers\CalidadPercibidaController::class,'reporteavalpercibido'])->name('reporteavalciudadano');
 Route::delete('borrarcalidadperc/{id}',[App\Http\Controllers\CalidadPercibidaController::class,'borrarcalidadperc'])->name('borrarcalidadperc');
-Route::get('exportcalidadperc', [App\Http\Controllers\CalidadPercibidaController::class, 'exportcalidadperc'])->name('exportcalidadperc');
+Route::get('exportcalidadperc/{id}', [App\Http\Controllers\CalidadPercibidaController::class, 'exportcalidadperc'])->name('exportcalidadperc');
 Route::get('viewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'pdfcalidadperc'])->name('viewpdfcalidadperc');
 Route::get('downloadPDFviewpdfcalidadperc',[App\Http\Controllers\CalidadPercibidaController::class, 'downloadPDFviewpdfcalidadperc'])->name('downloadPDFviewpdfcalidadperc');
 Route::get('altaprimernivelsec2/{id}/edit',[App\Http\Controllers\CalidadPercibidaController::class,'edit'])->name('editcalidad');

@@ -35,9 +35,7 @@
                                         <a href="#" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
-                                        <a href="{{ route('exportcalidadperc') }}" class="btn btn-success btn-round">
-                                            <i class="fas fa-file-excel"></i>  Excel
-                                        </a>
+
                                     </div>
                                 </div>
                                 <div class="table-responsive">
@@ -69,6 +67,11 @@
                                                             <i class="material-icons">close</i>
                                                         </button>
                                                     </form>
+                                                    <a href="{{ route('exportcalidadperc', $d->id) }}" class="btn btn-success btn-round">
+                                            <i class="fas fa-file-excel"></i>  Excel
+                                        </a>
+
+
                                                     {{-- <a href="{{ route('descargapdf',$d->id) }}" class="btn btn-danger"> <i class="material-icons">download    </i></a>
                                                     <a href="{{ route('pdfprueba',$d->id) }}" class="btn btn-red"> <i class="material-icons">visibility</i></a>
  --}}

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content">
-    <form action="/altaprimernivelsec4" method="POST">
+    <form action="{{ route('altaprimernivelsec4Save') }}" method="POST">
         {{ csrf_field() }}
         <div class="container-fluid">
         <div class="row">
@@ -102,13 +102,12 @@
                     </div>
                 </div>
         </div>
-
-    </div>
-    <center>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">
+        <center>
+            <button type="submit" class="btn btn-primary btn-round">
                 <i class="far fa-save"></i> Guardar
             </button>
     </center>
+    </div>
 
     </form>
 

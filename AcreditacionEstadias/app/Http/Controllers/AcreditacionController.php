@@ -15,6 +15,7 @@ use App\Models\Tipologia;
 use Illuminate\Http\Request;
 use App\Models\primernivel;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Puestos;
 
 
 class AcreditacionController extends Controller
@@ -28,13 +29,16 @@ class AcreditacionController extends Controller
         $infras = Infraestructura::all();
         $emis = Emi::all();
         $primernivel = primernivel::all();
+        $puestos = Puestos::all();
 
         //return $unidades;
-        return view('acreditacionprimernivel.acreditaprimernivel', compact('unidades','primernivel', 'municipios', 'jurisdicciones','tipologias','estratos','infras','emis'));
+        return view('acreditacionprimernivel.acreditaprimernivel', compact('puestos','unidades','primernivel', 'municipios', 'jurisdicciones','tipologias','estratos','infras','emis'));
 
     }
 
     public function altaprimerSave(Request $request){
+
+        return $request->all();
 
         $user = Auth::user();
         $user-> id;

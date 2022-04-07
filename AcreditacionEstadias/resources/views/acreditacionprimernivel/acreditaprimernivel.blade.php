@@ -233,89 +233,99 @@
                                               </h4>
                                             </center>
                                         </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                              <thead>
+                                                <tr class="table-info">
+                                                  <th scope="col"></th>
+                                                  <th scope="col"></th>
+                                                  <th scope="col"><center>SERVICIO SOCIAL</center></th>
+                                                  <th colspan="4"><center>PERSONAL ISEM</center></th>
+                                                  <th scope="col"></th>
+                                                  <th colspan="6"><center>CAPACITACIONES</center></th>
+                                                  <th scope="col"></th>
+                                                </tr>
+                                              </thead>
+                                              <thead>
+                                                  <tr class="table-warning">
+                                                    <th scope="col"><center>RH</center>
+                                                                  <center>(requisitar en base a su oferta de servicios)</center></th>
+                                                    <th scope="col"><center>Descripción Puesto</center></th>
+                                                    <th scope="col"><center>Carta de Asignación Campo Clinico al establecimiento(personal en servicio social)</center> </th>
+                                                    <th scope="col">Titulo</th>
+                                                    <th scope="col">Cédula</th>
+                                                    <th scope="col"><center>Tipo de contratación (base, formalizado, regularizado, comisionado)</center></th>
+                                                    <th scope="col"><center>Documento de Adscripción</center></th>
+                                                    <th scope="col"><center>Estomatologo Cartilla vacunación</center></th>
+                                                    <th scope="col"><center>Prevención de icendios y atencion de emergencias</center></th>
+                                                    <th scope="col"><center>Interculturalidad</center></th>
+                                                    <th scope="col"><center>Cuidados Paliativos</center></th>
+                                                    <th scope="col"><center>Programa integral higiene de manos</center></th>
+                                                    <th scope="col"><center>Acciones Escenciales</center></th>
+                                                    <th scope="col"><center>Estomatologo RCP basico</center></th>
+                                                    <th scope="col"><center>Observaciones</center></th>
+                                                  </tr>
+                                                </thead>
+
+                                              <tbody id="map_rh">
+                                                <tr>
+                                               <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="addRH()" >Agregar Nuevo</button>
+
+
+                                                  <th></th>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                  <td></td>
+                                                </tr>
+                                              </tbody>
+
+                                            </table>
+                                          </div>
+
                                 </div>
                             </div>
                         </div>
                       </div>
                         {{-- Recursos HUmanos --}}
 
-                   {{--      <div class="row">
+                       <div class="row">
                           <div class="col-md-12">
                             <div id="map_rh"></div>
 
                           </div>
                           <div class="col-md-12">
-                            <input onclick="addRH()" value="Agregar fila" type="button">
+                            <input onclick='addRH()' value="Agregar fila" type="button">
                           </div>
                         </div>
- --}}
+
 
                         {{-- Recursos HUmanos --}}
 
 
-                        <div class="table-responsive">
-                          <table class="table table-bordered">
-                            <thead>
-                              <tr class="table-info">
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"><center>SERVICIO SOCIAL</center></th>
-                                <th colspan="4"><center>PERSONAL ISEM</center></th>
-                                <th scope="col"></th>
-                                <th colspan="6"><center>CAPACITACIONES</center></th>
-                                <th scope="col"></th>
-                              </tr>
-                            </thead>
-                            <thead>
-                                <tr class="table-warning">
-                                  <th scope="col"><center>RH</center>
-                                                <center>(requisitar en base a su oferta de servicios)</center></th>
-                                  <th scope="col"><center>Descripción Puesto</center></th>
-                                  <th scope="col"><center>Carta de Asignación Campo Clinico al establecimiento(personal en servicio social)</center> </th>
-                                  <th scope="col">Titulo</th>
-                                  <th scope="col">Cédula</th>
-                                  <th scope="col"><center>Tipo de contratación (base, formalizado, regularizado, comisionado)</center></th>
-                                  <th scope="col"><center>Documento de Adscripción</center></th>
-                                  <th scope="col"><center>Estomatologo Cartilla vacunación</center></th>
-                                  <th scope="col"><center>Prevención de icendios y atencion de emergencias</center></th>
-                                  <th scope="col"><center>Interculturalidad</center></th>
-                                  <th scope="col"><center>Cuidados Paliativos</center></th>
-                                  <th scope="col"><center>Programa integral higiene de manos</center></th>
-                                  <th scope="col"><center>Acciones Escenciales</center></th>
-                                  <th scope="col"><center>Estomatologo RCP basico</center></th>
-                                  <th scope="col"><center>Observaciones</center></th>
-                                </tr>
-                              </thead>
-
-                            <tbody id="map_rh">
-                              <tr>
-                             <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="addRH()" >Agregar Nuevo</button>
-
-
-                                <th></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </tbody>
-
-                          </table>
-                        </div>
 
 
                         <br>
+
+                        <select name="clavepuesto" class="form-select" value="${rh.desc_puesto}" onchange="saveData(${index})" id="desc_rh_${index} aria-label="Default select example">
+                            <option selected>Selecciona un puesto</option>
+                            <@foreach($puestos as $p)
+                                    <option value="{{$p->clavepuesto}}">{{$p->nombrepuesto}}</option>
+                                @endforeach>
+                          </select>
+
+
 
                         {{-- Termina la segunda seccion --}}
                         {{-- Inicia la Tercera seccion --}}

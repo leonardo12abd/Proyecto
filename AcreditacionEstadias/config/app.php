@@ -184,6 +184,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
     ],
 
     /*
@@ -246,6 +247,7 @@ return [
 
          //----------------------------Excel---------------------------------
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Datatables' => 'Yajra\Datatables\Facades\Datatables',
     ],
 
 ];
