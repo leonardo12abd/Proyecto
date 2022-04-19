@@ -73,8 +73,8 @@ class CocasepController extends Controller
 
     }
 
-    public function exportcocasep(){
-        return Excel::download(new CocasepExport, 'cocasep.xlsx');
+    public function exportcocasep($id){
+        return Excel::download(new CocasepExport($id), 'cocasep.xlsx');
     }
 
     public function edit($id){

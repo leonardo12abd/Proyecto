@@ -131,7 +131,7 @@ Route::get('altaprimernivelsec4/{id}',[App\Http\Controllers\CocasepController::c
 Route::post('altaprimernivelsec4',[App\Http\Controllers\CocasepController::class,'altaprimernivelsec4Save'])->name('altaprimernivelsec4Save');
 Route::get('reportecocasep',[App\Http\Controllers\CocasepController::class,'reportecocasep'])->name('reportecocasep');
 Route::delete('borrarcocasep/{id}',[App\Http\Controllers\CocasepController::class,'borrarcocasep'])->name('borrarcocasep');
-Route::get('exportcocasep', [App\Http\Controllers\CocasepController::class, 'exportcocasep'])->name('exportcocasep');
+Route::get('exportcocasep/{id}', [App\Http\Controllers\CocasepController::class, 'exportcocasep'])->name('exportcocasep');
 Route::get('altaprimernivelsec4/{id}/edit',[App\Http\Controllers\CocasepController::class,'edit'])->name('editcocasep');
 Route::put('/updatecocasep/{id}',[App\Http\Controllers\CocasepController::class, 'updatecocasep'])->name('updatecocasep');
 
