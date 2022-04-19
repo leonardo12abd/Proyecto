@@ -25,7 +25,6 @@ class CalidadPercibidaExport implements FromView
 
         $unidades=Unidad::all();
         $municipios=Municipio::all();
-        $tipologia=Tipologia::all();
         $jurisdicciones=Jurisdiccion::all();
         $calidadpers = CalidadPercibida::all();
         $data3 = Calidadpercibidadata::with(['user', 'clues'])->find($this->idCalidad);

@@ -195,7 +195,7 @@
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <label class="form-check-label">
-                                    <input name="key_0{{$key}}"  type="radio" id="inlineradio2" value="NO"> NO
+                                    <input name="key_0{{$key}}"  type="radio" id="inlineradio2" value="NO" checked> NO
                                   </label>
                                 </div>
 
@@ -305,9 +305,7 @@
                             <div id="map_rh"></div>
 
                           </div>
-                          <div class="col-md-12">
-                            <input onclick='addRH()' value="Agregar fila" type="button">
-                          </div>
+
                         </div>
 
 
@@ -316,9 +314,8 @@
 
 
 
-                        <br>
 
-                       
+
 
 
 
@@ -353,14 +350,14 @@
                                             @foreach ( $infras as $key => $infra )
                                             <tr>
                                               <th scope="row">{{ $infra ->nombre_infra}} </th>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="fachada2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->fachada_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="salaespera2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->saladeespera_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="sanitario2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->sanitarios_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="consultorio2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->consultorios_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="medicinaprev2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->medicinaprev_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="farmacia2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->farmacia_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="areaesterilizacion2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->esterilizacion_infra_is_required == 0) disabled @endif></td>
-                                              <td><input type="number" name="key_{{$key}}" min="0" class="form-control" type="text" id="otrasareas2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->otrasareas_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key0_{{$key}}" value="0" min="0" class="form-control" type="text" id="fachada2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->fachada_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key1_{{$key}}" value="0" min="0" class="form-control" type="text" id="salaespera2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->saladeespera_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key2_{{$key}}" value="0" min="0" class="form-control" type="text" id="sanitario2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->sanitarios_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key3_{{$key}}" value="0" min="0" class="form-control" type="text" id="consultorio2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->consultorios_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key4_{{$key}}" value="0" min="0" class="form-control" type="text" id="medicinaprev2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->medicinaprev_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key5_{{$key}}" value="0" min="0" class="form-control" type="text" id="farmacia2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->farmacia_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key6_{{$key}}" value="0" min="0" class="form-control" type="text" id="areaesterilizacion2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->esterilizacion_infra_is_required == 0) disabled @endif></td>
+                                              <td><input type="number" name="key7_{{$key}}" value="0" min="0" class="form-control" type="text" id="otrasareas2_{{$key}}" onchange="sumarr2({{$key}})" onkeypress="sumarr2({{$key}})" @if($infra->otrasareas_infra_is_required == 0) disabled @endif></td>
                                             </tr>
                                             @endforeach
                                           </tbody>
@@ -434,7 +431,7 @@
                         {{-- Espacio donde termina los divs --}}
                             </div>
 
-                            
+
                                         <center><button type="submit" class="btn btn-primary">
                                             <i class="far fa-save"></i> Guardar
                                           </button></center>
@@ -445,8 +442,8 @@
             </div>
 
         </div>
-        
-        
+
+
     </form>
     </div>
 @endsection

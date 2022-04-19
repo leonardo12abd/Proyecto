@@ -21,6 +21,7 @@ use App\Models\Puestos;
 class AcreditacionController extends Controller
 {
     public function altaprimernivel(){
+
         $unidades = Unidad::all();
         $municipios = Municipio::all();
         $jurisdicciones = Jurisdiccion::all();
@@ -81,6 +82,7 @@ class AcreditacionController extends Controller
 
     public function altaprimernivelShow($id){
 
+        $Prim=Primerniveldata::all();
         $unidades = Unidad::all();
         $municipios = Municipio::all();
         $jurisdicciones = Jurisdiccion::all();
@@ -96,7 +98,7 @@ class AcreditacionController extends Controller
             ], 404);
         }
         $data20->data20 = unserialize($data20->data20);
-       return view('acreditacionprimernivel.acreditacionprimernivelShow', compact('data20','primernivel','emis','infras','unidades', 'municipios','jurisdicciones', 'tipologias', 'estratos'));
+       return view('acreditacionprimernivel.acreditacionprimernivelShow', compact('Prim','data20','primernivel','emis','infras','unidades', 'municipios','jurisdicciones', 'tipologias', 'estratos'));
         //return $data20;
 
     }

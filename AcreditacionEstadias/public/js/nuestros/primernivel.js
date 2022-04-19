@@ -1,11 +1,12 @@
-//const url = 'http://www.acreditacionclues.com/public'
+const url = 'http://www.acreditacionclues.com/public'
 
-const url = 'http://localhost:8000'
+//const url = 'http://localhost:8000'
 const rh_map = [
   {name: '', desc_puesto: '', servicio_social: '', carta_asignacion:'', titulo:'', cadula:'', tipo_contratacion:'',
     doc_adscripcion:'', estomatologo_cartilla:'', prev_incendios:'', interculturalidad:'', cuidados_paliativos:'', programa_higiene:'',
     accion_escenciales:'', estomatologo_rcp:'', observaciones:''}
 ]
+var preload = false
 
 
 
@@ -85,136 +86,135 @@ const preloadMap = () => {
                               <tbody id="rh_${index}">
                                 <tr>
 
-                                  <th><input name="key_13_${index}"  class="form-control" onchange="saveData(${index})" id="name_rh_${index}" /></th>
                                   <td>
+                                  <input  class="form-control" name="key_13_${index}"   onchange="saveData(${index})" id="name_rh_${index}" value="${preload ? preload[`key_13_${index}`] : ''}" />
+                                  </td>
 
-
-                                    <input type="text"  class="form-control" name="puesto_key1_${index}"  id="desc_rh_${index}">
-                                    
-
+                                  <td>
+                                   <input type="text"  class="form-control" name="puesto_key1_${index}"  id="desc_rh_${index}" value="${preload ? preload[`puesto_key1_${index}`] : ''}">
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="si">
+                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="si" ${preload ? preload[`key_0_${index}`] == 'si' ? 'checked' : '' : ''}>
                                             <label class="form-check-label" for="inlineRadio1">SI</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="no">
+                                            <input   type="radio" name="key_0_${index}" id="social_rh_${index}" value="no" ${preload ? preload[`key_0_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                             <label class="form-check-label" for="inlineRadio2">NO</label>
                                         </div>
                                   </td>
                                   <td>
                                         <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="si">
+                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="si" ${preload ? preload[`key_1_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="no">
+                                        <input   type="radio" name="key_1_${index}" id="titu_rh_${index}" value="no" ${preload ? preload[`key_1_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_2_${index}" id="ced_rh_${index}" value="si">
+                                        <input   type="radio" name="key_2_${index}" id="ced_rh_${index}" value="si" ${preload ? preload[`key_2_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_2_${index}" id="ced_rh_${index}" value="no">
+                                        <input   type="radio" name="key_2_${index}" id="ced_rh_${index}" value="no" ${preload ? preload[`key_2_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_3_${index}" id="t_contra_rh_${index}" value="si">
+                                        <input   type="radio" name="key_3_${index}" id="t_contra_rh_${index}" value="si"  ${preload ? preload[`key_3_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_3_${index}"" id="t_contra_rh_${index}" value="no"}>
+                                        <input   type="radio" name="key_3_${index}"" id="t_contra_rh_${index}" value="no" ${preload ? preload[`key_3_${index}`] == 'no' ? 'checked' : '' : 'checked'}}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_4_${index}" id="doc_ads_rh_${index}" value="si">
+                                        <input   type="radio" name="key_4_${index}" id="doc_ads_rh_${index}" value="si" ${preload ? preload[`key_4_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_4_${index}" id="doc_ads_rh_${index}" value="no">
+                                        <input   type="radio" name="key_4_${index}" id="doc_ads_rh_${index}" value="no" ${preload ? preload[`key_4_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                  <input   type="radio" name="key_5_${index}" id="est_cart_rh_${index}" value="si">
+                                  <input   type="radio" name="key_5_${index}" id="est_cart_rh_${index}" value="si" ${preload ? preload[`key_5_${index}`] == 'si' ? 'checked' : '' : ''}>
                                   <label class="form-check-label" for="inlineRadio1">SI</label>
                                   </div>
                               <div class="form-check form-check-inline">
-                                  <input   type="radio" name="key_5_${index}" id="est_cart_rh_${index}" value="no">
+                                  <input   type="radio" name="key_5_${index}" id="est_cart_rh_${index}" value="no" ${preload ? preload[`key_5_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                   <label class="form-check-label" for="inlineRadio2">NO</label>
                               </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_6_${index}" id="prev_inc_rh_${index}" value="si">
+                                        <input   type="radio" name="key_6_${index}" id="prev_inc_rh_${index}" value="si" ${preload ? preload[`key_6_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_6_${index}" id="prev_inc_rh_${index}" value="no">
+                                        <input   type="radio" name="key_6_${index}" id="prev_inc_rh_${index}" value="no" ${preload ? preload[`key_6_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_7_${index}" id="interc_rh_${index}" value="si">
+                                        <input   type="radio" name="key_7_${index}" id="interc_rh_${index}" value="si" ${preload ? preload[`key_7_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_7_${index}" id="interc_rh_${index}" value="no">
+                                        <input   type="radio" name="key_7_${index}" id="interc_rh_${index}" value="no" ${preload ? preload[`key_7_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                         </div>
                                         </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_8_${index}" id="cuid_pas_rh_${index}" value="si">
+                                        <input   type="radio" name="key_8_${index}" id="cuid_pas_rh_${index}" value="si" ${preload ? preload[`key_8_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_8_${index}" id="cuid_pas_rh_${index}" value="no">
+                                        <input   type="radio" name="key_8_${index}" id="cuid_pas_rh_${index}" value="no" ${preload ? preload[`key_8_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_9_${index}" id="program_rh_${index}" value="si">
+                                        <input   type="radio" name="key_9_${index}" id="program_rh_${index}" value="si" ${preload ? preload[`key_9_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                    <input   type="radio" name="key_9_${index}" id="program_rh_${index}" value="no">
+                                    <input   type="radio" name="key_9_${index}" id="program_rh_${index}" value="no" ${preload ? preload[`key_9_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                     </td>
                                     <td>
                                     <div class="form-check form-check-inline">
-                                    <input   type="radio" name="key_10_${index}" id="accion_rh_${index}" value="si">
+                                    <input   type="radio" name="key_10_${index}" id="accion_rh_${index}" value="si" ${preload ? preload[`key_10_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_10_${index}" id="accion_rh_${index}" value="no">
+                                        <input   type="radio" name="key_10_${index}" id="accion_rh_${index}" value="no" ${preload ? preload[`key_10_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
                                   <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_11_${index}" id="estomatologo_rcp_rh_${index}" value="si">
+                                        <input   type="radio" name="key_11_${index}" id="estomatologo_rcp_rh_${index}" value="si"  ${preload ? preload[`key_11_${index}`] == 'si' ? 'checked' : '' : ''}>
                                         <label class="form-check-label" for="inlineRadio1">SI</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input   type="radio" name="key_11_${index}" id="estomatologo_rcp_rh_${index}" value="no">
+                                        <input   type="radio" name="key_11_${index}" id="estomatologo_rcp_rh_${index}" value="no"   ${preload ? preload[`key_11_${index}`] == 'no' ? 'checked' : '' : 'checked'}>
                                         <label class="form-check-label" for="inlineRadio2">NO</label>
                                     </div>
                                   </td>
                                   <td>
-                                  <textarea class="form-control" name="key_12_${index}" id="observ_rh_${index}" value="${rh.observaciones} rows="3"></textarea>
+                                  <textarea class="form-control" name="key_12_${index}" id="observ_rh_${index}" rows="3">${preload ? preload[`key_12_${index}`]  : ''}</textarea>
                                   </td>
                                   <td><input type="button" class="btn btn-danger" value="Borrar" onclick="deleteCasilla(${index})" /></td>
                                 </tr>
@@ -223,11 +223,16 @@ const preloadMap = () => {
     })
 
   }
-const addRH = () => {
+const addRH = (bandera) => {
+  console.log('holiwis')
+  if(bandera){
+    var pre = JSON.parse(document.getElementById("rescatar_data_edit_acreditacion_show").value);
+    preload = pre.data20
+  }
   rh_map.push(
     {name: '', desc_puesto: '', servicio_social: ''}
   )
-  preloadMap() // Holis :3
+  preloadMap()
 }
 
 const deleteCasilla = (index) => {
@@ -355,7 +360,7 @@ const changeEstructuraClue = () => {
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="estomatologia_clues"   type="radio" id="inlineradio2" value="NO"> NO
+      <input name="estomatologia_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>
@@ -369,7 +374,7 @@ const changeEstructuraClue = () => {
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="psicologia_clues"   type="radio" id="inlineradio2" value="NO"> NO
+      <input name="psicologia_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>
@@ -383,7 +388,7 @@ const changeEstructuraClue = () => {
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="trabajo_social_clues"   type="radio" id="inlineradio2" value="NO"> NO
+      <input name="trabajo_social_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>
@@ -400,7 +405,7 @@ const changeEstructuraClue = () => {
    </div>
    <div class="form-check form-check-inline">
      <label class="form-check-label">
-       <input name="laboratorio_clues"   type="radio" id="inlineradio2" value="NO"> NO
+       <input name="laboratorio_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
        <span class="form-check-sign">
 
        </span>
@@ -419,7 +424,7 @@ const changeEstructuraClue = () => {
    </div>
    <div class="form-check form-check-inline">
      <label class="form-check-label">
-       <input name="rx_clues"  type="radio" id="inlineradio2" value="NO"> NO
+       <input name="rx_clues"  type="radio" id="inlineradio2" value="NO" checked> NO
        <span class="form-check-sign">
 
        </span>
@@ -457,7 +462,7 @@ const changeEstructuraClue = () => {
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="estomatologia_real"   type="radio" id="inlineradio2" value="NO"> NO
+          <input name="estomatologia_real"   type="radio" id="inlineradio2" value="NO" checked> NO
 
         </label>
       </div>
@@ -471,7 +476,7 @@ const changeEstructuraClue = () => {
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="psicologia_real"   type="radio" id="inlineradio2" value="NO"> NO
+          <input name="psicologia_real"   type="radio" id="inlineradio2" value="NO" checked> NO
 
         </label>
       </div>
@@ -485,7 +490,7 @@ const changeEstructuraClue = () => {
       </div>
       <div class="form-check form-check-inline">
         <label class="form-check-label">
-          <input name="trabajo_social_real"   type="radio" id="inlineradio2" value="NO"> NO
+          <input name="trabajo_social_real"   type="radio" id="inlineradio2" value="NO" checked> NO
 
         </label>
       </div>
@@ -502,7 +507,7 @@ const changeEstructuraClue = () => {
        </div>
        <div class="form-check form-check-inline">
          <label class="form-check-label">
-           <input name="laboratorio_real"   type="radio" id="inlineradio2" value="NO"> NO
+           <input name="laboratorio_real"   type="radio" id="inlineradio2" value="NO" checked> NO
            <span class="form-check-sign">
 
            </span>
@@ -521,7 +526,7 @@ const changeEstructuraClue = () => {
        </div>
        <div class="form-check form-check-inline">
          <label class="form-check-label">
-           <input name="rx_real"  type="radio" id="inlineradio2" value="NO"> NO
+           <input name="rx_real"  type="radio" id="inlineradio2" value="NO" checked> NO
            <span class="form-check-sign">
 
            </span>
