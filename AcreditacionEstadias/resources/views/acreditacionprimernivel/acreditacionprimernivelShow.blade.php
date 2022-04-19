@@ -271,7 +271,9 @@
                                           <tbody id="map_rh">
                                             <tr>
 
-                                           <button type="button" class="btn btn-success" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="addRH()" >Agregar Nuevo</button>
+                                           <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="addRH()" ><span class="material-icons">
+                                            visibility
+                                            </span></button>
                                            <input value="{{$data20}}" id="rescatar_data_edit_acreditacion_show" hidden>
                                            <script>
                                              window.onload= () => {

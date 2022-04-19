@@ -68,7 +68,7 @@ class AcreditacionController extends Controller
 
     public function reporteprimernivel(){
         $data =Primerniveldata::with(['clues', 'user'])->get();
-        $data=Primerniveldata::paginate(4);
+        $data=Primerniveldata::paginate(6);
 
         return view('acreditacionprimernivel.acreditacionprimernivelReporte', compact('data'));
     }

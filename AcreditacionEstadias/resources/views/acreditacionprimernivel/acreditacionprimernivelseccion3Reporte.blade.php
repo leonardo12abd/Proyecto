@@ -35,9 +35,7 @@
                                         <a href="#" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
-                                        <a href="{{ route('exportctsp') }}" class="btn btn-success btn-round">
-                                            <i class="fas fa-file-excel"></i>  Excel
-                                        </a>
+
                                     </div>
                                 </div>
                                 <div class="table-responsive">
@@ -71,6 +69,9 @@
                                                                 <i class="material-icons">close</i>
                                                             </button>
                                                         </form>
+                                                        <a href="{{ route('exportctsp', $d->id) }}" class="btn btn-success btn-round">
+                                                            <i class="fas fa-file-excel"></i>  Excel
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             @endforeach

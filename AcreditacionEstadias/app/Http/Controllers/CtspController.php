@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Exports\CtspExport;
 use App\Exports\CtspsExport;
 use App\Models\Ctsp;
 use App\Models\Ctspdata;
@@ -68,9 +70,12 @@ class CtspController extends Controller
 
     }
 
-        public function exportctsp(){
-            return Excel::download(new CtspsExport, 'ctsp.xlsx');
-        }
+    public function exportctsp($id){
+        return Excel::download(new CtspsExport($id), 'ctsp.xlsx');
+    }
+       // public function exportctsp(){
+         //   return Excel::download(new CtspsExport, 'ctsp.xlsx');
+        //}
 
         public function edit($id){
 

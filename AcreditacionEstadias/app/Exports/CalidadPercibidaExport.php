@@ -5,7 +5,6 @@ namespace App\Exports;
 use App\Models\Calidadpercibidadata;
 use App\Models\Unidad;
 use App\Models\Municipio;
-use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
 use App\Models\CalidadPercibida;
 use Illuminate\Contracts\View\View;

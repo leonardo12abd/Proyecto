@@ -119,7 +119,7 @@ Route::get('altaprimernivelsec3/{id}',[App\Http\Controllers\CtspController::clas
 Route::post('altaprimernivelsec3',[App\Http\Controllers\CtspController::class,'altaprimernivelsec3Save'])->name('altaprimernivelsec3Save');
 Route::get('reportecalidadtsp',[App\Http\Controllers\CtspController::class,'reportecalidadtsp'])->name('reportecalidadtsp');
 Route::delete('borrarctsp/{id}',[App\Http\Controllers\CtspController::class,'borrarctsp'])->name('borrarctsp');
-Route::get('exportctsp', [App\Http\Controllers\CtspController::class, 'exportctsp'])->name('exportctsp');
+Route::get('exportctsp/{id}', [App\Http\Controllers\CtspController::class, 'exportctsp'])->name('exportctsp');
 Route::get('altaprimernivelsec3/{id}/edit',[App\Http\Controllers\CtspController::class,'edit'])->name('editctsp');
 Route::put('/update/{id}',[App\Http\Controllers\CtspController::class, 'update'])->name('updatectsp');
 
