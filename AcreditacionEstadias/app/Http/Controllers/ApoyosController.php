@@ -70,8 +70,8 @@ class ApoyosController extends Controller
 
     }
 
-    public function exportapoyos(){
-        return Excel::download(new ApoyosExport, 'Apoyos.xlsx');
+    public function exportapoyos($id){
+        return Excel::download(new ApoyosExport($id), 'Apoyos.xlsx');
     }
 
     public function edit($id){

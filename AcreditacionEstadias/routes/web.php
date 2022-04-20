@@ -142,7 +142,7 @@ Route::get('altaprimernivelsec5/{id}',[App\Http\Controllers\IndicasController::c
 Route::post('altaprimernivelsec5',[App\Http\Controllers\IndicasController::class,'altaprimernivelsec5Save'])->name('altaprimernivelsec5Save');
 Route::get('reporteindicas',[App\Http\Controllers\IndicasController::class,'reporteindicas'])->name('reporteindicas');
 Route::delete('borraindicas/{id}',[App\Http\Controllers\IndicasController::class,'borraindicas'])->name('borraindicas');
-Route::get('exportindicas', [App\Http\Controllers\IndicasController::class, 'exportindicas'])->name('exportindicas');
+Route::get('exportindicas/{id}', [App\Http\Controllers\IndicasController::class, 'exportindicas'])->name('exportindicas');
 Route::get('altaprimernivelsec5/{id}/edit',[App\Http\Controllers\IndicasController::class,'edit'])->name('editindicas');
 Route::put('/updateindicas/{id}',[App\Http\Controllers\IndicasController::class, 'updateindicas'])->name('updateindicas');
 
@@ -152,7 +152,7 @@ Route::get('altaprimernivelsec6/{id}',[App\Http\Controllers\ApoyosController::cl
 Route::post('altaprimernivelsec6',[App\Http\Controllers\ApoyosController::class,'altaprimernivelsec6Save'])->name('altaprimernivelsec6Save');
 Route::get('reporteapoyo',[App\Http\Controllers\ApoyosController::class,'reporteapei'])->name('reporteapoyo');
 Route::delete('borrarapoyos/{id}',[App\Http\Controllers\ApoyosController::class,'borrarapoyos'])->name('borrarapoyos');
-Route::get('exportapoyos', [App\Http\Controllers\ApoyosController::class, 'exportapoyos'])->name('exportapoyos');
+Route::get('exportapoyos/{id}', [App\Http\Controllers\ApoyosController::class, 'exportapoyos'])->name('exportapoyos');
 Route::get('altaprimernivelsec6/{id}/edit',[App\Http\Controllers\ApoyosController::class,'edit'])->name('editapoyos');
 Route::put('/updateapoyos/{id}',[App\Http\Controllers\ApoyosController::class, 'updateapoyos'])->name('updateapoyos');
 

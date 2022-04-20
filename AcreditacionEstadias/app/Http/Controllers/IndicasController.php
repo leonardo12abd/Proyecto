@@ -71,8 +71,8 @@ class IndicasController extends Controller
 
     }
 
-    public function exportindicas(){
-        return Excel::download(new IndicasExport, 'indicas.xlsx');
+    public function exportindicas($id){
+        return Excel::download(new IndicasExport($id), 'indicas.xlsx');
     }
 
 
