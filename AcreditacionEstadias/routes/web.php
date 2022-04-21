@@ -1,12 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DropdownController;
-use App\Http\Controllers\FirstlevelController;
-use App\Http\Controllers\IndicasController;
-use App\Http\Controllers\CalidadPercibidaController;
-use App\Http\Controllers\CtspController;
-use App\Http\Controllers\ApoyosController;
+
 
 
 
@@ -95,6 +90,7 @@ Route::post('guardarprimernivel',[App\Http\Controllers\AcreditacionController::c
 Route::get('reporteprimernivel',[App\Http\Controllers\AcreditacionController::class,'reporteprimernivel'])->name('reporteprimernivel');
 Route::delete('borrarprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'borrarprimernivel'])->name('borrarprimernivel');
 Route::get('altaprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelShow'])->name('altaprimernivelShow');
+Route::get('exportprimernivel/{id}', [App\Http\Controllers\AcreditacionController::class, 'exportprimernivel'])->name('exportprimernivel');
 
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/

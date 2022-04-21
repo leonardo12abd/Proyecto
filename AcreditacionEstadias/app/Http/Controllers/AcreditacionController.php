@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PrimernivelExport;
 use App\Models\Acreditacion;
-
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Primerniveldata;
 use App\Models\Unidad;
 use App\Models\Emi;
@@ -101,6 +102,10 @@ class AcreditacionController extends Controller
        return view('acreditacionprimernivel.acreditacionprimernivelShow', compact('Prim','data20','primernivel','emis','infras','unidades', 'municipios','jurisdicciones', 'tipologias', 'estratos'));
         //return $data20;
 
+    }
+
+    public function exportprimernivel($id){
+        return Excel::download(new PrimernivelExport($id), 'acreditacion.xlsx');
     }
 
 
