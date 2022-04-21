@@ -1,17 +1,31 @@
+<h3 style="background-color: white">INDICAS</h3>
+<table>
+    <thead>
+        <tr>
 
-<br>
-<br>
-<th>Indicas</th>
-<br><br>
+            <th style="background: #BDE487">Codigo clues</th>
+
+        </tr>
+    </thead>
+    <tbody>
+<tr>
+
+        <th>{{ $data1->id_clues }}</th>
+
+    </tr>
+    </tbody>
+</table>
+
+
 <table>
     @foreach($indicas as $key => $indi)
     @if($key == 0 || $indicas[$key-1]->clasificacion_indicas != $indi->clasificacion_indicas)
     <thead >
       <tr>
-        <th scope="col" style="background-color: rgb(127, 179, 213);">{{$indi->clasificacion_indicas}}</th>
-        <th scope="col" style="background-color: rgb(127, 179, 213);">SI</th>
-        <th scope="col" style="background-color: rgb(127, 179, 213);">NO</th>
-        <th scope="col" style="background-color: rgb(127, 179, 213);">OBSERVACIONES</th>
+        <th style="background: #CAF2DD">{{$indi->clasificacion_indicas}}</th>
+        <th style="background: #B8E8A7">SI</th>
+        <th style="background: #F0816B">NO</th>
+        <th style="background: #E5DCDA">OBSERVACIONES</th>
       </tr>
     </thead>
     @endif

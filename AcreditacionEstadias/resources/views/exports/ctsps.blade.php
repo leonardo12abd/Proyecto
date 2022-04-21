@@ -1,19 +1,31 @@
 <br>
-<br>
+<h3 style="background-color: white">CALIDAD TECNICA Y SEGURIDAD AL PACIENTE</h3>
 <table>
+    <thead>
+        <tr>
 
-    <th>Reporte CALIDAD TECNICA Y SEGURIDAD DEL PACIENTE</th>
+            <th style="background: #BDE487">Codigo clues</th>
+
+        </tr>
+    </thead>
+    <tbody>
+<tr>
+
+        <th>{{ $data2->id_clues }}</th>
+
+    </tr>
+    </tbody>
 </table>
-<br><br>
+
 <table>
     @foreach($ctsps as $key => $ct)
     @if($key == 0 || $ctsps[$key-1]->clasificacion_ctsp != $ct->clasificacion_ctsp)
     <thead>
       <tr>
-        <th scope="col" style="background-color: rgb(133, 193, 233);">{{$ct->clasificacion_ctsp}}</th>
-        <th style="background-color: rgb(133, 193, 233);">SI</th>
-        <th style="background-color: rgb(133, 193, 233);">NO</th>
-        <th style="background-color: rgb(133, 193, 233);">OBSERVACIONES</th>
+        <th style="background: #CAF2DD">{{$ct->clasificacion_ctsp}}</th>
+        <th style="background: #B8E8A7">SI</th>
+        <th style="background: #F0816B">NO</th>
+        <th style="background: #E5DCDA">OBSERVACIONES</th>
       </tr>
     </thead>
     @endif

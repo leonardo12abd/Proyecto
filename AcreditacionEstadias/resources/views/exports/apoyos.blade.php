@@ -1,3 +1,22 @@
+<h3>Apoyos e Incentivos</h3>
+<table>
+    <thead>
+        <tr>
+
+            <th style="background: #BDE487">Codigo clues</th>
+
+        </tr>
+    </thead>
+    <tbody>
+<tr>
+
+        <th>{{ $data4->id_clues }}</th>
+
+    </tr>
+    </tbody>
+</table>
+
+
 <table>
     <thead>
           <tr>

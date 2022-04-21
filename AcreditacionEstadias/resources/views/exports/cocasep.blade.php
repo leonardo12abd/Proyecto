@@ -1,5 +1,19 @@
+<h3 style="background-color: white">COCASEP</h3>
 <table>
-    <th>excel prueba 3</th>
+    <thead>
+        <tr>
+
+            <th style="background: #BDE487">Codigo clues</th>
+
+        </tr>
+    </thead>
+    <tbody>
+<tr>
+
+        <th>{{ $data9->id_clues }}</th>
+
+    </tr>
+    </tbody>
 </table>
 
 
@@ -8,10 +22,10 @@
         @if($key == 0 || $cocaseps[$key-1]->clasificacion_cocasep != $pepsi->clasificacion_cocasep)
             <thead>
                 <tr>
-                    <th scope="col" style="background-color: rgb(169, 223, 191);">{{$pepsi->clasificacion_cocasep}}</th>
-                    <th scope="col" style="background-color: rgb(169, 223, 191);">SI</th>
-                    <th scope="col" style="background-color: rgb(169, 223, 191);">NO</th>
-                    <th scope="col" style="background-color: rgb(169, 223, 191);">OBSERVACIONES</th>
+                    <th style="background: #CAF2DD">{{$pepsi->clasificacion_cocasep}}</th>
+                    <th style="background: #B8E8A7">SI</th>
+                    <th style="background: #F0816B">NO</th>
+                    <th style="background: #E5DCDA">OBSERVACIONES</th>
                 </tr>
             </thead>
         @endif
