@@ -11,6 +11,7 @@ use App\Models\Infraestructura;
 use App\Models\Municipio;
 use App\Models\Jurisdiccion;
 use App\Models\Tipologia;
+use App\Models\User;
 
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;

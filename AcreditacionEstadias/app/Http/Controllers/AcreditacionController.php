@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 use App\Models\primernivel;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Puestos;
+use App\Models\User;
 
 
 class AcreditacionController extends Controller
