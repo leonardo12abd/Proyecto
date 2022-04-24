@@ -101,12 +101,11 @@
                           </table>
                     </div>
                 </div>
+            </div>
         </div>
-        <center>
-            <button type="submit" class="btn btn-primary btn-round">
+            <center><button type="submit" class="btn btn-primary btn-lg btn-block">
                 <i class="far fa-save"></i> Guardar
-            </button>
-    </center>
+              </button></center>
     </div>
 
     </form>
