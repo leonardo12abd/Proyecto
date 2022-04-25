@@ -354,13 +354,13 @@ const changeEstructuraClue = () => {
         <div class="col-3">
 <label>Estomatología: </label> <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="estomatologia_clues"   type="radio" id="inlineradio1" value="SI"> SI
+      <input name="estomatologia_clues"  value="estomatologia_clues" type="radio" id="inlineradio1" value="SI"> SI
 
     </label>
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="estomatologia_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
+      <input name="estomatologia_clues" value="estomatologia_clues"  type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>
@@ -368,13 +368,13 @@ const changeEstructuraClue = () => {
 <div class="col-3">
 <label>Psicología: </label> <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="psicologia_clues"   type="radio" id="inlineradio1" value="SI"> SI
+      <input name="psicologia_clues" value="psicologia_clues"   type="radio" id="inlineradio1" value="SI"> SI
 
     </label>
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="psicologia_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
+      <input name="psicologia_clues" value="psicologia_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>
@@ -382,13 +382,13 @@ const changeEstructuraClue = () => {
 <div class="col-3">
 <label>Trabajo Social: </label> <div class="form-check form-check-inline">
    <label class="form-check-label">
-      <input name="trabajo_social_clues"   type="radio" id="inlineradio1" value="SI"> SI
+      <input name="trabajo_social_clues" value="trabajo_social_clues"  type="radio" id="inlineradio1" value="SI"> SI
 
     </label>
   </div>
   <div class="form-check form-check-inline">
     <label class="form-check-label">
-      <input name="trabajo_social_clues"   type="radio" id="inlineradio2" value="NO" checked> NO
+      <input name="trabajo_social_clues" value="trabajo_social_clues"  type="radio" id="inlineradio2" value="NO" checked> NO
 
     </label>
   </div>

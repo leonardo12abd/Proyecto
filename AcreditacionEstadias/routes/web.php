@@ -91,6 +91,10 @@ Route::get('reporteprimernivel',[App\Http\Controllers\AcreditacionController::cl
 Route::delete('borrarprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'borrarprimernivel'])->name('borrarprimernivel');
 Route::get('altaprimernivel/{id}',[App\Http\Controllers\AcreditacionController::class,'altaprimernivelShow'])->name('altaprimernivelShow');
 Route::get('exportprimernivel/{id}', [App\Http\Controllers\AcreditacionController::class, 'exportprimernivel'])->name('exportprimernivel');
+Route::get('altaprimernivel/{id}/edit',[App\Http\Controllers\AcreditacionController::class,'edit'])->name('editprimernivel');
+Route::put('/updateprimer/{id}',[App\Http\Controllers\AcreditacionController::class, 'updateprimer'])->name('updateprimer');
+
+
 
 
 /** CRUD CALIDAD PERCIBIDA -> INICIO*/

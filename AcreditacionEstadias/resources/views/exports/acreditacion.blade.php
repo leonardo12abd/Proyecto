@@ -43,6 +43,57 @@
 </table>
 
 
+<h6>ESTRUCTURA CLUES</h6>
+<table>
+    <thead>
+        <tr>
+            <th style="background: #8fa6bb">Estomatologia Clues</th>
+            <th style="background: #8fa6bb">Psicologia Clues</th>
+            <th style="background: #8fa6bb">Trabajo social Clues</th>
+            <th style="background: #8fa6bb">Laboratorio Clues</th>
+            <th style="background: #8fa6bb">Rayos X Clues</th>
+            <th style="background: #8fa6bb">Otros Clues</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <th>{{ $data20->estomatologia_clues }}</th>
+                <th>{{ $data20->psicologia_clues }}</th>
+                <th>{{ $data20->trabajo_social_clues }}</th>
+                <th>{{ $data20->laboratorio_clues }}</th>
+                <th>{{ $data20->rx_clues }}</th>
+                <th>{{ $data20->otro_clues }}</th>
+            </tr>
+            </tbody>
+
+</table>
+
+<h6>ESTRUCTURA REAL</h6>
+<table>
+    <thead>
+        <tr>
+            <th style="background: #c077a4">Estomatologia Real</th>
+            <th style="background: #c077a4">Psicologia Real</th>
+            <th style="background: #c077a4">Trabajo social Real</th>
+            <th style="background: #c077a4">Laboratorio Real</th>
+            <th style="background: #c077a4">Rayos X Real</th>
+            <th style="background: #c077a4">Otros Real</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <th>{{ $data20->estomatologia_real }}</th>
+                <th>{{ $data20->psicologia_real }}</th>
+                <th>{{ $data20->trabajo_social_real }}</th>
+                <th>{{ $data20->laboratorio_real }}</th>
+                <th>{{ $data20->rx_real }}</th>
+                <th>{{ $data20->otro_real }}</th>
+            </tr>
+            </tbody>
+
+</table>
+
+
 {{-- Tabla Prueba --}}
 
 <table class="table">

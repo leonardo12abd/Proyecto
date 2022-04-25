@@ -2,8 +2,9 @@
 @section('content')
 
 <div class="content">
-    <form action="#" method="POST">
+    <form action="{{ route('updateprimer',$data20->id) }}" method="POST">
         {{ csrf_field() }}
+        @method('PUT')
 
         <div class="container-fluid">
         <div class="row">
@@ -104,57 +105,6 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                                    <center> <h4 class="card-tittle">Estructura Clues</h4> </center>
-                                </div>
-                                <center>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues0" value="{{ $data20->tipo__estructura }}"> Básica
-                                        </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input onchange="changeEstructuraClue()" name="tipo__estructura"  type="radio" id="estructura_clues1" value="{{ $data20->tipo__estructura }}"> Ampliada
-                                    </label>
-                                  </div>
-                                </center>
-                                <div id="get_estructura_clues">
-                                    <!-- NO VA NADA -->
-                                  </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card text-white bg-success" style="max-heigth: 18rem;">
-                                    <center> <h4 class="card-tittle">Estructura Real</h4> </center>
-                                </div>
-                                <center>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                            <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real0" value="{{ $data20->estructura_real }}"> Básica
-                                        </label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
-                                      <input onchange="changeEstructuraReal()" name="estructura_real" type="radio" id="estructura_real1"   value="{{ $data20->estructura_real }}"> Ampliada
-                                    </label>
-                                  </div>
-                                </center>
-                                <div id="get_estructura_real">
-                                    <!-- NO VA NADA -->
-                                  </div>
-                            </div>
-
-                        </div>
-                    </div>
 
                     {{-- Termina form --}}
 
@@ -440,17 +390,14 @@
                     {{-- Espacio donde termina los divs --}}
                         </div>
 
+                    </div>
 
 
+                    <center><button type="submit" class="btn btn-primary btn-lg btn-block">
+                        <i class="far fa-save"></i> Editar
+                      </button></center>
                 </div>
+
             </div>
-
-
-        </div>
-
-    </div>
-
-
-</form>
 </div>
 @endsection

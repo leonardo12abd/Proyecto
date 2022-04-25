@@ -136,6 +136,43 @@ class AcreditacionController extends Controller
     }
 
 
+    public function edit($id){
+        $Prim=Primerniveldata::all();
+        $unidades = Unidad::all();
+        $municipios = Municipio::all();
+        $jurisdicciones = Jurisdiccion::all();
+        $tipologias = Tipologia::all();
+        $estratos = Estrato::all();
+        $infras = Infraestructura::all();
+        $emis = Emi::all();
+        $primernivel = primernivel::all();
+        $data20 = Primerniveldata::with(['user', 'clues'])->find($id);
+        if(!$data20){
+            return response()->json([
+                'message' => 'not found data'
+            ], 404);
+        }
+        $data20->data20 = unserialize($data20->data20);
+
+        return view('acreditacionprimernivel.acreditacionprimernivelEdit', compact('Prim','data20','primernivel','emis','infras','unidades', 'municipios','jurisdicciones', 'tipologias', 'estratos'));
+
+    }
+
+    public function updateprimer($id, Request $request){
+
+        $data = Primerniveldata::find($id);
+        $data20 = $request->all();
+        $data20 = serialize($data20);
+        $estomatologia_clues = $request -> input('estomatologia_clues');
+
+        $data->data20 = $data20;
+       // $data->id_clues = $id_clues;
+        $data->save();
+
+       return redirect()->route('reporteprimernivel')->with('success','Reporte Acreditacion de Primer Nivel editado correctamente');
+
+    }
+
 
 
 }
