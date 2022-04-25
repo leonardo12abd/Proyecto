@@ -7,20 +7,39 @@
         <tr>
             <th style="background: #BDE487">Fecha</th>
             <th style="background: #BDE487">Codigo clues</th>
-            <th style="background: #BDE487">Tipologia Observaciones</th>
-            <th style="background: #BDE487">Estructura Clues</th>
-            <th style="background: #BDE487">Estructura Real</th>
+            <th style="background: #BDE487">clues</th>
+            <th style="background: #BDE487">nom unidad</th>
+            <th style="background: #BDE487">usuario encargado</th>
+
         </tr>
     </thead>
     <tbody>
 <tr>
         <th>{{ $data20->fecha_primernivel }}</th>
         <th>{{ $data20->id_clues }}</th>
-        <th>{{ $data20->textarea_tipologia }}</th>
-        <th>{{ $data20->tipo__estructura }}</th>
-        <th>{{ $data20->estructura_real }}</th>
+        <th>{{$data20->clues->clues}}</th>
+        <th>{{$data20->clues->nombreunidad}}</th>
+        <th>{{ $data20->user->name }}</th>
     </tr>
     </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th style="background: #dde4b7">Tipologia Observaciones</th>
+            <th style="background: #dde4b7">Estructura Clues</th>
+            <th style="background: #dde4b7">Estructura Real</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <th>{{ $data20->textarea_tipologia }}</th>
+                <th>{{ $data20->tipo__estructura }}</th>
+                <th>{{ $data20->estructura_real }}</th>
+            </tr>
+            </tbody>
+
 </table>
 
 

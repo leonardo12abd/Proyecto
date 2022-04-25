@@ -50,6 +50,19 @@ class AcreditacionController extends Controller
         $textarea_tipologia = $request->input('textarea_tipologia');
         $tipo__estructura = $request->input('tipo__estructura');
         $estructura_real = $request->input('estructura_real');
+        $estomatologia_clues = $request->input('estomatologia_clues');
+        $psicologia_clues = $request->input('psicologia_clues');
+        $trabajo_social_clues = $request->input('trabajo_social_clues');
+        $laboratorio_clues = $request->input('laboratorio_clues');
+        $rx_clues = $request->input('rx_clues');
+        $otro_clues = $request->input('otro_clues');
+        $estomatologia_real = $request->input('estomatologia_real');
+        $psicologia_real = $request->input('psicologia_real');
+        $trabajo_social_real = $request->input('trabajo_social_real');
+        $laboratorio_real = $request->input('laboratorio_real');
+        $rx_real = $request->input('rx_real');
+        $otro_real = $request->input('otro_real');
+
         $data20 = $request->all();
         $data20 = serialize($data20); //! Esto es lo que guardaria en Base de dAtos
 
@@ -61,7 +74,20 @@ class AcreditacionController extends Controller
             'fecha_primernivel'=>$date,
             'textarea_tipologia'=>$textarea_tipologia,
             'tipo__estructura'=>$tipo__estructura,
-            'estructura_real'=>$estructura_real
+            'estructura_real'=>$estructura_real,
+            'estomatologia_clues'=>$estomatologia_clues,
+            'psicologia_clues'=>$psicologia_clues,
+            'trabajo_social_clues'=>$trabajo_social_clues,
+            'laboratorio_clues'=>$laboratorio_clues,
+            'rx_clues'=>$rx_clues,
+            'otro_clues'=>$otro_clues,
+            'estomatologia_real'=>$estomatologia_real,
+            'psicologia_real'=>$psicologia_real,
+            'trabajo_social_real'=>$trabajo_social_real,
+            'laboratorio_real'=>$laboratorio_real,
+            'rx_real'=>$rx_real,
+            'otro_real'=>$otro_real,
+
 
         ]);
 

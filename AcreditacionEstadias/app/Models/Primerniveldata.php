@@ -19,7 +19,19 @@ class Primerniveldata extends Model
         'estructura_real',
         'data20',
         'id_user',
-        'id_clues'
+        'id_clues',
+        'estomatologia_clues',
+        'psicologia_clues',
+        'trabajo_social_clues',
+        'laboratorio_clues',
+        'rx_clues',
+        'otro_clues',
+        'estomatologia_real',
+        'psicologia_real',
+        'trabajo_social_real',
+        'laboratorio_real',
+        'rx_real',
+        'otro_real',
     ];
 
     public function clues(){
