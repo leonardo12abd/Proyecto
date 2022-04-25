@@ -11,6 +11,7 @@ use App\Models\Tipologia;
 use App\Models\Cocasep;
 use App\Models\Cocacepdata;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 use Illuminate\Http\Request;
 
@@ -109,6 +110,13 @@ class CocasepController extends Controller
 
         return redirect()->route('reportecocasep')->with('success','Reporte Cocasep editado correctamente');
 
+    }
+
+    public function pdfcocasep()
+    {
+        $data =Cocacepdata::with(['clues', 'user'])->get();
+        $pdf = PDF::loadView('acreditacionprimernivel/cocasep', compact('data'));
+        return $pdf->download('cocasep.pdf');
     }
 
 

@@ -18,6 +18,7 @@ use App\Models\primernivel;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Puestos;
 use App\Models\User;
+Use PDF;
 
 
 class AcreditacionController extends Controller
@@ -173,7 +174,12 @@ class AcreditacionController extends Controller
 
     }
 
-
+    public function pdfprimernivel()
+    {
+        $data =Primerniveldata::with(['clues', 'user'])->get();
+        $pdf = PDF::loadView('acreditacionprimernivel/primernivel', compact('data'));
+        return $pdf->download('primernivel.pdf');
+    }
 
 }
 

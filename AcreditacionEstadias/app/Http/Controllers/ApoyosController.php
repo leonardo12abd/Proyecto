@@ -9,7 +9,7 @@ use App\Models\Unidad;
 use App\Models\Municipio;
 use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
-
+use PDF;
 use Illuminate\Support\Facades\Auth;
 use App\Exports\ApoyosExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -104,5 +104,12 @@ class ApoyosController extends Controller
 
         return redirect()->route('reporteapoyo')->with('success','Reporte Apoyos editado correctamente');
 
+    }
+
+    public function pdfapoyos()
+    {
+        $data =Apoyodata::with(['clues', 'user'])->get();
+        $pdf = PDF::loadView('acreditacionprimernivel/apoyos', compact('data'));
+        return $pdf->download('apoyos.pdf');
     }
 }

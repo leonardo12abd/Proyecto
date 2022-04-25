@@ -96,9 +96,9 @@ class CalidadPercibidaController extends Controller
 
     public function pdfcalidadperc()
     {
-        $Calidadpercibidadata = Calidadpercibidadata::all();
-
-        return view('acreditacionprimernivel.pdfcalidadpercibida', compact('Calidadpercibidadata'));
+        $data =Calidadpercibidadata::with(['clues', 'user'])->get();
+        $pdf = PDF::loadView('acreditacionprimernivel/calidadpercibida', compact('data'));
+        return $pdf->download('calidadpercibida.pdf');
     }
 
     public function downloadPDFviewpdfcalidadperc()
@@ -158,9 +158,5 @@ class CalidadPercibidaController extends Controller
         return view('acreditacionprimernivel.pdfprueba', compact('data3', 'calidadpers','unidades', 'municipios', 'jurisdicciones'));
       }
 
-      public function pdfDownload($id)
-      {
 
-
-      }
 }

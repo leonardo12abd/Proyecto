@@ -11,6 +11,7 @@ use App\Models\Unidad;
 use App\Models\Municipio;
 use App\Models\Tipologia;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 use App\Models\Jurisdiccion;
 use SebastianBergmann\Environment\Console;
@@ -109,5 +110,13 @@ class CtspController extends Controller
             return redirect()->route('reportecalidadtsp')->with('success','Reporte Calidad Tecnica editado correctamente');
 
         }
+
+
+        public function pdfctsp()
+    {
+        $data =Ctspdata::with(['clues', 'user'])->get();
+        $pdf = PDF::loadView('acreditacionprimernivel/ctsp', compact('data'));
+        return $pdf->download('ctsp.pdf');
+    }
 
 }

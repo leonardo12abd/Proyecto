@@ -9,6 +9,7 @@ use App\Models\Unidad;
 use App\Models\Municipio;
 use App\Models\Tipologia;
 use App\Models\Jurisdiccion;
+use PDF;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -108,4 +109,12 @@ class IndicasController extends Controller
             return redirect()->route('reporteindicas')->with('success','Reporte INDICAS Editado correctamente');
 
         }
+
+        public function pdfindicas()
+        {
+            $data =Indicadata::with(['clues', 'user'])->get();
+            $pdf = PDF::loadView('acreditacionprimernivel/inidcas', compact('data'));
+            return $pdf->download('inidcas.pdf');
+        }
+
 }

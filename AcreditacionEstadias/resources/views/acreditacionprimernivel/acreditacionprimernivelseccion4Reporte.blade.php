@@ -31,7 +31,7 @@
                                         </a>
 
                                     <div class="col-12 text-left">
-                                        <a href="#" class="btn btn-danger btn-round">
+                                        <a href="{{ route('pdfcocasep') }}" class="btn btn-danger btn-round">
                                             <i class="material-icons">picture_as_pdf</i> PDF
                                             </a>
 
