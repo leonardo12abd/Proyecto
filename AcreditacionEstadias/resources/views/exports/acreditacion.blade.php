@@ -7,9 +7,9 @@
         <tr>
             <th style="background: #BDE487">Fecha</th>
             <th style="background: #BDE487">Codigo clues</th>
-            <th style="background: #BDE487">clues</th>
-            <th style="background: #BDE487">nom unidad</th>
-            <th style="background: #BDE487">usuario encargado</th>
+            <th style="background: #BDE487">Nombre Clues</th>
+            <th style="background: #BDE487">Nombre de la Unidad</th>
+            <th style="background: #BDE487">Usuario Encargado de la captura</th>
 
         </tr>
     </thead>

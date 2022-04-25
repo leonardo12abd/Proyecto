@@ -4,6 +4,9 @@
         <tr>
 
             <th style="background: #BDE487">Codigo clues</th>
+            <th style="background: #BDE487">Nombre Clues</th>
+            <th style="background: #BDE487">Nombre de la Unidad</th>
+            <th style="background: #BDE487">Usuario Encargado de la captura</th>
 
         </tr>
     </thead>
@@ -11,6 +14,9 @@
 <tr>
 
         <th>{{ $data9->id_clues }}</th>
+        <th>{{$data9->clues->clues}}</th>
+        <th>{{$data9->clues->nombreunidad}}</th>
+        <th>{{ $data9->user->name }}</th>
 
     </tr>
     </tbody>

@@ -45,7 +45,7 @@
                                             <th><center>Codigo Clues</center></th>
                                             <th><center>Unidad</center></th>
                                             <th><center>Usuario Encargado</center></th>
-                                            <th><center>Creacion</center></th>
+                                            <th><center>Creación</center></th>
                                             <th class="text-right"><center>Acciones</center></th>
                                         </thead>
                                         <tbody>

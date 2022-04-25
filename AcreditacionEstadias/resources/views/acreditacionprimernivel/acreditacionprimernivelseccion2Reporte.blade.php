@@ -41,11 +41,11 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class="text-primary">
-                                            <th><center>ID Reporte</center></th>
+                                            <th><center>Clave Reporte</center></th>
                                             <th><center>Codigo Clues</center></th>
                                             <th><center>Unidad</center></th>
                                             <th><center>Usuario Encargado</center></th>
-                                            <th><center>Creacion</center></th>
+                                            <th><center>Creación</center></th>
                                             <th class="text-right"><center>Acciones</center></th>
                                         </thead>
                                         <tbody>
