@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'users', 'titlePage' => 'Detalle de Usuario'])
+@extends('layouts.main', ['activePage' => 'permissions', 'titlePage' => 'Detalle de permiso'])
 @section('content')
     <div class="content">
         <div class="container-fluid">
@@ -6,8 +6,8 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-danger">
-                            <div class="card-tittle">Usuarios</div>
-                            <p class="card-category">Vista detallada del usuario {{ $user->name }}</p>
+                            <div class="card-tittle">Roles</div>
+                            <p class="card-category">Vista detallada del Rol {{ $role->name }}</p>
                         </div>
                         <center>
                         <div class="card-body">
@@ -19,30 +19,27 @@
                                                 <div class="author">
                                                     <a href="">
                                                         <img src="{{ asset('img/imagen_default_avatar.png') }}" alt="image" class="avatar">
-                                                        <h5 class="tittle mt-3">{{ $user->name }}</h5>
+                                                        <h5 class="tittle mt-3">{{ $role->name }}</h5>
                                                     </a>
                                                     <p class="description">
-                                                        {{ $user->username }} <br>
-                                                        {{ $user->email }} <br>
-                                                        <h5>Roles asignados</h3>
-                                                            @forelse ($user->roles as $role )
-                                                            <span class="badge badge-info">{{ $role->name }}</span>
-                                                            @empty
-                                                            <span class="badge badge-danger">Ningun rol asignado</span>
-                                                            @endforelse
-                                                          <br>  {{ $user->created_at }}
+                                                        {{ $role->guard_name }} <br>
+                                                        {{ $role->created_at }}
 
                                                     </p>
                                                 </div>
                                             </p>
                                             <div class="card-description">
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius at nulla magni dolor expedita deserunt officiis obcaecati repellendus vero perferendis, accusantium, blanditiis ullam aliquam ut accusamus nostrum eligendi vel iure.
+                                                <center><h3>Permisos asignados:</h3></center><br>
+                                                @forelse ($role->permissions as $permission )
+                                                <span class="badge rounded-pill bg-dark text-white">{{ $permission->name }}</span>
+                                                @empty
+                                                <span class="badge badge-danger bg-danger">No permisos</span>
+                                                @endforelse
                                             </div>
                                         </div>
                                         <div class="card-footer">
                                             <div class="button-container">
-                                                <a href="{{ route('users.edit',$user->id) }}" button class="btn btn-sm btn-warning ml-2">Editar</a></button>
-                                                <a href="{{ route('users.index') }}" button class="btn btn-sm btn-danger ml-2">Volver</a></button>
+                                                <a href="{{ route('roles.edit',$role->id) }}" button class="btn btn-sm btn-warning ml-2">Editar</a></button>
                                             </div>
                                         </div>
                                     </div>

@@ -1,5 +1,4 @@
-
-@extends('layouts.main', ['activePage' => 'users', 'titlePage' => 'Editar Usuario'])
+@extends('layouts.main', ['activePage' => 'roles', 'titlePage' => 'Editar de rol'])
 @section('content')
 
 <div class="content">
@@ -7,59 +6,39 @@
         <div class="row">
             <div class="col-md-12">
 
-            <form action="{{ route('users.update',$user->id) }}" method="post" class="form-horizontal">
+            <form action="{{ route('roles.update',$role->id) }}" method="post" class="form-horizontal">
             @csrf
             @method('PUT')
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-tittle">Usuario</h4>
-                        <p class="card-category">Editar Datos</p>
+                        <h4 class="card-tittle">Roles</h4>
+                        <p class="card-category">Editar Rol</p>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <label for="name" class="col-sm-2 col-form-label">Nombre</label>
+                            <label for="name" class="col-sm-2 col-form-label">Nombre del Rol</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" name="name" value="{{ $user->name }}" autofocus>
-                            </div>
-                        </div>
-                       <!-- Usuario -->
-                        <div class="row">
-                            <label for="username" class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" name="username" value="{{ $user->username }}" >
-                            </div>
-                        </div>
-                        <!-- Email -->
-                        <div class="row">
-                            <label for="email" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-7">
-                                <input type="email" class="form-control" name="email" value="{{ $user->email }}" >
-                            </div>
-                        </div>
-                        <!-- Password -->
-                        <div class="row">
-                            <label for="password" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-7">
-                                <input type="password" class="form-control" name="password" placeholder="Ingresa tu password en caso de modificarla" >
+                                <input type="text" class="form-control" name="name" value="{{ $role->name }}" autofocus>
                             </div>
                         </div>
 
+
                         <div class="row">
-                            <label for="name" class="col-sm-2 col-form-label">Rol del Usiario:</label>
+                            <label for="name" class="col-sm-2 col-form-label">Permisos</label>
                             <div class="col-sm-7">
                                 <div class="form-group">
                                     <div class="tab-content">
                                         <div class="tab-pane active">
                                             <table class="table">
                                                 <tbody>
-                                                    @foreach ($roles as $id => $role )
+                                                    @foreach ($permissions as $id => $permission )
 
                                                     <tr>
                                                         <td>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input class="form-check-input" type="checkbox" name="roles[]"
-                                                                     value="{{ $id }}"{{ $user->roles->contains($id)? 'checked' : ''}}>
+                                                                    <input class="form-check-input" type="checkbox" name="permissions[]"
+                                                                     value="{{ $id }}"{{ $role->permissions->contains($id)? 'checked': '' }}>
                                                                     <span class="form-check-sign">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -67,7 +46,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            {{ $role }}
+                                                            {{ $permission }}
                                                         </td>
                                                     </tr>
 
@@ -80,11 +59,9 @@
                             </div>
                         </div>
 
-                    </div>
-
                     <!-- Final -->
                     <div class="card-footer ml-auto mr-auto">
-                        <a href="{{ route('users.index') }}" button class="btn btn-danger">Regresar</a></button>
+                        <a href="{{ route('roles.index') }}" button class="btn btn-danger">Regresar</a></button>
                         <button type="submit" class="btn btn-warning">Actualizar</button>
                     </div>
                 </div>

@@ -109,6 +109,23 @@
         </a>
 
       </li>
+      <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('permissions.index') }}">
+            <i class="material-icons">
+                key
+            </i>
+            <p>Permisos</p>
+        </a>
+
+      </li>
+
+      <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('roles.index') }}">
+
+            <p>Roles</p>
+        </a>
+
+      </li>
 
 
 

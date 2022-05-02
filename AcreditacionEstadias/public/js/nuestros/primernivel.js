@@ -23,7 +23,7 @@ const selectUnidad = async ({vista='alta_primer_nivel'}) => {
     if(vista === 'alta_primer_nivel'){
         document.getElementById("id_clues").value = data.id_clues
       document.getElementById("unidad_id").value = data.id_clues
-      document.getElementById("municipio_primer").value = data.clave_municipio
+      document.getElementById("municipio_primer").value = data.clave_municipioñ
       document.getElementById("juridiccion_primer").value = data.clavejurisdiccion
       document.getElementById("tipologia_primer").value = data.id_tipologia
       document.getElementById("estrato_primer").value = data.claveestrato

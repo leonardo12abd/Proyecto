@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{{ asset('js/nuestros/primernivel.js') }}" defer></script>
+</head>
+<body>
+
+
+
 <br>
 <h2>Acreditación Primer Nivel</h2>
 <br>
@@ -64,9 +73,9 @@
                 <th>{{ $data20->rx_clues }}</th>
                 <th>{{ $data20->otro_clues }}</th>
             </tr>
-            </tbody>
+        </tbody>
 
-</table>
+    </table>
 
 <h6>ESTRUCTURA REAL</h6>
 <table>
@@ -89,55 +98,117 @@
                 <th>{{ $data20->rx_real }}</th>
                 <th>{{ $data20->otro_real }}</th>
             </tr>
-            </tbody>
+        </tbody>
 
 </table>
 
+
+{{-- Recursos Humanos --}}
+
+<table>
+    <thead>
+      <tr>
+          <th ></th>
+          <th ></th>
+        <th > SERVICIO SOCIAL </th>
+        <th > PERSONAL ISEM </th>
+        <th></th>
+        <th> CAPACITACIONES </th>
+        <th></th>
+    </tr>
+</thead>
+    <thead>
+        <tr>
+            <th  > RH
+                (requisitar en base a su oferta de servicios) </th>
+                <th  > Descripción Puesto </th>
+          <th  > Carta de Asignación Campo Clinico al establecimiento(personal en servicio social)  </th>
+          <th  >Titulo</th>
+          <th  >Cédula</th>
+          <th  > Tipo de contratación (base, formalizado, regularizado, comisionado) </th>
+          <th  > Documento de Adscripción </th>
+          <th  > Estomatologo Cartilla vacunación </th>
+          <th  > Prevención de icendios y atencion de emergencias </th>
+          <th  > Interculturalidad </th>
+          <th  > Cuidados Paliativos </th>
+          <th  > Programa integral higiene de manos </th>
+          <th  > Acciones Escenciales </th>
+          <th  > Estomatologo RCP basico </th>
+          <th  > Observaciones </th>
+        </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+
+        <td>{{$data20->data20['key_13_'.$index]}}</td>
+
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+
+</table>
+
+
+{{-- FIN Recursos Humanos --}}
 
 {{-- Tabla Prueba --}}
 
 <table class="table">
     @foreach ($primernivel as $key=>$fanta )
-        @if($key == 0 || $primernivel[$key-1]->clasificacion_primer != $fanta->clasificacion_primer)
-      <thead class="thead-dark">
+    @if($key == 0 || $primernivel[$key-1]->clasificacion_primer != $fanta->clasificacion_primer)
+    <thead class="thead-dark">
           <tr>
-              <th scope="col" style="background-color: #ECFBA2">{{ $fanta->clasificacion_primer }}</th>
-              <th scope="col" style="background-color: #ACFBA2">SI</th>
-              <th scope="col" style="background-color: #FBB2A2">NO</th>
-              <th scope="col" style="background-color: #D1F1E6">OBSERVACIONES</th>
+              <th   style="background-color: #ECFBA2">{{ $fanta->clasificacion_primer }}</th>
+              <th   style="background-color: #ACFBA2">SI</th>
+              <th   style="background-color: #FBB2A2">NO</th>
+              <th   style="background-color: #D1F1E6">OBSERVACIONES</th>
 
 
-          </tr>
-      </thead>
+            </tr>
+        </thead>
       @endif
 
       <tbody>
           <tr>
               <th scope="row"> {{ $fanta->nombre_primer }}</th>
               <td>
-                @if($data20->data20['key_0'.$key] == 'SI') ✔ @endif
-              </td>
-              <td>
-                @if($data20->data20['key_0'.$key] == 'NO') ❌ @endif
-              </td>
-              <td>
+                  @if($data20->data20['key_0'.$key] == 'SI') ✔ @endif
+                </td>
+                <td>
+                    @if($data20->data20['key_0'.$key] == 'NO') ❌ @endif
+                </td>
+                <td>
                 @if ($fanta->nombre_primer == 'Otros') {{$data20->data20['textarea_'.$key]}} @endif
-              </td>
+            </td>
           </tr>
-      </tbody>
+        </tbody>
   @endforeach
   </table>
 
 
 
-{{-- Fin --}}
+  {{-- Fin --}}
 <br>
 
 <h3>NECESIDADES DE MANTENIMIENTO</h3>
 <table >
     <thead>
-      <tr>
-        <th style="background: #B489D1">REQUERIMIENTO</th>
+        <tr>
+            <th style="background: #B489D1">REQUERIMIENTO</th>
         <th style="background: #B489D1">FACHADA</th>
         <th style="background: #B489D1">SALA DE ESPERA</th>
         <th style="background: #B489D1">SANITARIOS</th>
@@ -151,8 +222,8 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ( $infras as $key => $infra )
-      <tr>
+        @foreach ( $infras as $key => $infra )
+        <tr>
         <th scope="row">{{ $infra ->nombre_infra}} </th>
         <td>{{isset($data20->data20['key0_'.$key]) ? $data20->data20['key0_'.$key] : 'No aplica'}}</td>
         <td>{{isset($data20->data20['key1_'.$key]) ? $data20->data20['key1_'.$key] : 'No aplica'}}</td>
@@ -162,16 +233,16 @@
         <td>{{isset($data20->data20['key5_'.$key]) ? $data20->data20['key5_'.$key] : 'No aplica'}}</td>
         <td>{{isset($data20->data20['key6_'.$key]) ? $data20->data20['key6_'.$key] : 'No aplica'}}</td>
         <td>{{isset($data20->data20['key7_'.$key]) ? $data20->data20['key7_'.$key] : 'No aplica'}}</td>
-      </tr>
-      @endforeach
-    </tbody>
+    </tr>
+    @endforeach
+</tbody>
   </table>
 
 
-<h3>NECESIDADES DE EQUIPO, INMOBILIARIO E INSTRUMENTAL</h3>
-<br>
+  <h3>NECESIDADES DE EQUIPO, INMOBILIARIO E INSTRUMENTAL</h3>
+  <br>
   <table>
-    <thead>
+      <thead>
       <tr>
         <th style="background: #89D1B2">REQUERIMIENTO</th>
         <th style="background: #89D1B2">SALA DE ESPERA</th>
@@ -185,7 +256,7 @@
         <th style="background: #89D1B2">OTRAS ÁREAS</th>
 
 
-      </tr>
+    </tr>
     </thead>
     <tbody>
       @foreach ( $emis as $key => $emi )
@@ -207,3 +278,5 @@
 
 </table>
 
+</body>
+</html>

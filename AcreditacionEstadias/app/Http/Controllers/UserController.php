@@ -8,8 +8,7 @@ use PDF;
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
 use Maatwebsite\Excel\Facades\Excel;
-
-
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -25,7 +24,8 @@ class UserController extends Controller
 //--------------------- Vista Create Users-----------------------
     public function create()
     {
-        return view('users.create');
+        $roles = Role::all()->pluck('name','id');
+        return view('users.create',compact('roles'));
     }
 //---------------------- Inicio CRUD ------------------------------------
     public function store(Request $request)
@@ -42,6 +42,9 @@ class UserController extends Controller
         +[
             'password'=>bcrypt($request->input('password')),
         ]);
+
+        $roles = $request->input('roles',[]);
+        $user->syncRoles($roles);
         return redirect()->route('users.index')->with('success','Usuario creado correctamente')
         ;
 
@@ -52,6 +55,7 @@ class UserController extends Controller
     {
         //$user = User::findOrFail($id);
         //dd($user);
+        $user->load('roles');
         return view('users.show',compact('user'));
 
     }
@@ -59,7 +63,9 @@ class UserController extends Controller
 //------------------- Edit Users ---------------------------------
     public function edit(User $user)
     {
-        return view('users.edit',compact('user'));
+        $roles = Role::all()->pluck('name','id');
+        $user->load('roles');
+        return view('users.edit',compact('user','roles'));
     }
 
 //------------------- Update Users ---------------------------------
@@ -77,12 +83,18 @@ class UserController extends Controller
         }
 
         $user->update($data);
+        $roles = $request->input('roles',[]);
+        $user->syncRoles($roles);
         return redirect()->route('users.index')->with('success','Usuario editado exitosamente');
     }
 
     //------------------- Update Delete ---------------------------------
     public function destroy(User $user)
     {
+
+        if(auth()->user()->id == $user->id){
+            return redirect()->route('users.index');
+        }
         $user->delete();
         return back()->with('error','Usuario eliminado exitosamente');
     }

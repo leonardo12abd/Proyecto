@@ -163,4 +163,7 @@ Route::get('altaprimernivelsec6/{id}/edit',[App\Http\Controllers\ApoyosControlle
 Route::put('/updateapoyos/{id}',[App\Http\Controllers\ApoyosController::class, 'updateapoyos'])->name('updateapoyos');
 Route::get('/pdfapoyos',[App\Http\Controllers\ApoyosController::class, 'pdfapoyos'])->name('pdfapoyos');
 
+Route::resource('permissions',App\Http\Controllers\PermissionController::class);
+Route::resource('roles', App\Http\Controllers\RoleController::class);
+
 });

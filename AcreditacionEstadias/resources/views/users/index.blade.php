@@ -47,7 +47,8 @@
                                             <th>Nombre</th>
                                             <th>Correo</th>
                                             <th>Username</th>
-                                            <th>Crated_at</th>
+                                            <th>Roles Asignados</th>
+                                            <th>Fecha de creación</th>
                                             <th class="text-right">Acciones</th>
                                         </thead>
                                         <tbody>
@@ -57,6 +58,13 @@
                                                 <td>{{  $user->name         }}</td>
                                                 <td>{{  $user->email        }}</td>
                                                 <td>{{  $user->username     }}</td>
+                                                <td>
+                                                    @forelse ($user->roles as $role )
+                                                    <span class="badge badge-info">{{ $role->name }}</span>
+                                                    @empty
+                                                    <span class="badge badge-danger">Ningun rol asignado</span>
+                                                    @endforelse
+                                                </td>
                                                 <td>{{  $user->created_at   }}</td>
                                                 <td class="td-actions text-right">
                                                     <a href="{{ route('users.show',$user->id) }}"class="btn btn-info"> <i class="material-icons">person</i></a>
