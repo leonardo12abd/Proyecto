@@ -141,7 +141,7 @@
     <tbody>
       <tr>
 
-        <td>{{$data20->data20['key_13_'.$index]}}</td>
+        <td></td>
 
         <td></td>
         <td></td>

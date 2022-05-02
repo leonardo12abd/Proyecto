@@ -81,10 +81,10 @@
                             @if($key == 0 || $calidadpers[$key-1]->clasificacion_aval != $cpers->clasificacion_aval)
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col" style="background-color: rgb(249, 231, 159);">{{$cpers->clasificacion_aval}}</th>
-                                    <th scope="col" style="background-color: rgb(249, 231, 159);">SI</th>
-                                    <th scope="col" style="background-color: rgb(249, 231, 159);">NO</th>
-                                    <th scope="col" style="background-color: rgb(249, 231, 159);">OBSERVACIONES</th>
+                                    <th scope="col" style="background-color: rgb(204, 168, 24);">{{$cpers->clasificacion_aval}}</th>
+                                    <th scope="col" style="background-color: rgb(204, 168, 24);">SI</th>
+                                    <th scope="col" style="background-color: rgb(204, 168, 24);">NO</th>
+                                    <th scope="col" style="background-color: rgb(204, 168, 24);">OBSERVACIONES</th>
 
                                 </tr>
                             </thead>
