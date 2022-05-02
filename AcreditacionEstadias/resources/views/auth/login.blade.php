@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="card-body">
-            <p class="card-description text-center">{{ __('Acreditación ') }} <strong>de unidades hospitalarias</strong> {{ __(' del Estado de México.') }} </p>
+            <p class="card-description text-center">{{ __('Cédula para la acreditación') }} <strong>de unidades</strong>  </p>
             <!-- <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -81,7 +81,7 @@
       <div class="row">
         <div class="col-12">
             @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}" class="text-light">
+                <a href="{{ route('password.request') }}" class="text-light" hidden>
                     <center><small>{{ __('¿Has olvidado la contraseña?') }}</small></center>
                 </a>
             @endif

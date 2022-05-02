@@ -20,7 +20,7 @@
                               <div class="row">
                                   <div class="col-12 text-right">
                                       <a href="{{ route('roles.create') }}" class="btn btn-facebook btn-round">
-                                      <i class="material-icons">person_add</i>  Añadir rol
+                                      <i class="material-icons">lock</i>  Añadir rol
                                   </a>
                                   </div>
 
@@ -51,7 +51,7 @@
                                                   @endforelse
                                               </td>
                                            <td class="td-actions text-right">
-                                                  <a href="{{ route('roles.show',$role->id) }} "class="btn btn-info"> <i class="material-icons">person</i></a>
+                                                  <a href="{{ route('roles.show',$role->id) }} "class="btn btn-info"> <i class="material-icons">library_books</i></a>
                                                   <a href=" {{ route('roles.edit',$role->id) }}"class="btn btn-warning"><i class="material-icons">edit</i></a>
 
                                                <form action="{{ route('roles.destroy',$role->id) }}  " method="POST" style="display:inline-block;" onsubmit="return confirm('¿Segro que deseas eliminar al?')">
