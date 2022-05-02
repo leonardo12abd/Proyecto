@@ -33,99 +33,128 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'ReporteAcreditacion' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('reporteprimernivel') }}">
-                <i class="material-icons">
-                    task
-                </i>                <span class="sidebar-normal">{{ __('ACREDITACIÓN') }} </span>
-              </a>
-            </li>
-
-            <li class="nav-item{{ $activePage == 'Reporecp' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('reporteavalciudadano') }} ">
-                    <i class="material-icons">
-                        pending_actions
-                    </i>
-                  <span class="sidebar-normal">{{ __('CALIDAD PERCIBIDA') }} </span>
-                </a>
-              </li>
-
-              <li class="nav-item{{ $activePage == 'Reportectsp' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('reportecalidadtsp') }} ">
-
-                    <span class="sidebar-auto">   <i class="material-icons">
-                        healing
-                    </i>{{ __('CALIDAD TÉCNICA Y SEGURIDAD AL PACIENTE') }}  </span>
-                </a>
-            </li>
-            <li class="nav-item{{ $activePage == 'reportecocasep' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('reportecocasep') }} ">
-                    <i class="material-icons">
-                        leaderboard
-                    </i>
-                  <span class="sidebar-normal">{{ __('COCASEP') }} </span>
-                </a>
-              </li>
-              <li class="nav-item{{ $activePage == 'reporteindicas' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('reporteindicas') }} ">
-                    <i class="material-icons">
-                        emergency_recording
-                    </i>
-                  <span class="sidebar-normal">{{ __('INDICAS') }} </span>
-                </a>
-              </li>
-
-              <li class="nav-item{{ $activePage == 'reporteapoyo' ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('reporteapoyo') }} ">
-                    <i class="material-icons">
-                        attach_money
-                    </i>
-                    <span class="sidebar-normal">{{ __('APOYOS E INCENTIVOS') }} </span>
-                </a>
-              </li>
-
 
           </ul>
 
-
-
-
-        </div>
-
-
       </li>
 
 
-      {{-- Calidad Percibida --}}
+      {{-- reporteprimernivel --}}
 
 
+      @can('reporteprimernivel')
 
+      <li class="nav-item{{ $activePage == 'ReporteAcreditacion' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('reporteprimernivel') }}">
+          <i class="material-icons">
+              task
+          </i>                <span class="sidebar-normal">{{ __('ACREDITACIÓN') }} </span>
+        </a>
+      </li>
+      @endcan
 
        {{-- Select Fin --}}
-      <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('users.index') }}">
-            <i class="fas fa-user-friends"></i>
-            <p>Usuarios</p>
-        </a>
 
-      </li>
-      <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('permissions.index') }}">
+       @can('reporteavalciudadano')
+
+       <li class="nav-item{{ $activePage == 'Reporecp' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('reporteavalciudadano') }} ">
             <i class="material-icons">
-                key
+                pending_actions
             </i>
-            <p>Permisos</p>
+          <span class="sidebar-normal">{{ __('CALIDAD PERCIBIDA') }} </span>
         </a>
-
       </li>
+       @endcan
 
-      <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('roles.index') }}">
+       @can('reportecalidadtsp')
 
-            <p>Roles</p>
-        </a>
+       <li class="nav-item{{ $activePage == 'Reportectsp' ? ' active' : '' }}">
+         <a class="nav-link" href="{{ route('reportecalidadtsp') }} ">
 
-      </li>
+             <span class="sidebar-auto">   <i class="material-icons">
+                 healing
+             </i>{{ __('CALIDAD TÉCNICA Y SEGURIDAD AL PACIENTE') }}  </span>
+         </a>
+     </li>
+       @endcan
+
+       @can('reportecocasep')
+
+       <li class="nav-item{{ $activePage == 'reportecocasep' ? ' active' : '' }}">
+           <a class="nav-link" href="{{ route('reportecocasep') }} ">
+               <i class="material-icons">
+                   leaderboard
+               </i>
+             <span class="sidebar-normal">{{ __('COCASEP') }} </span>
+           </a>
+         </li>
+       @endcan
+
+       @can('reporteindicas')
+
+       <li class="nav-item{{ $activePage == 'reporteindicas' ? ' active' : '' }}">
+         <a class="nav-link" href="{{ route('reporteindicas') }} ">
+             <i class="material-icons">
+                 emergency_recording
+             </i>
+           <span class="sidebar-normal">{{ __('INDICAS') }} </span>
+         </a>
+       </li>
+       @endcan
+
+       @can('reporteapoyo')
+
+       <li class="nav-item{{ $activePage == 'reporteapoyo' ? ' active' : '' }}">
+         <a class="nav-link" href="{{ route('reporteapoyo') }} ">
+             <i class="material-icons">
+                 attach_money
+             </i>
+             <span class="sidebar-normal">{{ __('APOYOS E INCENTIVOS') }} </span>
+         </a>
+       </li>
+       @endcan
+
+
+
+
+@can('user_index')
+
+<li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
+  <a class="nav-link" href="{{ route('users.index') }}">
+      <i class="fas fa-user-friends"></i>
+      <p>Usuarios</p>
+  </a>
+
+</li>
+@endcan
+
+@can('permission_index')
+
+<li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
+  <a class="nav-link" href="{{ route('permissions.index') }}">
+      <i class="material-icons">
+          key
+      </i>
+      <p>Permisos</p>
+  </a>
+
+</li>
+@endcan
+
+@can('roles_index')
+<li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
+    <a class="nav-link" href="{{ route('roles.index') }}">
+        <i class="material-icons">
+            lock
+        </i>
+        <p>Roles</p>
+    </a>
+
+  </li>
+@endcan
+
+
 
 
 

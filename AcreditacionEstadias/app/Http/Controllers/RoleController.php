@@ -46,7 +46,7 @@ class RoleController extends Controller
     {
         $role = Role::create($request->only('name'));
 
-        $role->permissions()->syncPermissions($request->input('permissions', []));
+        $role->permissions()->sync($request->input('permissions', []));
       //  $role->syncPermissions($request->input('permissions', []));
 
         return redirect()->route('roles.index');
@@ -90,7 +90,7 @@ class RoleController extends Controller
     {
         $role->update($request->only('name'));
 
-        $role->permissions()->syncPermissions($request->input('permissions', []));
+        $role->permissions()->sync($request->input('permissions', []));
 
         return redirect()->route('roles.index');
     }
